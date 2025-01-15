@@ -3,6 +3,8 @@ The string is **<span style="color: red;">delimited</span>** with quotes - in fa
 
 **<span style="color: red;">invoke</span>** typically means to call or execute a function
 
+
+
 ### Explanation of the Sections:
 
 - **Table of Contents**: Helps you navigate through the document quickly by linking to different topics.
