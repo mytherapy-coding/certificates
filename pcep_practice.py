@@ -1,4 +1,4 @@
-# pcep_study_examples.py
+# Module 1
 
 print("My name is", "Python.", end=" ")
 print("My name is", "Python.")
@@ -113,7 +113,13 @@ end_min = total_minutes % 60
 
 # Display the final time
 print(f"The event will end at: {end_hour:02}:{end_min:02}")
-'''
-
 x = input("Enter a number: ") # The user enters 2
 print(type(x))
+'''
+
+# Module 2
+
+print(2 == 2.)
+
+
+

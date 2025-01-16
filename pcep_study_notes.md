@@ -1,3 +1,4 @@
+# Module 1
 
 The string is **<span style="color: red;">delimited</span>** with quotes - in fact, the quotes make the string - they cut out a part of the code and assign a different meaning to it.
 
@@ -139,3 +140,5 @@ and
 c = √ a2 + b2 
 
 <span style="color: red;">The input() function in Python always returns a string (even if you type a number).</span>
+
+# Module 2
