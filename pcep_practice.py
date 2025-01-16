@@ -74,3 +74,16 @@ print("I'm Monty Python.")
 binary_number = "1010"
 decimal_number = int(binary_number, 2)
 print(decimal_number)  # Outputs: 10
+print(6 // 3)
+print(6 // 3.)
+print(6. // 3)
+print(6. // 3.)
+
+
+print(-6 // 4)
+print(6. // -4)
+print("------------------------------")
+print(-4 - 4)
+print(4. - 8)
+print(-1.1)
+print(2 ** 2 ** 3)

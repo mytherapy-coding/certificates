@@ -60,3 +60,59 @@ Therefore, the binary number 1010 is equal to 10 in decimal.
 binary_number = "1010"
 decimal_number = int(binary_number, 2)
 print(decimal_number)  # Outputs: 10
+
+## Basic operators
+Data and operators when connected together form expressions. The simplest expression is a literal itself.
+
+
+Integer division can also be called floor division.  
+
+A // (double slash) sign is an integer divisional operator. It differs from the standard / operator in two details:
+
+its result lacks the fractional part - it's absent (for integers), or is always equal to zero (for floats); this means that the results are always rounded;
+it conforms to the integer vs. float rule.
+
+print(6 // 3)
+print(6 // 3.)
+print(6. // 3)
+print(6. // 3.)
+
+
+print(-6 // 4)
+print(6. // -4)
+
+
+Note: some of the values are negative. This will obviously affect the result. But how?
+
+The result is two negative twos. The real (not rounded) result is -1.5 in both cases. However, the results are the subjects of rounding. <span style="color: red;">The rounding goes toward the lesser integer value, and the lesser integer value is -2, hence: -2 and -2.0.</span>
+
+## Operators: remainder (modulo)
+The result of the operator is a remainder left after the integer division.
+
+In other words, it's the value left over after dividing one value by another to produce an integer quotient.
+
+Note: the operator is sometimes called modulo in other programming languages.
+
+Take a look at the snippet - try to predict its result and then run it:
+
+print(14 % 4)
+
+
+As you can see, the result is two. This is why:
+
+14 // 4 gives 3 → this is the integer quotient;
+3 * 4 gives 12 → as a result of quotient and divisor multiplication;
+14 - 12 gives 2 → this is the remainder.
+
+
+A <span style="color: red;">unary operator</span> is an operator with only one operand, e.g., -1, or +3.
+
+A <span style="color: red;">binary operator</span> is an operator with two operands, e.g., 4 + 5, or 12 % 5.
+
+## Operator Precedence
+In Python, the exponentiation operator (**) has <span style="color: yellow;">right-to-left associativity</span>. This means that when you have multiple ** operators in a row, Python evaluates them from right to left.
+Thus, the expression 2 ** 2 ** 3 is evaluated as:
+
+scss
+Copy code
+2 ** (2 ** 3)
