@@ -99,6 +99,7 @@ a /= 2 * b
 print(a)
 print(15**2.0)
 print("\nThat's all, folks!")
+'''
 hour = int(input("Starting time (hours): "))
 mins = int(input("Starting time (minutes): "))
 dura = int(input("Event duration (minutes): "))
@@ -112,3 +113,7 @@ end_min = total_minutes % 60
 
 # Display the final time
 print(f"The event will end at: {end_hour:02}:{end_min:02}")
+'''
+
+x = input("Enter a number: ") # The user enters 2
+print(type(x))

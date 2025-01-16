@@ -138,3 +138,4 @@ and
 
 c = √ a2 + b2 
 
+<span style="color: red;">The input() function in Python always returns a string (even if you type a number).</span>
