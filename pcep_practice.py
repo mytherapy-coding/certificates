@@ -32,3 +32,22 @@ print(0o123)
 #
 # Example:
 print(0o123)  # Outputs: 83
+
+"""
+0x123 is a hexadecimal number (base 16).
+
+If an integer number is preceded by an 0O or 0o prefix (zero-o), it will be treated as an octal value. This means that the number must contain digits taken from the [0..7] range only.
+
+In hexadecimal:
+- The prefix "0x" indicates that the number is in base 16.
+- The digits range from 0-9 and A-F, where A = 10, B = 11, ..., F = 15.
+
+To convert 0x123 to decimal (base 10):
+
+0x123 = 1 × 16^2 + 2 × 16^1 + 3 × 16^0
+      = 1 × 256 + 2 × 16 + 3 × 1
+      = 256 + 32 + 3
+      = 291 (decimal)
+"""
+print(0x123)
+
