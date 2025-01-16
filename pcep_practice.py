@@ -51,3 +51,26 @@ To convert 0x123 to decimal (base 10):
 """
 print(0x123)
 
+print(0.0000000000000000000001)
+
+print('I\'m Monty Python.')
+print("I'm Monty Python.")
+
+# Binary System
+# The binary system is a number system that uses 2 as its base.
+# It consists only of the digits 0 and 1, which are called binary digits or bits.
+
+# Example: Converting a Binary Number to Decimal
+# Let's consider the binary number "1010" and convert it to decimal (base 10).
+# To convert a binary number to decimal, you expand it as follows:
+
+# 1010 (binary) = 1 × 2^3 + 0 × 2^2 + 1 × 2^1 + 0 × 2^0
+#               = 1 × 8 + 0 × 4 + 1 × 2 + 0 × 1
+#               = 8 + 0 + 2 + 0 = 10 (decimal)
+
+# Therefore, the binary number 1010 is equal to 10 in decimal.
+
+# Code Example: Converting Binary to Decimal in Python
+binary_number = "1010"
+decimal_number = int(binary_number, 2)
+print(decimal_number)  # Outputs: 10
