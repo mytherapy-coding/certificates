@@ -124,3 +124,4 @@ print(2 == 2.)
 
 var = 0  # Assigning 0 to var
 print(var == 0)
+
