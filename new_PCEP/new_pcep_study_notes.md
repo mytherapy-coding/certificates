@@ -356,6 +356,12 @@ for i in range(2, 1):
 else:
     print("else:", i)
 ```
+*Listen to this story: a boy and his father, a computer programmer, are playing with wooden blocks. They are building a pyramid.
+Their pyramid is a bit weird, as it is actually a pyramid-shaped wall - it's flat. The pyramid is stacked according to one simple principle: each lower layer contains one block more than the layer above.
+The figure illustrates the rule used by the builders:
+Your task is to write a program which reads the number of blocks the builders have, and outputs the height of the pyramid that can be built using these blocks.
+Note: the height is measured by the number of fully completed layers - if the builders don't have a sufficient number of blocks and cannot complete the next layer, they finish their work immediately.*
+
 
 ```py
 # Input: total number of blocks
@@ -376,4 +382,48 @@ while True:
 
 # Output the height of the pyramid
 print("Height of the pyramid:", height)
+```
+Scenario
+In 1937, a German mathematician named Lothar Collatz formulated an intriguing hypothesis (it still remains unproven) which can be described in the following way:
+
+take any non-negative and non-zero integer number and name it c0;
+if it's even, evaluate a new c0 as c0 ÷ 2;
+otherwise, if it's odd, evaluate a new c0 as 3 × c0 + 1;
+if c0 ≠ 1, skip to point 2.
+The hypothesis says that regardless of the initial value of c0, it will always go to 1.
+
+Of course, it's an extremely complex task to use a computer in order to prove the hypothesis for any natural number (it may even require artificial intelligence), but you can use Python to check some individual numbers. Maybe you'll even find the one which would disprove the hypothesis.
+
+
+Write a program which reads one natural number and executes the above steps as long as c0 remains different from 1. We also want you to count the steps needed to achieve the goal. Your code should output all the intermediate values of c0, too.
+
+Hint: the most important part of the problem is how to transform Collatz's idea into a while loop - this is the key to success.
+
+```py
+# Read the initial number from the user
+c0 = int(input("Enter a natural number: "))
+
+# Initialize the step counter
+steps = 0
+
+# Print the initial value
+print(c0)
+
+# Continue the process until c0 becomes 1
+while c0 != 1:
+    # If the number is even, divide it by 2
+    if c0 % 2 == 0:
+        c0 = c0 // 2
+    # If the number is odd, multiply by 3 and add 1
+    else:
+        c0 = 3 * c0 + 1
+    
+    # Print the current value of c0
+    print(c0)
+    
+    # Increment the step counter
+    steps += 1
+
+# Output the total number of steps
+print("Steps:", steps)
 ```
