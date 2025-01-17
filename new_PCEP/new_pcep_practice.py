@@ -168,9 +168,23 @@ for i in range(5):
 # Print the final message
 print("Ready or not, here I come!")
 
-import time
+# break - example
+print()
+print("The break instruction:")
+for i in range(1, 6):
+    if i == 3:
+        break
+    print("Inside the loop.", i)
+print("Outside the loop.")
 
-# Write a for loop that counts to five.
 
+# continue - example
+
+print("\nThe continue instruction:")
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print("Inside the loop.", i)
+print("Outside the loop.")
 
 
