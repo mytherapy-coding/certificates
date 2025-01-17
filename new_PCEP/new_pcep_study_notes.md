@@ -330,3 +330,31 @@ print(word_without_vowels)
 # Print the word assigned to word_without_vowels.
 ```
 
+## The while loop and the else branch
+
+Loops may have the else branch too, like ifs.
+
+The loop's else branch is always executed once, regardless of whether the loop has entered its body or not.
+
+```py
+i = 5
+while i < 5:
+    print(i)
+    i += 1
+else:
+    print("else:", i)
+```
+For loops behave a bit differently - take a look at the snippet in the editor and run it.
+The output may be a bit surprising.
+The i variable retains its last value.
+Modify the code a bit to carry out one more experiment.
+
+```py
+i = 111
+for i in range(2, 1):
+    print(i)
+else:
+    print("else:", i)
+```
+
+
