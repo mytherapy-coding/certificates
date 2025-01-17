@@ -148,3 +148,29 @@ You can write text on
 multiple lines without
 using any special characters.""")
 
+for i in range(2, 8):
+    print("The value of i is currently", i)
+
+power = 1
+for expo in range(16):
+    print("2 to the power of", expo, "is", power)
+    power *= 2
+
+
+import time
+
+# Write a for loop that counts to five.
+for i in range(5):
+    # Print the iteration number and "Mississippi"
+    print(i + 1, "Mississippi")
+    time.sleep(1)  # Pause for 1 second
+
+# Print the final message
+print("Ready or not, here I come!")
+
+import time
+
+# Write a for loop that counts to five.
+
+
+

@@ -259,3 +259,18 @@ while True:
         print("Well done, muggle! You are free now.")
         break  # Exit the loop
 ```
+
+## For Loop
+
+```py
+import time
+# Write a for loop that counts to five.
+for i in range(5):
+    # Print the iteration number and "Mississippi"
+    print(i + 1, "Mississippi")
+    time.sleep(1)  # Pause for 1 second
+
+# Print the final message
+print("Ready or not, here I come!")
+```
+The purpose of time.sleep(1) in the given code is to create a pause of 1 second between each iteration of the loop. 
