@@ -209,4 +209,53 @@ if year >= 1582:
 
 else: 
     print("Not within the Gregorian calendar period")
-    ```
+```
+
+## While Loop
+
+```py
+# A program that reads a sequence of numbers
+# and counts how many numbers are even and how many are odd.
+# The program terminates when zero is entered.
+
+odd_numbers = 0
+even_numbers = 0
+
+# Read the first number.
+number = int(input("Enter a number or type 0 to stop: "))
+
+# 0 terminates execution.
+while number != 0:
+    # Check if the number is odd.
+    if number % 2 == 1:
+        # Increase the odd_numbers counter.
+        odd_numbers += 1
+    else:
+        # Increase the even_numbers counter.
+        even_numbers += 1
+    # Read the next number.
+    number = int(input("Enter a number or type 0 to stop: "))
+
+# Print results.
+print("Odd numbers count:", odd_numbers)
+print("Even numbers count:", even_numbers)
+```
+
+*A junior magician has picked a secret number. He has hidden it in a variable named secret_number. He wants everyone who run his program to play the Guess the secret number game, and guess what number he has picked for them. Those who don't guess the number will be stuck in an endless loop forever! Unfortunately, he does not know how to complete the code.
+Your task is to help the magician complete the code in the editor in such a way so that the code:
+will ask the user to enter an integer number;
+will use a while loop;
+will check whether the number entered by the user is the same as the number picked by the magician. If the number chosen by the user is different than the magician's secret number, the user should see the message "Ha ha! You're stuck in my loop!" and be prompted to enter a number again. If the number entered by the user matches the number picked by the magician, the number should be printed to the screen, and the magician should say the following words: "Well done, muggle! You are free now."*
+
+```py
+secret_number = 777
+
+number = int(input("Enter the number: "))
+while True:
+    if number != secret_number:
+        print("Ha ha! You're stuck in my loop!")
+        number = int(input("Try again: "))  # Prompt the user to guess again
+    else:
+        print("Well done, muggle! You are free now.")
+        break  # Exit the loop
+```

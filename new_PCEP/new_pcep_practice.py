@@ -136,3 +136,15 @@ if tax < 0:
 tax = round(tax, 00)
 print("The tax is:", tax, "thalers")
 '''
+counter = 5
+while counter != 0:
+    print("Inside the loop.", counter)
+    counter -= 1
+print("Outside the loop.", counter)
+
+
+print("""This is a multi-line string.
+You can write text on
+multiple lines without
+using any special characters.""")
+
