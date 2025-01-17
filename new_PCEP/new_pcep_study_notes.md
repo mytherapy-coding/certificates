@@ -306,13 +306,27 @@ user_word = input("Enter a word: ")
 user_word = user_word.upper()  # Convert the input to uppercase
 print(user_word)
 
-index = 0
-while index < len(user_word):
-    letter = user_word[index]
+for letter in user_word:
     # Check if the letter is a vowel (A, E, I, O, U)
     if letter == "A" or letter == "E" or letter == "I" or letter == "O" or letter == "U":
-        index += 1  # Move to the next letter
         continue  # Skip vowels
     print(letter)
-    index += 1  # Move to the next letter
 ```
+```py
+word_without_vowels = ""
+
+# Prompt the user to enter a word
+# and assign it to the user_word variable.
+
+user_word = input("Enter a word: ")
+user_word = user_word.upper()
+for letter in user_word:
+    if letter == "A" or letter == "E" or letter == "I" or letter == "O" or letter == "U":
+        continue
+    word_without_vowels += letter
+    # Complete the body of the loop.
+print(word_without_vowels)
+
+# Print the word assigned to word_without_vowels.
+```
+
