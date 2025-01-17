@@ -187,4 +187,13 @@ for i in range(1, 6):
     print("Inside the loop.", i)
 print("Outside the loop.")
 
+blocks = int(input("Enter the number of blocks: "))
 
+count = 0
+
+for b in range(blocks):
+      count += b
+
+      print(count)
+        
+print("The height of the pyramid:", height)

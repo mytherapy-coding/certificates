@@ -357,4 +357,23 @@ else:
     print("else:", i)
 ```
 
+```py
+# Input: total number of blocks
+blocks = int(input("Enter the number of blocks: "))
 
+height = 0
+used_blocks = 0
+
+# Keep adding layers while there are enough blocks
+while True:
+    height += 1
+    used_blocks += height  # Add blocks for the current layer
+    
+    # Check if the next layer exceeds the number of available blocks
+    if used_blocks > blocks:
+        height -= 1  # Undo the last layer addition as it wasn't completed
+        break
+
+# Output the height of the pyramid
+print("Height of the pyramid:", height)
+```
