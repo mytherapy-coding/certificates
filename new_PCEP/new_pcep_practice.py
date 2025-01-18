@@ -234,4 +234,25 @@ for digit in "0165031806510":
     print(digit, end="")
 
 print()
+print()
+n = 896
+digits = []
 
+while n > 0:
+    digits.append(n % 10)
+    n = n // 10
+
+# Разворачиваем список для прямого порядка
+for digit in reversed(digits):
+    print("Цифра:", digit)
+
+print()
+
+def print_digits_direct(n):
+    if n == 0:
+        return
+    print_digits_direct(n // 10)
+    print("Цифра:", n % 10)
+
+n = 896
+print_digits_direct(n)

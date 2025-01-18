@@ -439,4 +439,13 @@ while counter > 2:
     print(counter)
     counter -= 1
 ```
+## Bitwise operators
+_& (ampersand) - bitwise conjunction;
+| (bar) - bitwise disjunction;
+~ (tilde) - bitwise negation;
+^ (caret) - bitwise exclusive or (xor).
 
+- 2 — binary
+- 8 — octal
+- 10 — decimal  
+- 16 — hexadecimal
