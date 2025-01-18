@@ -159,6 +159,7 @@ for expo in range(16):
 
 import time
 
+'''
 # Write a for loop that counts to five.
 for i in range(5):
     # Print the iteration number and "Mississippi"
@@ -180,6 +181,8 @@ print("Outside the loop.")
 
 # continue - example
 
+'''
+'''
 print("\nThe continue instruction:")
 for i in range(1, 6):
     if i == 3:
@@ -197,3 +200,38 @@ for b in range(blocks):
       print(count)
         
 print("The height of the pyramid:", height)
+
+
+'''
+
+for i in range(1, 10):
+    if i % 2 == 0:
+        print(i)
+
+text = "OpenEDG Python Institute"
+for letter in text:
+    if letter == "P":
+        break
+    print(letter, end="")
+print()
+text = "pyxpyxpyx"
+for letter in text:
+    if letter == "x":
+        continue
+    print(letter, end = "")
+
+print()
+
+for ch in "john.smith@pythoninstitute.org":
+    if ch == "@":
+        break
+    print(ch, end="")
+print()
+for digit in "0165031806510":
+    if digit == "0":
+        print("x", end="")
+        continue
+    print(digit, end="")
+
+print()
+
