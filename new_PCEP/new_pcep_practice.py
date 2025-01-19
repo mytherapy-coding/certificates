@@ -256,3 +256,40 @@ def print_digits_direct(n):
 
 n = 896
 print_digits_direct(n)
+
+print("____")
+
+print()
+def digits(n: int, base: int = 16):
+    # List of possible digits for bases > 10
+    digits = "0123456789ABCDEF"
+    result = []
+    
+    while n > 0:
+        digit = n % base
+        result.append(digits[digit])  # Append the corresponding character
+        n //= base
+        
+    result.reverse()  # Reverse the list to get the correct order
+    print(''.join(result))  # Print the result as a string
+
+digits(986)  # This will print the digits of 986 in hexadecimal
+
+print()
+
+def digits(n: int, base: int = 16):
+    while n > 0:
+        digit = n % base
+        print(digit)
+        n //= base
+        
+digits(986)
+
+
+def digits(n: int, base: int = 10):
+    while n > 0:
+        digit = n % base
+        print(digit)
+        n //= base
+        
+digits(986)
