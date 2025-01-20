@@ -440,16 +440,16 @@ while counter > 2:
     counter -= 1
 ```
 ## Bitwise operators
-- & (ampersand) - bitwise conjunction;
-- | (bar) - bitwise disjunction;
-- ~ (tilde) - bitwise negation;
-- ^ (caret) - bitwise exclusive or (xor).
+- & (ampersand) - bitwise conjunction; AND
+- | (bar) - bitwise disjunction; OR
+- ~ (tilde) - bitwise negation; - NOT
+- ^ (caret) - bitwise exclusive or (xor). - Bitwise XOR (Exclusive OR)
 
 ## Number systems or bases
 - 2 — binary
 - 8 — octal
 - 10 — decimal  
-- 16 — hexadecimal
+- 16 — hexadecimal 
 
 ```py
 def digits(n: int, base: int = 16):
@@ -460,3 +460,50 @@ def digits(n: int, base: int = 16):
         
 digits(986)
 ```
+## Binary Conversion 
+
+```py
+def to_binary(num):
+    if num == 0:
+        return '0'  # Handle the special case for 0
+    binary = ''
+    while num > 0:
+        binary += str(num % 2)
+        num //= 2
+    return binary[::-1]
+
+```
+## Base <= 10
+
+```py
+def to_base(num, base):
+    if num == 0:
+        return '0'
+    result = ''
+    while num > 0:
+        result += str(num % base)  # Directly convert remainder to a string
+        num //= base
+    return result[::-1]
+```
+
+## Base >10
+
+```py
+def to_base(num, base):
+    if num == 0:
+        return '0'
+    result = ''
+    while num > 0:
+        remainder = num % base
+        if remainder < 10:
+            result += str(remainder)  # For 0-9, convert directly to string
+        else:
+            result += chr(remainder - 10 + ord('A'))  # Map 10+ to 'A', 'B', etc.
+        num //= base
+    return result[::-1]
+```
+
+
+![alt text](image.png)
+
+![alt text](<PNG image.png>)

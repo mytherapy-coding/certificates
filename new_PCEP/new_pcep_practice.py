@@ -293,3 +293,26 @@ def digits(n: int, base: int = 10):
         n //= base
         
 digits(986)
+
+print()
+
+for i in range(1, 11):
+    if i % 2 == 1:
+      print(i)
+print()
+x = 1
+while x < 11:
+    if x % 2 == 0:
+        print(x)
+    x += 1
+
+print()
+
+for ch in "john.smith@pythoninstitute.org":
+    if ch == "@":
+        break
+    print(ch, end = "")
+
+print()
+
+
