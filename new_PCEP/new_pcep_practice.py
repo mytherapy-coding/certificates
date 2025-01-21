@@ -335,4 +335,14 @@ print("New list's length:", len(numbers))  # Printing new list length.
 print("\nNew list content:", numbers)  # Printing current list content.
 
 ###
+print(numbers[2])
+numbers[2] = 1
+print(numbers[2])
 
+print()
+variable_1 = 1
+variable_2 = 2
+variable_2 = variable_1
+variable_1 = variable_2
+print(variable_1)
+print(variable_2)
