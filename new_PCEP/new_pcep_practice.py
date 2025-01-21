@@ -346,3 +346,42 @@ variable_2 = variable_1
 variable_1 = variable_2
 print(variable_1)
 print(variable_2)
+
+my_list = [10, 1, 8, 3, 5]
+length = len(my_list)
+
+print()
+
+for i in range(length // 2):
+    print(i)
+    my_list[i], my_list[length - i - 1] = my_list[length - i - 1], my_list[i]
+
+print(my_list)
+print(length)
+
+print()
+
+# step 1
+beatles = []
+print("Step 1:", beatles)
+
+# step 2
+for x in ("John Lennon", "Paul McCartney", "George Harrison"):
+    beatles.append(x)
+print("Step 2:", beatles)
+
+# step 3
+beatles.append("Stu Sutcliffe")
+print("Step 3 :", beatles)
+
+# step 4
+del beatles[1]
+print("Step 4:", beatles)
+
+# step 5
+beatles.insert(2, "Paul McCartney")
+print("Step 5:", beatles)
+
+
+beatles[0] = "----"
+print(beatles)
