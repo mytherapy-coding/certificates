@@ -452,7 +452,7 @@ while counter > 2:
 - 16 — hexadecimal 
 
 ```py
-def digits(n: int, base: int = 16):
+def digits(n: int, base: int = 10):
     while n > 0:
         digit = n % base
         print(digit)
@@ -507,3 +507,7 @@ def to_base(num, base):
 ![alt text](image.png)
 
 ![alt text](<PNG image.png>)
+
+
+## Why do we need lists?
+
