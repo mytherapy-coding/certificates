@@ -385,3 +385,39 @@ print("Step 5:", beatles)
 
 beatles[0] = "----"
 print(beatles)
+
+print()
+lst = [1, 2, 3, 4, 5]
+lst.insert(1, 6)
+del lst[0]
+lst.append(1)
+
+print(lst)
+print()
+lst = [1, 2, 3, 4, 5]
+lst_2 = []
+add = 0
+
+for number in lst:
+    add += number
+    lst_2.append(add)
+
+print(lst_2)
+
+print()
+
+my_list = [8, 10, 6, 2, 4]  # list to sort
+# It's a little fake, we need it to enter the while loop.
+
+while True:
+      swapped = False
+      for i in range(len(my_list) - 1):
+         if my_list[i] > my_list[i + 1]:
+            my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
+            swapped = True  # a swap occurred!
+      if not swapped :
+            break  # no swaps so far
+      
+      
+print(my_list)
+

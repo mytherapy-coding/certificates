@@ -547,13 +547,23 @@ for i in range(length // 2):
 print(my_list)
 ```
 
-*Write a program that reflects these changes and lets you practice with the concept of lists. Your task is to:
-step 1: create an empty list named beatles;
-step 2: use the append() method to add the following members of the band to the list: John Lennon, Paul McCartney, and George Harrison;
-step 3: use the for loop and the append() method to prompt the user to add the following members of the band to the list: Stu Sutcliffe, and Pete Best;
-step 4: use the del instruction to remove Stu Sutcliffe and Pete Best from the list;
-step 5: use the insert() method to add Ringo Starr to the beginning of the list.*
+## The bubble sort
+
+The essence of this algorithm is simple: we compare the adjacent elements, and by swapping some of them, we achieve our goal.
 
 ```py
+my_list = [8, 10, 6, 2, 4]  # list to sort
+# It's a little fake, we need it to enter the while loop.
 
-
+while True:
+      swapped = False
+      for i in range(len(my_list) - 1):
+         if my_list[i] > my_list[i + 1]:
+            my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
+            swapped = True  # a swap occurred!
+      if not swapped :
+            break  # no swaps so far
+      
+      
+print(my_list)
+```
