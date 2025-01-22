@@ -567,3 +567,90 @@ while True:
       
 print(my_list)
 ```
+```py
+list_1 = [1]
+list_2 = list_1[:]
+list_1[0] = 2
+print(list_2)
+```
+ts output is [1].
+
+This inconspicuous part of the code described as [:] is able to produce a brand new list.
+
+```py
+Copying some part of the list.
+my_list = [10, 8, 6, 4, 2]
+new_list = my_list[1:3]
+print(new_list)
+```
+A slice of this form makes a new (target) list, taking elements from the source list - the elements of the indices from start to **end - 1.**
+
+## Copying some part of the list.
+```py
+my_list = [10, 8, 6, 4, 2]
+new_list = my_list[1:3]
+print(new_list)
+```
+[8, 6]
+
+```py
+my_list = [10, 8, 6, 4, 2]
+print(my_list[:])
+```
+[10, 8, 6, 4, 2]
+
+## Slices - negative indices
+
+```py
+my_list = [10, 8, 6, 4, 2]
+new_list = my_list[1:-1]
+print(new_list)
+```
+
+The snippet's output is:
+
+[8, 6, 4]
+
+```py
+my_list = [10, 8, 6, 4, 2]
+new_list = my_list[:3]
+print(new_list)
+```
+
+This is why its output is: [10, 8, 6].
+
+Similarly, if you omit the end in your slice, it is assumed that you want the slice to end at the element with the index len(my_list).
+
+The previously described del instruction is able to delete more than just a list's element at once - it can delete slices too:
+
+
+```py
+my_list = [10, 8, 6, 4, 2]
+del my_list[1:3]
+print(my_list)
+```
+
+
+## The in and not in operators
+
+Python offers two very powerful operators, able to look through the list in order to check whether a specific value is stored inside the list or not.
+
+These operators are:
+
+```py
+elem in my_list
+elem not in my_list
+```
+
+```py
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+to_find = 5
+
+for i in range(len(my_list)):
+    if my_list[i] == to_find:  # Check if the current element matches
+        print("Element found at index", i)
+        break
+else:
+    # This block executes if the loop completes without a `break`
+    print("Absent")
+```
