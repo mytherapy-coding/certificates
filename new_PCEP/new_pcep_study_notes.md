@@ -567,8 +567,46 @@ print(result)  # Output: {1, 2, 4, 5}
 * Set B: {3, 4, 5}
 * A ⊕ B (Symmetric Difference): {1, 2, 4, 5}
 
+To implement bitwise operations using set operations, we first convert integers 
+𝑥
+x and 
+𝑦
+y into sets of their binary 1 positions. Using these sets, we perform the desired set operations to mimic bitwise behavior. Here's how the implementation looks:
 
+```py
+def int_to_bitset(n: int) -> set:
+    """
+    Convert an integer to a set of indices where bits are 1.
+    """
+    return {i for i in range(n.bit_length()) if (n >> i) & 1}
 
+def bitset_to_int(bitset: set) -> int:
+    """
+    Convert a set of indices back to an integer.
+    """
+    return sum(1 << i for i in bitset)
+
+def and_operation(x: int, y: int) -> int:
+    set_x = int_to_bitset(x)  # Convert x to set of '1' bit indices
+    set_y = int_to_bitset(y)  # Convert y to set of '1' bit indices
+    set_z = set_x & set_y     # Perform set intersection (AND operation)
+    z = bitset_to_int(set_z)  # Convert the resulting set back to integer
+    return z
+```
+```py 
+x = 10  # Binary: 1010
+y = 12  # Binary: 1100
+
+result = and_operation(x, y)  # Perform bitwise AND
+print(result)  # Output: 8 (Binary: 1000)
+```
+
+Extending to Other Bitwise Operations
+You can generalize this approach for OR, XOR, and NOT using other set operations:
+
+- OR (|): Use set union.
+- XOR (^): Use symmetric difference.
+- NOT (~): Calculate all possible bit positions (based on bit length) and subtract the existing positions.
 
 ## Why do we need lists?
 
