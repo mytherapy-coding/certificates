@@ -467,3 +467,53 @@ if found:
 else:
     print("absent")
 
+my_list = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
+unique = []
+
+for i in range(len(my_list)):
+    if my_list[i] not in unique:
+        unique.append(my_list[i])
+
+print("The list with unique elements only:", unique)
+print(my_list)
+
+print()
+vehicles_one = ['car', 'bicycle', 'motor']
+print(vehicles_one) # outputs: ['car', 'bicycle', 'motor']
+vehicles_two = vehicles_one
+del vehicles_one[0] # deletes 'car'
+print(vehicles_one)
+print(vehicles_two) # outputs: ['bicycle', 'motor']
+
+del vehicles_two[0]
+print(vehicles_one)
+print(vehicles_two) # outputs: ['bicycle', 'motor']
+print(vehicles_one == vehicles_two)
+
+print()
+
+my_list = [1, 2, 3, 4, 5]
+slice_one = my_list[2: ]
+slice_two = my_list[ :2]
+slice_three = my_list[-2: ]
+
+print(slice_one)  # outputs: [3, 4, 5]
+print(slice_two)  # outputs: [1, 2]
+print(slice_three)  # outputs: [4, 5]
+print()
+row = []
+
+for i in range(8):
+    row.append("0")
+
+print(row)
+
+print()
+
+board = []
+
+for i in range(8):
+    row = ["EMPTY" for i in range(8)]
+    board.append(row)
+print(board)
+

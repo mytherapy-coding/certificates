@@ -508,6 +508,67 @@ def to_base(num, base):
 
 ![alt text](<PNG image.png>)
 
+## Explanation of Set Operations: Intersection, Union, Difference, and Symmetric Difference
+
+### 1. Intersection
+
+The intersection of two sets includes elements that are common to both sets.
+
+```py
+set_a = {1, 2, 3}
+set_b = {3, 4, 5}
+result = set_a & set_b  # Intersection
+print(result)  # Output: {3}
+```
+* Set A: {1, 2, 3}
+* Set B: {3, 4, 5}
+* A ∩ B (Intersection): {3}
+
+
+### 2. Union (|)
+
+The union of two sets includes all elements from both sets, with no duplicates.
+
+```py
+# Example
+set_a = {1, 2, 3}
+set_b = {3, 4, 5}
+result = set_a | set_b  # Union
+print(result)  # Output: {1, 2, 3, 4, 5}
+```
+* Set A: {1, 2, 3}
+* Set B: {3, 4, 5}
+* A ∪ B (Union): {1, 2, 3, 4, 5}
+
+### 3. Difference (-)
+The difference of two sets includes elements that are in the first set but not in the second.
+
+```py
+# Example
+set_a = {1, 2, 3}
+set_b = {3, 4, 5}
+result = set_a - set_b  # Difference
+print(result)  # Output: {1, 2}
+```
+* Set A: {1, 2, 3}
+* Set B: {3, 4, 5}
+* A - B (Difference): {1, 2}
+
+### 4. Symmetric Difference (^)
+The symmetric difference includes elements that are in either set but not in both (unique elements from each set).
+
+```py
+set_a = {1, 2, 3}
+set_b = {3, 4, 5}
+result = set_a ^ set_b  # Symmetric Difference
+print(result)  # Output: {1, 2, 4, 5}
+```
+* Set A: {1, 2, 3}
+* Set B: {3, 4, 5}
+* A ⊕ B (Symmetric Difference): {1, 2, 4, 5}
+
+
+
 
 ## Why do we need lists?
 
@@ -654,3 +715,16 @@ else:
     # This block executes if the loop completes without a `break`
     print("Absent")
 ```
+
+## Lists in lists
+
+```py
+row = []
+
+for i in range(8):
+    row.append(WHITE_PAWN)
+ ```
+
+The board variable is now a two-dimensional array. It's also called, by analogy to algebraic terms, a matrix.
+
+
