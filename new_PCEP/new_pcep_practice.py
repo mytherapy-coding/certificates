@@ -603,9 +603,16 @@ print(c + d + e)
 
 print()
 
-a = 11 # {0, 1} - indexes of bits
-b = 10 # {1}
+a = 3 # 11 - binary, {0, 1} -  et (indexes of bits)
+b = 2 # 10 - binary,  {1} - set 
 c = a & b # {0, 1} & {1} -> intersect {1} ->  10 -> 2
 d = a | b # {0, 1} | {1} -> union {0, 1} -> 11 -> 3
 e = a ^ b # {0, 1} ^ {1} -> symetric difference {0} ->  1 -> 1
 print(c + d + e)
+
+print()
+n = 2**7
+print(n)
+n = 1 << 7
+print(n)
+
