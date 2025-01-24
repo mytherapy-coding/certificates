@@ -495,7 +495,7 @@ print()
 my_list = [1, 2, 3, 4, 5]
 slice_one = my_list[2: ]
 slice_two = my_list[ :2]
-slice_three = my_list[-2: ]
+slice_three = my_list[-2:]
 
 print(slice_one)  # outputs: [3, 4, 5]
 print(slice_two)  # outputs: [1, 2]
@@ -517,3 +517,41 @@ for i in range(8):
     board.append(row)
 print(board)
 
+i = 2
+
+while i >= 0:
+    print("*")
+    i -= 2
+
+for i in range(-1, 1):
+    print("#")
+print()
+
+
+
+    
+res = [1, 2, 3, 4]
+
+print(res[-3:-2])
+
+for i in range(1):
+    print("/")
+else:
+    print("/")
+
+i = 0
+while i <= 5:
+    i += 1
+    if i % 2 == 0:
+        break
+    print("*")
+    
+print()
+t = [[3 - i for i in range(3)] for j in range(3)]
+print(t)
+s = 0
+
+for i in range(3):
+    s += t[i][i]
+print(s)
+     
