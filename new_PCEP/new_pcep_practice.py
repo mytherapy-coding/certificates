@@ -554,4 +554,52 @@ s = 0
 for i in range(3):
     s += t[i][i]
 print(s)
-     
+
+print()
+
+a = 1
+b = 0
+c = a & b # and 
+d = a | b # or
+e = a ^ b #!=
+print(c + d + e)
+
+print()
+
+a = 1
+b = 1
+c = a & b 
+d = a | b
+e = a ^ b
+print(c + d + e)
+
+print()
+
+a = 0
+b = 0
+c = a & b 
+d = a | b
+e = a ^ b
+print(c + d + e)
+
+print()
+
+a = 3 # 11
+b = 2 # 10
+c = a & b # 11 
+          # 10
+          # 10 -> 2
+d = a | b # 11 
+          # 10
+          # 11 -> 3
+
+e = a ^ b # 11 
+          # 10
+          # 01 -> 1
+
+
+print(c + d + e)
+# output 6
+
+print()
+
