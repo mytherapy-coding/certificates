@@ -767,3 +767,27 @@ The board variable is now a two-dimensional array. It's also called, by analogy 
 
 ## How functions work
 
+```py
+def message():
+    print("Enter a value: ")
+
+message()
+a = int(input())
+message()
+b = int(input())
+message()
+c = int(input())
+```
+
+It's important to remember that positional arguments mustn't follow keyword arguments. That's why if you try to run the following snippet:
+
+```py
+def subtra(a, b):
+    print(a - b)
+
+subtra(5, b=2)    # outputs: 3
+subtra(a=5, 2)    # Syntax Error
+```
+
+
+

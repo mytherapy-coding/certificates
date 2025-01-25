@@ -616,13 +616,28 @@ print(n)
 n = 1 << 7
 print(n)
 print()
-def message():
-    print("Enter a value: ")
 
-message()
-a = int(input())
-message()
-b = int(input())
-message()
-c = int(input())
 
+def happy_new_year(wishes = True):
+    print("Three...")
+    print("Two...")
+    print("One...")
+    if not wishes:
+        return
+    
+    print("Happy New Year!")
+
+happy_new_year()
+
+print()
+
+def boring_function():
+    print("'Boredom Mode' ON.")
+    return 123
+
+print("This lesson is interesting!")
+boring_function()
+print()
+x = boring_function()
+print("This lesson is boring...")
+print(x)
