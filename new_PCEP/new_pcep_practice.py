@@ -698,3 +698,84 @@ for i in range(len(test_years)):
     else:
         print(f"Failed (Expected: {test_results[i]}, Got: {result})")
 
+print()
+
+def is_year_leap(year):
+    # Determines if a year is a leap year
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        return True
+    else:
+        return False
+
+def days_in_month(year, month):
+    # Validate inputs
+    if year < 1 or month < 1 or month > 12:
+        return None  # Invalid year or month
+
+    # Days in each month for a non-leap year
+    month_lengths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+    # Adjust February for leap years
+    if month == 2 and is_year_leap(year):
+        return 29
+    else:
+        return month_lengths[month - 1]
+
+def day_of_year(year, month, day):
+    # Validate inputs
+    if year < 1 or month < 1 or month > 12:
+        return None  # Invalid year or month
+
+    days_in_current_month = days_in_month(year, month)
+    if day < 1 or (days_in_current_month is None or day > days_in_current_month):
+        return None  # Invalid day
+
+    # Calculate the day of the year
+    day_of_year = 0
+    for m in range(1, month):  # Sum days for all previous months
+        day_of_year += days_in_month(year, m)
+    day_of_year += day  # Add the current month's days
+    return day_of_year
+
+# Test the function
+test_cases = [
+    (2023, 1, 1, 1),     # January 1, 2023 -> Day 1
+    (2023, 12, 31, 365), # December 31, 2023 -> Day 365
+    (2024, 2, 29, 60),   # February 29, 2024 (leap year) -> Day 60
+    (1900, 2, 28, 59),   # February 28, 1900 (not leap year) -> Day 59
+    (2000, 3, 1, 61),    # March 1, 2000 (leap year) -> Day 61
+    (2023, 13, 1, None), # Invalid month
+    (2023, 2, 29, None), # Invalid day
+    (2023, 0, 10, None), # Invalid month
+]
+
+for year, month, day, expected in test_cases:
+    print(f"{year}-{month:02d}-{day:02d} -> ", end="")
+    result = day_of_year(year, month, day)
+    if result == expected:
+        print("OK")
+    else:
+        print(f"Failed (Expected: {expected}, Got: {result})")
+
+print()
+
+def is_prime(num):
+    # A prime number is greater than 1
+    if num <= 1:
+        return False
+    
+    # Check divisors from 2 to sqrt(num)
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    
+    return True
+
+# Test the function for numbers 2 through 20
+for i in range(1, 20):
+    if is_prime(i + 1):
+        print(i + 1, end=" ")
+print()
+
+print()
+

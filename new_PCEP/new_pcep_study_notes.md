@@ -879,3 +879,72 @@ for i in range(len(test_years)):
     else:
         print(f"Failed (Expected: {test_results[i]}, Got: {result})")
 ```
+
+**Scenario**
+
+A natural number is prime if it is greater than 1 and has no divisors other than 1 and itself.
+Complicated? Not at all. For example, 8 isn't a prime number, as you can divide it by 2 and 4 (we can't use divisors equal to 1 and 8, as the definition prohibits this).
+On the other hand, 7 is a prime number, as we can't find any legal divisors for it.
+
+
+Your task is to write a function checking whether a number is prime or not.
+
+The function:
+
+- is called is_prime;
+- takes one argument (the value to check)
+- returns True if the argument is a prime number, and False otherwise.
+
+Hint: try to divide the argument by all subsequent values (starting from 2) and check the remainder - if it's zero, your number cannot be a prime; think carefully about when you should stop the process.
+
+If you need to know the square root of any value, you can utilize the ** operator. Remember: the square root of x is the same as x0.5
+
+
+Run your code and check whether your output is the same as ours.
+
+Expected output
+2 3 5 7 11 13 17 19
+
+```py
+def is_prime(num):
+    # A prime number is greater than 1
+    if num <= 1:
+        return False
+    
+    # Check divisors from 2 to sqrt(num)
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    
+    return True
+
+# Test the function for numbers 2 through 20
+for i in range(1, 20):
+    if is_prime(i + 1):
+        print(i + 1, end=" ")
+print()
+```
+**Scenario**
+
+A car's fuel consumption may be expressed in many different ways. For example, in Europe, it is shown as the amount of fuel consumed per 100 kilometers.
+
+In the USA, it is shown as the number of miles traveled by a car using one gallon of fuel.
+
+Your task is to write a pair of functions converting l/100km into mpg, and vice versa.
+
+The functions:
+
+- are named liters_100km_to_miles_gallon and 
+- miles_gallon_to_liters_100km respectively;
+- take one argument (the value corresponding to their names)
+Complete the code in the editor.
+
+Run your code and check whether your output is the same as ours.
+Here is some information to help you:
+
+1 American mile = 1609.344 metres;
+
+1 American gallon = 3.785411784 litres.
+
+
+```py
