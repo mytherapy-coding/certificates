@@ -615,4 +615,14 @@ n = 2**7
 print(n)
 n = 1 << 7
 print(n)
+print()
+def message():
+    print("Enter a value: ")
+
+message()
+a = int(input())
+message()
+b = int(input())
+message()
+c = int(input())
 

@@ -765,4 +765,5 @@ for i in range(8):
 
 The board variable is now a two-dimensional array. It's also called, by analogy to algebraic terms, a matrix.
 
+## How functions work
 
