@@ -865,3 +865,30 @@ print(phone_numbers)
 print(empty_dictionary)
 print()
 
+print()
+
+pol_eng_dictionary = {
+    "zamek": "castle",
+    "woda": "water",
+    "gleba": "soil"
+    }
+
+pol_eng_dictionary["zamek"] = "lock"
+item = pol_eng_dictionary["zamek"]    
+print(item)  # outputs: lock
+
+print()
+
+pol_eng_dictionary = {
+    "kwiat": "flower",
+    "woda": "water",
+    "gleba": "soil"
+    }
+
+item_1 = pol_eng_dictionary["gleba"]    # ex. 1
+print(item_1)    # outputs: soil
+
+item_2 = pol_eng_dictionary.get("woda")
+print(item_2)    # outputs: water
+
+print()

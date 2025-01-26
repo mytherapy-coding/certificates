@@ -1388,3 +1388,49 @@ dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
 dictionary.update({"duck": "canard"})
 print(dictionary)
 ```
+## Removing a key
+```py
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+del dictionary['dog']
+print(dictionary)
+```
+
+```py
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+dictionary.popitem()
+print(dictionary)    # outputs: {'cat': 'chat', 'dog': 'chien'}
+```
+
+ If you want to access a dictionary item, you can do so by making a reference to its key inside a pair of square brackets (ex. 1) or by using the get() method (ex. 2):
+
+
+## get()
+ ```py
+ pol_eng_dictionary = {
+    "kwiat": "flower",
+    "woda": "water",
+    "gleba": "soil"
+    }
+
+item_1 = pol_eng_dictionary["gleba"]    # ex. 1
+print(item_1)    # outputs: soil
+
+item_2 = pol_eng_dictionary.get("woda")
+print(item_2)    # outputs: water
+
+```
+You can also insert an item to a dictionary by using the update() method, and remove the last element by using the popitem() method, e.g.:
+
+## popitem()
+```py
+pol_eng_dictionary = {"kwiat": "flower"}
+
+pol_eng_dictionary.update({"gleba": "soil"})
+print(pol_eng_dictionary)    # outputs: {'kwiat': 'flower', 'gleba': 'soil'}
+
+pol_eng_dictionary.popitem()
+print(pol_eng_dictionary)    # outputs: {'kwiat': 'flower'}
+
+```
