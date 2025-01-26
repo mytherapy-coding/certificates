@@ -1342,3 +1342,49 @@ print(empty_dictionary)
 
 Dictionaries are not lists - **they don't preserve the order of their data**, as the order is completely meaningless (unlike in real, paper dictionaries). The order in which a dictionary stores its data is completely out of your control, and your expectations.
 
+(*) In Python 3.6x dictionaries have become ordered collections by default. Your results may vary depending on what Python version you're using.
+
+## How to use a dictionary?
+
+Keys are case-sensitive: 'Suzy' is something different from 'suzy'.
+
+```py
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+words = ['cat', 'lion', 'horse']
+
+for word in words:
+    if word in dictionary:
+        print(word, "->", dictionary[word])
+    else:
+        print(word, "is not in dictionary")
+
+```
+
+```py
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+for english, french in dictionary.items():
+    print(english, "->", french)
+```
+
+```py
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+for french in dictionary.values():
+    print(french)
+```
+## Adding a new key
+```py
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+dictionary['swan'] = 'cygne'
+print(dictionary)
+```
+OR
+
+```py
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+dictionary.update({"duck": "canard"})
+print(dictionary)
+```
