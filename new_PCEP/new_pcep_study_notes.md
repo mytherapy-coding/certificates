@@ -1123,3 +1123,42 @@ for n in range(1, 10):  # testing
 
 ```
 
+## Recursion
+
+recursion is a technique where a function invokes itself.
+
+These two cases seem to be the best to illustrate the phenomenon - factorials and Fibonacci numbers. Especially the latter.
+
+The Fibonacci numbers definition is a clear example of recursion. 
+
+Fibi = Fibi-1 + Fibi-2
+
+The factorial has a second, recursive side too. Look:
+
+n! = 1 × 2 × 3 × ... × n-1 × n
+
+
+It's obvious that:
+
+1 × 2 × 3 × ... × n-1 = (n-1)!
+
+
+So, finally, the result is:
+
+n! = (n-1)! × n
+
+This is in fact a ready recipe for our new solution.
+
+
+```py
+def fib(n):
+    if n < 1:
+        return None
+    if n < 3:
+        return 1
+    return fib(n - 1) + fib(n - 2)
+
+```
+ **If you forget to consider the conditions which can stop the chain of recursive invocations, the program may enter an infinite loop.**
+
+
