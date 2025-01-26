@@ -1161,4 +1161,81 @@ def fib(n):
 ```
  **If you forget to consider the conditions which can stop the chain of recursive invocations, the program may enter an infinite loop.**
 
+```py
+def fib(n):
+    if n < 1:
+         return None
+    if n < 3:
+        return 1
+
+    elem_1 = elem_2 = 1
+    the_sum = 0
+    for i in range(3, n + 1):
+        the_sum = elem_1 + elem_2
+        elem_1, elem_2 = elem_2, the_sum
+    return the_sum
+
+
+for n in range(1, 10):
+    print(n, "->", fib(n))
+```
+
+Recursive calls consume a lot of memory, and therefore may sometimes be inefficient.
+
+```py
+# Recursive implementation of the factorial function.
+
+def factorial(n):
+    if n == 1:    # The base case (termination condition.)
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+
+print(factorial(4)) # 4 * 3 * 2 * 1 = 24
+
+```
+
+Ig the factorial function has no termination condition (no base case), Python will raise an exception (RecursionError: maximum recursion depth exceeded)
+```py
+def fun(a):
+    if a > 30:
+        return 3
+    else:
+        return a + fun(a + 3)
+
+
+print(fun(25))
+```
+Outcpme 56
+
+## What is a tuple?
+
+You've encountered one Python sequence so far - the list. The list is a classic example of a Python sequence, although there are some other sequences worth mentioning, and we're going to present them to you now.
+
+**Immutable data cannot be modified**
+
+The data type we want to tell you about now is a tuple. A tuple is an immutable sequence type. It can behave like a list, but it mustn't be modified in situ.
+
+The first and the clearest distinction between lists and tuples is the syntax used to create them - tuples prefer to use parenthesis, whereas lists like to see brackets, although it's also possible to create a tuple just from a set of values separated by commas.
+```py
+tuple_1 = (1, 2, 4, 8)
+tuple_2 = 1., .5, .25, .125
+
+print(tuple_1)
+print(tuple_2)
+```
+output 
+
+```py
+(1, 2, 4, 8)
+(1.0, 0.5, 0.25, 0.125)
+```
+
+f you want to create a one-element tuple, you have to take into consideration the fact that, due to syntax reasons (a tuple has to be distinguishable from an ordinary, single value), you must end the value with a comma:
+```py
+one_element_tuple_1 = (1, )
+one_element_tuple_2 = 1.,
+```
+
 
