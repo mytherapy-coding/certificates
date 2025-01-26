@@ -820,3 +820,48 @@ for n in range(1, 10):  # testing
 
 print()
 
+my_tuple = (1, 10, 100, 1000)
+
+print(my_tuple[0])
+print(my_tuple[-1])
+print(my_tuple[1:])
+print(my_tuple[:-2])
+
+print()
+for elem in my_tuple:
+    print(elem)
+
+print()
+
+my_tuple = [1, 10, 100, 1000]
+
+print(my_tuple[0])
+print(my_tuple[-1])
+print(my_tuple[1:])
+print(my_tuple[:-2])
+
+print()
+for elem in my_tuple:
+    print(elem)
+print()
+my_tuple = (1, 10, 100)
+
+t1 = my_tuple + (1000, 10000)
+t2 = my_tuple * 3
+
+print(len(t2))
+print(t1)
+print(t2)
+print(10 in my_tuple)
+print(-10 not in my_tuple)
+
+print()
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+phone_numbers = {'boss': 5551234567, 'Suzy': 22657854310}
+empty_dictionary = {}
+
+print(dictionary)
+print(phone_numbers)
+print(empty_dictionary)
+print()
+

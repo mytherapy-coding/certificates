@@ -1238,4 +1238,107 @@ one_element_tuple_1 = (1, )
 one_element_tuple_2 = 1.,
 ```
 
+```py
+my_tuple = (1, 10, 100, 1000)
+
+print(my_tuple[0])
+print(my_tuple[-1])
+print(my_tuple[1:])
+print(my_tuple[:-2])
+
+for elem in my_tuple:
+    print(elem)
+```
+output
+
+```py
+1
+1000
+(10, 100, 1000)
+(1, 10)
+1
+10
+100
+1000
+```
+
+List 
+
+```py
+my_tuple = [1, 10, 100, 1000]
+
+print(my_tuple[0])
+print(my_tuple[-1])
+print(my_tuple[1:])
+print(my_tuple[:-2])
+
+print()
+for elem in my_tuple:
+    print(elem)
+
+```
+output
+
+```py
+1
+1000
+[10, 100, 1000]
+[1, 10]
+
+1
+10
+100
+1000
+```
+## How to use a tuple
+
+- the len() function accepts tuples, and returns the number of elements contained inside;
+- the + operator can join tuples together (we've shown you this already)
+- the * operator can multiply tuples, just like lists;
+- the in and not in operators work in the same way as in lists.
+
+```py
+my_tuple = (1, 10, 100)
+
+t1 = my_tuple + (1000, 10000)
+t2 = my_tuple * 3
+
+print(len(t2))
+print(t1)
+print(t2)
+print(10 in my_tuple)
+print(-10 not in my_tuple)
+
+```
+
+output 
+
+```py
+9
+(1, 10, 100, 1000, 10000)
+(1, 10, 100, 1, 10, 100, 1, 10, 100)
+True
+True
+```
+
+## What is a dictionary?
+The dictionary is another Python data structure. It's not a sequence type (but can be easily adapted to sequence processing) and it is mutable.
+
+- each key must be unique - it's not possible to have more than one key of the same value;
+- a key may be any immutable type of object: it can be a number (integer or float), or even a string, but not a list;
+- a dictionary is not a list - a list contains a set of numbered values, while a dictionary holds pairs of values;
+- the len() function works for dictionaries, too - it returns the numbers of key-value elements in the dictionary;
+- a dictionary is a one-way tool - if you have an English-French dictionary, you can look for French equivalents of English terms, but not vice versa.
+
+```py
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+phone_numbers = {'boss': 5551234567, 'Suzy': 22657854310}
+empty_dictionary = {}
+
+print(dictionary)
+print(phone_numbers)
+print(empty_dictionary)
+```
+
+Dictionaries are not lists - **they don't preserve the order of their data**, as the order is completely meaningless (unlike in real, paper dictionaries). The order in which a dictionary stores its data is completely out of your control, and your expectations.
 
