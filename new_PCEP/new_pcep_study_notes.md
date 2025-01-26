@@ -968,4 +968,158 @@ print(miles_gallon_to_liters_100km(60.3)) # Expected: ~3.9007393587617467
 print(miles_gallon_to_liters_100km(31.4)) # Expected: ~7.490910297239916
 print(miles_gallon_to_liters_100km(23.5)) # Expected: ~10.009131205673757
 ```
+Look at the difference in output in the following two examples:
+
+```py
+# Example 1
+def wishes():
+    print("My Wishes")
+    return "Happy Birthday"
+
+wishes()    # outputs: My Wishes
+
+
+# Example 2
+def wishes():
+    print("My Wishes")
+    return "Happy Birthday"
+
+print(wishes())
+
+# outputs: My Wishes
+#          Happy Birthday
+
+```
+## Functions and scopes
+
+A variable existing outside a function has a scope inside the functions' bodies.
+
+```py
+def my_function():
+    var = 2
+    print("Do I know that variable?", var)
+
+
+var = 1
+my_function()
+print(var)
+```
+Output 
+```py
+Do I know that variable? 2
+1
+```
+
+There's a special Python method which can extend a variable's scope in a way which includes the functions' bodies (even if you want not only to read the values, but also to modify them).
+
+Such an effect is caused by a keyword named global:
+
+```py 
+def my_function():
+    global var
+    var = 2
+    print("Do I know that variable?", var)
+
+
+var = 1
+my_function()
+print(var)
+```
+
+Output
+
+```py
+Do I know that variable? 2
+2
+```
+
+The conclusion is obvious - changing the parameter's value doesn't propagate outside the function (in any case, not when the variable is a scalar, like in the example).
+
+```py
+def my_function(n):
+    print("I got", n)
+    n += 1
+    print("I have", n)
+
+
+var = 1
+my_function(var)
+print(var)
+```
+
+Output
+```py
+I got 1
+I have 2
+1
+```
+it is different with lists 
+```py
+def my_function(my_list_1):
+    print("Print #1:", my_list_1)
+    print("Print #2:", my_list_2)
+    del my_list_1[0]  # Pay attention to this line.
+    print("Print #3:", my_list_1)
+    print("Print #4:", my_list_2)
+
+
+my_list_2 = [2, 3]
+my_function(my_list_2)
+print("Print #5:", my_list_2)
+```
+
+Output
+
+```py
+Print #1: [2, 3]
+Print #2: [2, 3]
+Print #3: [3]
+Print #4: [3]
+Print #5: [3]
+```
+When my_function(my_list_2) is called, the following happens:
+
+The variable my_list_2 (a list [2, 3]) is passed as an argument to the parameter my_list_1.
+
+Both my_list_1 and my_list_2 now refer to the same list object in memory. This is because lists in Python are mutable and passed by reference.
+
+
+## Fibonacci numbers
+
+They are a sequence of integer numbers built using a very simple rule:
+
+- the first element of the sequence is equal to one (Fib1 = 1)
+- the second is also equal to one (Fib2 = 1)
+- every subsequent number is the the_sum of the two preceding numbers:
+(Fibi = Fibi-1 + Fibi-2)
+
+Here are some of the first Fibonacci numbers:
+```py
+fib_1 = 1
+fib_2 = 1
+fib_3 = 1 + 1 = 2
+fib_4 = 1 + 2 = 3
+fib_5 = 2 + 3 = 5
+fib_6 = 3 + 5 = 8
+fib_7 = 5 + 8 = 13
+```
+```py
+def fib(n):
+    if n < 1:
+        return None
+    if n < 3:
+        return 1
+
+    elem_1 = elem_2 = 1
+    the_sum = 0
+    for i in range(3, n + 1):
+        the_sum = elem_1 + elem_2
+        elem_1, elem_2 = elem_2, the_sum
+    return the_sum
+
+
+for n in range(1, 10):  # testing
+    print(n, "->", fib(n))
+
+```
 
