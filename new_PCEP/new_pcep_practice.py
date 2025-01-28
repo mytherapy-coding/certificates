@@ -899,5 +899,61 @@ print(pol_eng_dictionary)    # outputs: {'kwiat': 'flower', 'gleba': 'soil'}
 
 pol_eng_dictionary.popitem()
 print(pol_eng_dictionary)    # outputs: {'kwiat': 'flower'}
+pol_eng_dictionary["gleba"] = "soil"
+print(pol_eng_dictionary)
+
+
+print("-----")
+
+d1 = {'Adam Smith': 'A', 'Judy Paxton': 'B+'}
+d2 = {'Mary Louis': 'A', 'Patrick White': 'C'}
+d3 = {}
+
+for item in (d1, d2):
+    print(item)
+    print()
+    d3.update(item)
+    print(item)
+
+print(d3)
+
+
+
+def fun(ino = 2, out = 3):
+    return ino * out
+
+print(fun(3))
 
 print()
+
+print((1, ) + (1, ))
+'''
+value = input("Enter a value: ")
+print(10/value)
+'''
+x = 5 
+y = 10
+z = x > y or x and y 
+print(z)
+
+
+print("My", "name", "is", sep="_", end="*")
+print("Monty", "Python.", sep="*", end="*\n")
+print("------------")
+print("My", "name", "is", sep="_", end="*")
+print("Monty", "Python.", sep="*")
+print("999")
+print(1//2*8)
+
+print(3 % 4)
+print(1/1)
+print("-----")
+
+res = (1, 2, 3, 4)
+print(res[1])
+
+print("-----")
+
+
+
+print(for)

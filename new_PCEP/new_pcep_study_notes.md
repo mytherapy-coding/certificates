@@ -1434,3 +1434,35 @@ pol_eng_dictionary.popitem()
 print(pol_eng_dictionary)    # outputs: {'kwiat': 'flower'}
 
 ```
+### Excercize 
+
+Complete the code to correctly use the count() method to find the number of duplicates of 2 in the following tuple.
+
+```py
+tup = 1, 2, 3, 2, 4, 5, 6, 2, 7, 2, 8, 9
+duplicates = tup.count(2)
+
+print(duplicates)    # outputs: 4
+
+```
+
+```py
+colors = {
+    "white": (255, 255, 255),
+    "grey": (128, 128, 128),
+    "red": (255, 0, 0),
+    "green": (0, 128, 0)
+    }
+
+for col, rgb in colors.items():
+    print(col, ":", rgb)
+```
+output
+
+```py
+white : (255, 255, 255)
+grey : (128, 128, 128)
+red : (255, 0, 0)
+green : (0, 128, 0)
+```
+
