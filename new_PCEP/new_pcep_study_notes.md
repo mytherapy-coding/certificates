@@ -1482,3 +1482,9 @@ output
 ```py
 IndexError: tuple index out of range
 ```
+
+```py
+two_element_tuple = (1, 2.5)
+two_element_tuple = 1, 2.5 # the same effect as above
+```
+

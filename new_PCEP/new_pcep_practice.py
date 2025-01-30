@@ -997,3 +997,22 @@ print((0, 1, 2, 3)[4:5])
 print()
 the_list = [0, 1, 2, 3, 4, 5, 6]
 print(the_list[-3:-1])
+print("-----")
+the_list = [0, 1, 2, 3, 4, 5, 6]
+print(len(the_list))
+print(the_list[2:len(the_list)])
+print(the_list[1:])
+print(the_list[1:len(the_list)])
+print()
+res = tuple()
+print(len(res))
+res = list()
+print(len(res))
+res = dict()
+print(len(res))
+print()
+attendance = {'Bob': True}
+attendance['Bob'] = False
+print(attendance['Bob'])
+
+print()
