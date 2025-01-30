@@ -969,5 +969,8 @@ print([x for x in  range(5, 2, -1)])
 
 print(0%2)
 print()
-for i in range(2):
+for i in range(-5, -2, -1):
+    print(i)
+print()
+for i in range(2, 5, -1):
     print(i)
