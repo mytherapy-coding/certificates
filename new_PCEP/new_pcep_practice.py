@@ -955,5 +955,19 @@ print(res[1])
 print("-----")
 
 
+my_list = [1, 2]
 
-print(for)
+for v in range(2):
+      my_list.insert(-1, my_list[v])
+      
+print(my_list)
+
+lst = [i for i in range(-1, 2, -1)]
+print(lst)
+
+print([x for x in  range(5, 2, -1)])
+
+print(0%2)
+print()
+for i in range(2):
+    print(i)
