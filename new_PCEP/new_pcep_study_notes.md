@@ -1466,3 +1466,19 @@ red : (255, 0, 0)
 green : (0, 128, 0)
 ```
 
+Tuple slicing beyond its range returns an empty tuple instead of raising an error.
+```py
+print((0, 1, 2, 3)[4:5])
+```
+output: ()
+
+Indexing beyond range would raise an IndexError.
+
+```py
+print((1,2,3)[4])
+```
+output
+
+```py
+IndexError: tuple index out of range
+```

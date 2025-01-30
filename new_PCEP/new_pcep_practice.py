@@ -969,8 +969,31 @@ print([x for x in  range(5, 2, -1)])
 
 print(0%2)
 print()
-for i in range(-5, -2, -1):
+for i in range(5, 2, 1):
     print(i)
+
+g = (g for g in range(3))
+print(list(g), list(g))
 print()
-for i in range(2, 5, -1):
+
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(4))
+
+print()
+
+lst = [1, 3, 5, 7]
+print(len(lst))
+print()
+for i in range (len(lst)):
     print(i)
+
+print()
+the_list = ['a', 'b', 'c']
+print((0, 1, 2, 3)[4:5])
+print()
+the_list = [0, 1, 2, 3, 4, 5, 6]
+print(the_list[-3:-1])
