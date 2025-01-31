@@ -1016,3 +1016,42 @@ attendance['Bob'] = False
 print(attendance['Bob'])
 
 print()
+
+domains = {'au': 'Australia'}
+domains['at'] = 'Austria'
+print(len(domains))
+
+print()
+currencies = {'USD': 'United States dollar'}
+del currencies['USD']
+print(len(currencies))
+print()
+phonetic = {'A': 'Alpha', 'B': 'Bravo'}
+for key in phonetic:
+    print(key, end=' ')
+print()
+ 
+phonetic = {'A': 'Alpha', 'B': 'Bravo'}
+for key in phonetic.keys():
+    print(key, end=' ')
+print(phonetic)
+print()
+phonetic = {'A': 'Alpha', 'B': 'Bravo'}
+for value in phonetic.values():
+    print(value, end=' ')
+print()
+phonetic = {'A': 'Alpha', 'B': 'Bravo'}
+for item in phonetic.items():
+    print(item, end=' ')
+print()
+phonetic = {'A': 'Alpha', 'B': 'Bravo'}
+for item, x in phonetic.items():
+    print(item, x,  end=' ')
+print()
+print()
+phonetic = {'A': 'Alpha', 'B': 'Bravo'}
+print(" ".join(str(item) for item in phonetic.items()))
+print()
+lst = [4, 3, 2, 1]
+print(lst[3:5])
+print()

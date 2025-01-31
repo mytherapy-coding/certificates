@@ -1488,3 +1488,10 @@ two_element_tuple = (1, 2.5)
 two_element_tuple = 1, 2.5 # the same effect as above
 ```
 
+```py
+phonetic = {'A': 'Alpha', 'B': 'Bravo'}
+
+print(" ".join(str(item) for item in phonetic.items()))
+
+```
+
