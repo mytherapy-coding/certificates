@@ -1054,4 +1054,32 @@ print(" ".join(str(item) for item in phonetic.items()))
 print()
 lst = [4, 3, 2, 1]
 print(lst[3:5])
+print("()")
+lst = [2, 3, 5, 8]
+print(lst[3:3])
 print()
+lst = [0, .0, True]
+print(lst.index(True) == 0)
+print()
+lst = [1, .0, True]
+print(lst.index(True) == 0)
+print("----")
+lst = ['data', -1, 2.76543]
+print(int(lst[2]) == len(lst))
+print()
+lst = ['data', -1, 2.76543]
+print(lst[-2:])
+print()
+lst = ['data', -1, 2.76543]
+print(lst[-2:-1])
+print()
+def function(parameter):
+    if parameter == False:
+        return True
+
+
+print(function(False), function(True))
+print()
+print(1-2//3+4)
+lst = [1, 2, 3]
+print(len(lst[0:2]))

@@ -1495,3 +1495,14 @@ print(" ".join(str(item) for item in phonetic.items()))
 
 ```
 
+```py
+lst = [4, 3, 2, 1]
+
+print(lst[3:5])  # [1]  (Includes index 3, stops before index 5)
+print(lst[2:4])  # [2, 1]  (Includes index 2 and 3)
+print(lst[2:10]) # [2, 1]  (Stops at last available element)
+print(lst[4:5])  # []  (Index 4 does not exist, so it's an empty list)
+print(lst[3:])   # [1]  (Extracts from index 3 to the end)
+print(lst[:2])   # [4, 3]  (Extracts from start to index 2)
+```
+
