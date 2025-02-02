@@ -49,3 +49,22 @@ print(sample(my_list, 10))
 [3, 1, 8, 9, 10]
 [10, 8, 5, 1, 6, 4, 3, 9, 7, 2]
 ```
+## Lambdas and the map() function
+
+```py
+In the simplest of all possible cases, the map() function:
+
+map(function, list)
+
+
+takes two arguments:
+
+- a function;
+- a list.
+The above description is extremely simplified, as:
+
+the second map() argument may be any entity that can be iterated (e.g., a tuple, or just a generator)
+map() can accept more than two arguments.
+```
+The map() function applies the function passed by its first argument to all its second argument's elements, and returns an iterator delivering all subsequent function results.
+
