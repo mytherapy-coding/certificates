@@ -16,3 +16,28 @@ print(sin(pi / 2))
 # Calling the actual math.sin function with math.pi
 print(math.sin(math.pi / 2))  
 print()
+from platform import machine
+
+print(machine())
+print()
+from platform import processor
+
+print(processor())
+print()
+from platform import system
+
+print(system())
+print()
+from platform import version
+
+print(version())
+print()
+
+import platform
+
+print(len(platform.python_version_tuple()))
+print()
+
+from random import randint
+for i in range(2):
+    print(randint(1, 2))
