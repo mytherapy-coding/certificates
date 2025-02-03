@@ -41,3 +41,9 @@ print()
 from random import randint
 for i in range(2):
     print(randint(1, 2))
+print()
+
+for x in (el * 2 for el in range(5)):
+    print(x)
+
+print()

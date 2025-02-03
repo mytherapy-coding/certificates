@@ -68,3 +68,40 @@ map() can accept more than two arguments.
 ```
 The map() function applies the function passed by its first argument to all its second argument's elements, and returns an iterator delivering all subsequent function results.
 
+## Operations on strings: ord()
+If you want to know a specific character's ASCII/UNICODE code point value, you can use a function named ord() (as in ordinal).
+
+```py
+# Demonstrating the ord() function.
+
+char_1 = 'a'
+char_2 = ' '  # space
+
+print(ord(char_1))
+print(ord(char_2))
+```
+output 
+```py
+97
+32
+```
+## Operations on strings: chr()
+
+If you know the code point (number) and want to get the corresponding character, you can use a function named **chr().**
+
+The function takes a code point and returns its character.
+
+Invoking it with an invalid argument (e.g., a negative or invalid code point) causes ValueError or TypeError exceptions.
+
+```py
+# Demonstrating the chr() function.
+
+print(chr(97))
+print(chr(945))
+```
+output
+```py
+a
+α
+```
+
