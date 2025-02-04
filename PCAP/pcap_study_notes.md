@@ -194,24 +194,6 @@ False
 True
 ```
 
-## The find() method
-The find() method is similar to index(), which you already know - it looks for a substring and returns the index of first occurrence of this substring, but:
-
-it's safer - it doesn't generate an error for an argument containing a non-existent substring (it returns -1 then)
-it works with strings only - don't try to apply it to any other sequence.
-
-Note: don't use find() if you only want to check if a single character occurs within a string - the in operator will be significantly faster.
-
-```py
-# Demonstrating the find() method:
-print("Eta".find("ta"))
-print("Eta".find("mma"))
-```
-output
-```py
-1
--1
-```
 ## The isalnum() method
 
 The parameterless method named isalnum() checks if the string contains only digits or alphabetical characters (letters), and returns True or False according to the result.
@@ -253,7 +235,7 @@ True
 False
 ```
 
-## Example 2: Demonstrating the isdigit() method:
+## Demonstrating the isdigit() method:
 ```py
 print('2018'.isdigit())
 print("Year2019".isdigit())
@@ -377,3 +359,52 @@ output
 [hello]
 ```
 ## The replace() method
+The two-parameter replace() method returns a copy of the original string in which all occurrences of the first argument have been replaced by the second argument.
+
+Look at the example code in the editor. Run it.
+```py
+# Demonstrating the replace() method:
+print("www.netacad.com".replace("netacad.com", "pythoninstitute.org"))
+print("This is it!".replace("is", "are"))
+print("Apple juice".replace("juice", ""))
+```
+output
+
+```py
+www.pythoninstitute.org
+Thare are it!
+Apple
+```
+
+## The find() method
+The find() method is similar to index(), which you already know - it looks for a substring and returns the index of **first** occurrence of this substring, but:
+
+it's safer - it doesn't generate an error for an argument containing a non-existent substring (it returns -1 then)
+it works with strings only - don't try to apply it to any other sequence.
+
+Note: don't use find() if you only want to check if a single character occurs within a string - the in operator will be significantly faster.
+
+```py
+# Demonstrating the find() method:
+print("Eta".find("ta"))
+print("Eta".find("mma"))
+```
+output
+```py
+1
+-1
+```
+## The rfind() method
+- rfind() searches for the last occurrence of a substring.
+- If found, it returns the index of the last occurrence.
+- If not found, it returns -1.
+- You can specify a start and end range for searching.
+
+```py text = "hello world, welcome to the world"
+index = text.rfind("world", 0, 20)  
+print(index)  # Output: 6
+```
+- Here, rfind("world", 0, 20) searches only from index 0 to 19.
+- The last occurrence of "world" within this range is at index 6.
+
+
