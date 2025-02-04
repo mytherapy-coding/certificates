@@ -376,3 +376,4 @@ output
 [  hello]
 [hello]
 ```
+## The replace() method
