@@ -66,4 +66,33 @@ alphabet = "a" + alphabet
 alphabet = alphabet + "z"
 
 print(alphabet)
+print()
 
+alphabet = "bcdefghijklmnopqrstuvwxy"
+alphabet1 = alphabet
+alphabet1 = "a" + alphabet
+alphabet = alphabet + "z"
+
+print(alphabet)
+print(alphabet1)
+print()
+# Demonstrating min() - Example 1:
+print(min("aAbByYzZ"))
+print("_____________________")
+# Demonstrating min() - Examples 2 & 3:
+t = 'The Knights Who Say "Ni!"'
+x = '[' + min(t) + ']'
+print(x)
+print(len(x))
+
+t = [0, 1, 2]
+print(min(t))
+print()
+print(
+'''
+string
+string1
+''')
+y = "\n\n"
+print(y)
+print(len(y))
