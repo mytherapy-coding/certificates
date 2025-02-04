@@ -134,3 +134,82 @@ output
 ```py
 Abcd
 ```
+## The center() method
+
+The one-parameter variant of the center() method makes a copy of the original string, trying to center it inside a field of a specified width.
+
+The centering is actually done by adding some spaces before and after the string.
+
+Don't expect this method to demonstrate any sophisticated skills. It's rather simple.
+
+The example in the editor uses brackets to clearly show you where the centered string actually begins and terminates.
+
+```py
+print('[' + 'Beta'.center(2) + ']')
+print('[' + 'Beta'.center(4) + ']')
+print('[' + 'Beta'.center(6) + ']')
+```
+output
+
+```py
+[Beta]
+[Beta]
+[ Beta ]
+```
+
+he two-parameter variant of center() makes use of the character from the second argument, instead of a space. Analyze the example below:
+```py
+print('[' + 'gamma'.center(20, '*') + ']')
+```
+
+This is why the output now looks like this:
+```py
+[*******gamma********]
+```
+
+- If width ≤ length of the string → No padding, returns the original string.
+- If width > length → Spaces are added equally on both sides.
+- If width - length is odd, the extra space goes to the right.
+
+## The endswith() method
+
+The endswith() method checks if the given string ends with the specified argument and returns True or False, depending on the check result.
+
+Note: the substring must adhere to the string's last character - it cannot just be located somewhere near the end of the string.
+
+```py
+t = "zeta"
+print(t.endswith("a"))
+print(t.endswith("A"))
+print(t.endswith("et"))
+print(t.endswith("eta"))
+
+```
+output 
+
+```py
+True
+False
+False
+True
+```
+
+## The find() method
+The find() method is similar to index(), which you already know - it looks for a substring and returns the index of first occurrence of this substring, but:
+
+it's safer - it doesn't generate an error for an argument containing a non-existent substring (it returns -1 then)
+it works with strings only - don't try to apply it to any other sequence.
+
+Note: don't use find() if you only want to check if a single character occurs within a string - the in operator will be significantly faster.
+
+```py
+# Demonstrating the find() method:
+print("Eta".find("ta"))
+print("Eta".find("mma"))
+```
+output
+```py
+1
+-1
+```
+
