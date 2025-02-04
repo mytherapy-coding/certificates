@@ -358,3 +358,21 @@ output
 sigma=60
 ```
 
+## .lstrip(), .rstrip(), and .strip()
+
+- Use .lstrip() when you want to remove spaces only from the beginning.
+- Use .rstrip() when you want to remove spaces only from the end.
+- Use .strip() when you want to remove spaces from both sides.
+```py
+text = "  hello  "
+print("[" + text.lstrip() + "]")
+print("[" + text.rstrip() + "]")
+print("[" + text.strip() + "]")
+```
+output
+
+```py
+[hello  ]
+[  hello]
+[hello]
+```

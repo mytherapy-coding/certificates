@@ -150,3 +150,12 @@ print(",".join(["omicron", "pi", "rho"]))
 
 print()
 
+print("[" + " tau ".lstrip() + "]")
+text = "  hello  "
+print("[" + text.lstrip() + "]")
+print("[" + text.rstrip() + "]")
+print("[" + text.strip() + "]")
+print()
+
+
+
