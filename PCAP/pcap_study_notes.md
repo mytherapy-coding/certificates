@@ -212,4 +212,149 @@ output
 1
 -1
 ```
+## The isalnum() method
+
+The parameterless method named isalnum() checks if the string contains only digits or alphabetical characters (letters), and returns True or False according to the result.
+
+Look at the example in the editor and run it.
+
+Note: any string element that is not a digit or a letter causes the method to return False. An empty string does, too.
+
+```py
+# Demonstrating the isalnum() method:
+print('lambda30'.isalnum())
+print('lambda'.isalnum())
+print('30'.isalnum())
+print('@'.isalnum())
+print('lambda_30'.isalnum())
+print(''.isalnum())
+```
+output
+```py
+True
+True
+True
+False
+False
+False
+```
+## The isalpha() and isdigit() method method
+
+The isalpha() method is more specialized - it's interested in letters only.
+
+```py
+# Example 1: Demonstrating the isapha() method:
+print("Moooo".isalpha())
+print('Mu40'.isalpha())
+```
+output 
+```py
+True
+False
+```
+
+## Example 2: Demonstrating the isdigit() method:
+```py
+print('2018'.isdigit())
+print("Year2019".isdigit())
+```
+output 
+
+```py
+True
+False
+```
+
+## The islower() method
+
+The islower() method is a fussy variant of isalpha() – it accepts lower-case letters only.
+
+```py
+# Example 1: Demonstrating the islower() method:
+print("Moooo".islower())
+print('moooo'.islower())
+```
+output 
+
+```py
+False
+True
+```
+## The isspace() method
+
+The isspace() method identifies whitespaces **only** – it disregards any other character (the result is False then).
+
+```py
+# Example 2: Demonstrating the isspace() method:
+print(' \n '.isspace())
+print(" ".isspace())
+print("mooo mooo mooo".isspace())
+```
+output
+
+```py
+True
+True
+False
+```
+## The isupper() method
+
+The isupper() method is the upper-case version of islower() – it concentrates on upper-case letters only.
+
+```py
+# Example 3: Demonstrating the isupper() method:
+print("Moooo".isupper())
+print('moooo'.isupper())
+print('MOOOO'.isupper())
+```
+output 
+```py
+False
+False
+True
+```
+
+## The join() method
+
+The join() method is rather complicated, so let us guide you step by step thorough it:
+
+- as its name suggests, the method performs a join - it expects one argument as a list; 
+- it must be assured that all the list's elements are strings - the method will raise a TypeError exception otherwise;
+- all the list's elements will be joined into one string but...
+- ...the string from which the method has been invoked is used as a separator, put among the strings;
+- the newly created string is returned as a result.
+
+Take a look at the example in the editor. Let's analyze it:
+
+- the join() method is invoked from within a string containing a comma (the string can be arbitrarily long, or it can be empty)
+- the join's argument is **a list** containing three strings;
+- the method returns **a new string**.
+
+```py
+# Demonstrating the join() method:
+print(",".join(["omicron", "pi", "rho"]))
+``` 
+output 
+
+```py
+omicron,pi,rho
+```
+
+## The lower() method
+
+The lower() method makes a copy of a source string, replaces all upper-case letters with their lower-case counterparts, and returns the string as the result. Again, the source string remains untouched.
+
+If the string doesn't contain any upper-case characters, the method returns the original string.
+
+**Note: The lower() method doesn't take any parameters.**
+
+```py
+# Demonstrating the lower() method:
+print("SiGmA=60".lower())
+```
+output
+
+```py
+sigma=60
+```
 
