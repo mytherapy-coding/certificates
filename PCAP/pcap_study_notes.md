@@ -407,4 +407,83 @@ print(index)  # Output: 6
 - Here, rfind("world", 0, 20) searches only from index 0 to 19.
 - The last occurrence of "world" within this range is at index 6.
 
+## The split() method
+The split() method does what it says - it splits the string and builds a list of all detected substrings.
+
+The method assumes that the substrings are delimited by whitespaces - the spaces don't take part in the operation, and aren't copied into the resulting list.
+
+If the string is empty, the resulting list is empty too.
+```py
+# Demonstrating the split() method:
+print("phi       chi\npsi".split())
+```
+output
+```py
+['phi', 'chi', 'psi']
+```
+## The swapcase() method
+
+The swapcase() method makes a new string by swapping the case of all letters within the source string: lower-case characters become upper-case, and vice versa.
+
+All other characters remain untouched.
+
+Look at the first example in the editor. Can you guess the output? It won't look good, but you must see it:
+
+```py
+# Demonstrating the swapcase() method:
+print("I know that I know nothing.".swapcase())
+```
+output
+```py
+i KNOW THAT i KNOW NOTHING.
+```
+
+## The title() method
+
+The title() method performs a somewhat similar function - it changes every word's first letter to upper-case, turning all other ones to lower-case.
+
+Look at the second example in the editor. Can you guess its output? This is the result:
+
+```py
+
+# Demonstrating the title() method:
+print("I know that I know nothing. Part 1.".title())
+```
+output
+```py
+I Know That I Know Nothing. Part 1.
+```
+## Some of the methods offered by strings are:
+
+| Method        | Description |
+|--------------|------------|
+| **`capitalize()`** | Changes the first letter of the string to uppercase. |
+| **`center(width)`** | Centers the string inside a field of a given width. |
+| **`count(substring)`** | Counts the occurrences of a given substring in the string. |
+| **`join(iterable)`** | Joins all items of a tuple/list into one string, using the string as a separator. |
+| **`lower()`** | Converts all the string's letters to lowercase. |
+| **`lstrip()`** | Removes white spaces from the beginning of the string. |
+| **`replace(old, new)`** | Replaces a given substring (`old`) with another (`new`). |
+| **`rfind(substring)`** | Finds the last occurrence of a substring in the string. |
+| **`rstrip()`** | Removes trailing white spaces from the end of the string. |
+| **`split(delimiter)`** | Splits the string into a list of substrings using the given delimiter. |
+| **`strip()`** | Removes both leading and trailing white spaces. |
+| **`swapcase()`** | Swaps uppercase letters to lowercase and vice versa. |
+| **`title()`** | Converts the first letter of each word to uppercase. |
+| **`upper()`** | Converts all the string's letters to uppercase. |
+
+
+**String content can be determined using the following methods (all of them return Boolean values):**
+
+
+| Method            | Description |
+|------------------|-------------|
+| **`endswith(substring)`** | Checks if the string ends with a given substring. |
+| **`isalnum()`** | Checks if the string consists only of letters and digits (no special characters or spaces). |
+| **`isalpha()`** | Checks if the string consists only of letters (no digits or special characters). |
+| **`islower()`** | Checks if the string consists only of lowercase letters. |
+| **`isspace()`** | Checks if the string consists only of whitespace characters (spaces, tabs, newlines). |
+| **`isupper()`** | Checks if the string consists only of uppercase letters. |
+| **`startswith(substring)`** | Checks if the string begins with a given substring. |
+
 

@@ -163,4 +163,14 @@ print("This is it!".replace("", "?"))
 print("Apple juice".replace("juice", ""))
 print()
 
+print("Hello, /n")
+print("phi       chi\npsi".split())
+print()
+print("phi       chi psi".split())
+print()
+print("phi       chi\npsi")
+print(" ".join(["phi", "chi", "psi"]))
+print("".join("phi chi psi"))
+print(" ".join(['phi', 'chi', 'psi']))
+
 
