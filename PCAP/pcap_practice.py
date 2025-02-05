@@ -183,5 +183,12 @@ print(mysplit("   "))
 print(mysplit(" abc "))
 print(mysplit(""))
 
+print()
 
+'10' == '010'
+'10' > '010'
+'10' > '8'
+'20' < '8'
+'20' < '80'
+print()
 
