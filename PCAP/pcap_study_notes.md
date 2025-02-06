@@ -526,4 +526,11 @@ output
 - > string != number is always True;
 - > string >= number always raises an exception.
 
+## How Python Compares Strings
+Python compares strings character by character using their ASCII/Unicode values.
+_____
+- Lowercase letters (a-z) have higher ASCII values than uppercase letters (A-Z).
+- Numbers (0-9) have lower ASCII values than letters.
+- If one string is longer but identical up to the shorter string's length, the longer string is considered greater.
+____
 

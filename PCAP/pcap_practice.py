@@ -183,12 +183,14 @@ print(mysplit("   "))
 print(mysplit(" abc "))
 print(mysplit(""))
 
+
 print()
 
-'10' == '010'
-'10' > '010'
-'10' > '8'
-'20' < '8'
-'20' < '80'
-print()
+lst = [1, 2, 3]
+print(lst.pop(1))
 
+res = "awesome"
+print(res.replace("e", "r", 1))
+
+res = "awesome"
+print(res.find("y"))
