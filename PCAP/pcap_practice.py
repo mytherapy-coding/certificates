@@ -194,3 +194,12 @@ print(res.replace("e", "r", 1))
 
 res = "awesome"
 print(res.find("y"))
+
+x ='\''
+print(len(x))
+
+print(ord('c')-ord('a'))
+      
+print(chr(ord('z')-2))
+
+print('Mike'>'Mikey')
