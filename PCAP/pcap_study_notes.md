@@ -534,3 +534,21 @@ _____
 - If one string is longer but identical up to the shorter string's length, the longer string is considered greater.
 ____
 
+## The stack - the object approach
+
+When any class component has a name starting with two underscores (__), it becomes private - this means that it can be accessed only from within the class.
+
+You cannot see it from the outside world. This is how Python implements the encapsulation concept.
+
+```py
+class Stack:
+    def __init__(self):
+        self.__stack_list = []
+
+stack_object = Stack()
+print(len(stack_object.__stack_list))
+```
+Run the program to test our assumptions - an AttributeError exception should be raised.
+```py
+AttributeError: 'Stack' object has no attribute '__stack_list'
+```
