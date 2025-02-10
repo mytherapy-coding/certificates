@@ -203,3 +203,70 @@ print(ord('c')-ord('a'))
 print(chr(ord('z')-2))
 
 print('Mike'>'Mikey')
+
+
+print()
+
+class ExampleClass:
+    a = 1
+    def __init__(self):
+        self.b = 2
+
+
+example_object = ExampleClass()
+
+print(hasattr(example_object, 'b'))
+print(hasattr(example_object, 'a'))
+print(hasattr(ExampleClass, 'b'))
+print(hasattr(ExampleClass, 'a'))
+print()
+class Python:
+    population = 1
+    victims = 0
+    def __init__(self):
+        self.length_ft = 3
+        self._venomous = False
+
+version_2 = Python()
+print(version_2._venomous)
+version_2._venomous = not version_2._venomous
+print(version_2._venomous)
+
+print()
+
+class Timer:
+    def __init__(self, hours=0, minutes=0, seconds=0):
+        self.hours = hours
+        self.minutes = minutes
+        self.seconds = seconds
+
+    def __str__(self):
+        return f'{self.hours:02d}:{self.minutes:02d}:{self.seconds:02d}'
+
+    def next_second(self):
+        self.seconds += 1
+        self.minutes += self.seconds//60
+        self.seconds %= 60
+        self.hours += self.minutes//60
+        self.minutes %= 60
+        self.hours %= 24
+        
+        
+    def prev_second(self):
+        self.seconds = self.seconds - 1 +60 
+        self.minutes = self.minutes - (1 - self.seconds//60) +60
+        self.seconds %= 60
+        self.hours = self.hours - (1 - self.minutes//60) +24
+        self.minutes %= 60
+        self.hours %= 24
+        
+
+
+timer = Timer(23, 59, 59)
+print(timer)
+timer.next_second()
+print(timer)
+timer.prev_second()
+print(timer)
+
+print()
