@@ -552,3 +552,15 @@ Run the program to test our assumptions - an AttributeError exception should be 
 ```py
 AttributeError: 'Stack' object has no attribute '__stack_list'
 ```
+
+## Inheritance: issubclass()
+Python offers a function which is able to identify a relationship between two classes, and although its diagnosis isn't complex, it can check if a particular class is a subclass of any other class.
+
+This is how it looks:
+
+```py
+issubclass(ClassOne, ClassTwo)
+```
+
+
+The function returns True if ClassOne is a subclass of ClassTwo, and False otherwise.
