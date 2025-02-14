@@ -564,3 +564,37 @@ issubclass(ClassOne, ClassTwo)
 
 
 The function returns True if ClassOne is a subclass of ClassTwo, and False otherwise.
+
+## Generators
+
+```py
+class Fib:
+    def __init__(self):
+        print("__init__")
+        self.i = 0
+        self.__p1 = self.__p2 = 1
+
+    def __iter__(self):
+        print("__iter__")
+        return self
+
+    def __next__(self):
+        print("__next__")
+        self.i += 1
+        if self.i in [1, 2]:
+            return 1
+        ret = self.__p1 + self.__p2
+        self.__p1, self.__p2 = self.__p2, ret
+        return ret
+
+f = Fib()
+it = iter(f)
+print(it is f)
+for _ in range(10):
+    print(next(it))
+
+for _, y in zip(range(10), Fib()):
+    print(y)
+    
+print([y for _, y in zip(range(10), Fib())])
+```
