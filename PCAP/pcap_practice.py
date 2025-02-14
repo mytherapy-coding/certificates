@@ -285,15 +285,42 @@ print(object_2 is object_3)
 print(object_3 is object_1)
 print(object_1.val, object_2.val, object_3.val)
 
+import sys
 string_1 = "Mary had a little "
-string_2 = "Mary had a little lamb"
-string_1 += "lamb"
-string_3 = "Mary had a little lamb"
+string_2 = sys.intern("Mary had a little lamb")
+string_1 = sys.intern(string_1 + "lamb")
+
+string_3 = sys.intern("Mary had a little lamb")
 
 
 print(string_1 == string_2, string_1 is string_2, string_2 is string_3)
 print(id(string_1), id(string_2), id(string_3))
+print()
 
+
+string_1 = sys.intern(string_1)
+
+print(id(string_1), id(string_2), id(string_3))
 
 print()
 
+a = (1, 2, 3, 4)
+b = (1, 2, 3, 4)
+print(a == b)
+print(a is b)
+print()
+
+import math
+
+try:
+    print(math.sqrt(9))
+except ValueError:
+    print("inf")
+else:
+    print("fine")
+
+
+print(3j)
+x = 3j
+y = x*x 
+print(x, y)
