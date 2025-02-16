@@ -352,3 +352,118 @@ for _, y in zip(range(10), Fib()):
     print(y)
     
 print([y for _, y in zip(range(10), Fib())])
+
+print()
+
+print("Mike">"Mikey")
+
+print(ord("c") - ord("a"))
+print()
+x = '\''
+print(len(x))
+
+print(chr(ord("z") -2))
+
+print("My_filter")
+
+
+
+def myfilter(f, lst):
+    for x in lst:
+        if f(x):
+            yield x
+
+print(list(myfilter(lambda x: x%2 == 0, [2, 4, 6, 13])))
+
+
+
+
+def filter_numbers(x):
+    return x == 1 or x == 5 or x == 17
+
+
+print(list(filter(filter_numbers, [1, 2, 5, 9, 15])))
+print()
+print(list(myfilter(filter_numbers, [1, 2, 5, 9, 15])))
+print()
+print(list(myfilter(lambda x: x in (1,5,17), [1, 2, 5, 9, 15])))
+print(list(myfilter(lambda x: x == 1 or x == 5 or x == 17, [1, 2, 5, 9, 15])))
+
+print()
+
+'''
+def powers_of_2(n):
+    power = 1
+    for i in range(n):
+        yield power
+        power *= 2
+
+
+for v in powers_of_2(8):
+    print(v)
+'''
+print()
+def powers_of_2():
+    power = 1
+    while True:
+        yield power
+        power *= 2
+
+for _, v in zip(range(8), powers_of_2()):
+    print(v)
+
+print()
+
+def powers_of_2(n):
+    power = 1
+    for j in range(n):
+        yield power
+        power *= 2
+
+print(list(powers_of_2(20)))
+for i in range(1000):
+    if i in powers_of_2(20):
+        print(i)
+print()
+powers = list(powers_of_2(20))
+print(powers)
+for i in range(1000):
+    if i in powers:
+        print(i)
+
+print()
+powers = set(powers_of_2(20))
+print(powers)
+for i in range(1000):
+    if i in powers:
+        print(i)
+print(hash("117"))
+
+two = lambda: 2
+sqr = lambda x: x * x
+pwr = lambda x, y: x ** y
+
+res = [1, 3, 5, 7, 9, 10]
+a = res[-2:-1]
+a = res[-2:]
+a = res[-2:6]
+
+print(a)
+
+print()
+
+def print_function(args, fun):
+    for x in args:
+        print('f(', x,')=', fun(x), sep='')
+        print(f"f({x})={fun(x)}")
+
+
+def poly(x):
+    return 2 * x**2 - 4 * x + 2
+
+
+print_function(range(-2, 3), poly)
+
+print()
+
+print_function(range(-2, 3), lambda x: 2 * x**2 - 4 * x + 2)
