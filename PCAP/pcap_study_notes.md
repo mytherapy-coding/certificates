@@ -611,6 +611,80 @@ def powers_of_2(n):
 for v in powers_of_2(8):
     print(v)
 ```
+## map()
+
+returns a generator 
+
+akes two arguments:
+
+- a function;
+- a list.
+The above description is extremely simplified, as:
+
+- > the second map() argument may be any entity that can be iterated (e.g., a tuple, or just a generator)
+
+- > map() can accept more than two arguments.
+
+
+The map() function applies the function passed by its first argument to all its second argument's elements, and returns an iterator delivering all subsequent function results.
+
+
+
+```py
+list_1 = [x for x in range(5)]
+list_2 = list(map(lambda x: 2 ** x, list_1))
+print(list_2)
+
+for x in map(lambda x: x * x, list_2):
+    print(x, end=' ')
+print()
+```
+
+## filter 
+
+Another Python function which can be significantly beautified by the application of a lambda is filter().
+
+It expects the same kind of arguments as map(), but does something different - it filters its second argument while being guided by directions flowing from the function specified as the first argument (the function is invoked for each list element, just like in map()).
+
+The elements which return True from the function pass the filter - the others are rejected.
+
+The example in the editor shows the filter() function in action.
+
+Note: we've made use of the random module to initialize the random number generator (not to be confused with the generators we've just talked about) with the seed() function, and to produce five random integer values from -10 to 10 using the randint() function.
+
+The list is then filtered, and only the numbers which are even and greater than zero are accepted.
+```py
+from random import seed, randint
+
+seed()
+data = [randint(-10,10) for x in range(5)]
+filtered = list(filter(lambda x: x > 0 and x % 2 == 0, data))
+
+print(data)
+print(filtered)
+```
+```py
+[-10, -9, 9, -9, 7]
+[]
+```
+
+## os module
+In this section, you'll learn about a module called os, which lets you interact with the operating system using Python.
+
+It provides functions that are available on Unix and/or Windows systems. If you're familiar with the command console, you'll see that some functions give the same results as the commands available on the operating systems.
+
+A good example of this is the mkdir function, which allows you to create a directory just like the mkdir command in Unix and Windows. If you don't know this command, don't worry.
+
+You'll soon have the opportunity to learn the functions of the os module, to perform operations on files and directories along with the corresponding commands.
+
+In addition to file and directory operations, the os module enables you to:
+
+- get information about the operating system;
+- manage processes;
+- operate on I/O streams using file descriptors.
+
+
+
 
 
 

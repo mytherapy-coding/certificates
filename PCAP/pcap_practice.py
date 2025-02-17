@@ -467,3 +467,4 @@ print_function(range(-2, 3), poly)
 print()
 
 print_function(range(-2, 3), lambda x: 2 * x**2 - 4 * x + 2)
+print()
