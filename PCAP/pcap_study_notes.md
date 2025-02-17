@@ -683,7 +683,17 @@ In addition to file and directory operations, the os module enables you to:
 - manage processes;
 - operate on I/O streams using file descriptors.
 
+----
 
+he os module provides a function that returns information about the current working directory. It's called 
+- > *getcwd.*
+
+The os module also allows you to delete directories. It gives you the option of deleting a single directory or a directory with its subdirectories. To delete a single directory, you can use a function called 
+- > *rmdir*,
+
+which takes the path as its argument. Look at the code in the editor.
+
+The key thing to note is that os.rmdir() only works if the directory is empty. If the directory contains files or other directories, it will raise an error.
 
 
 
