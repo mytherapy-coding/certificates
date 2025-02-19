@@ -724,3 +724,23 @@ print("Year:", today.year)
 print("Month:", today.month)
 print("Day:", today.day)
 ```
+## My calendar
+
+```py
+import calendar
+print(calendar.calendar(2020))
+```
+
+output 
+
+A year calender will be printed
+
+## How do we check if a year is a leap year?
+
+```py
+import calendar
+
+print(calendar.isleap(2020))
+```
+
+output - True 

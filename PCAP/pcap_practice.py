@@ -483,3 +483,6 @@ print("Year:", today.year)
 print("Month:", today.month)
 print("Day:", today.day)
 print()
+import calendar
+print(calendar.calendar(2025))
+print()
