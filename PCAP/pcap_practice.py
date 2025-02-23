@@ -486,3 +486,14 @@ print()
 import calendar
 print(calendar.calendar(2025))
 print()
+
+x = "\\\\"
+print(len(x))
+
+print("________")
+
+import math
+print(dir(math))
+
+print()
+
