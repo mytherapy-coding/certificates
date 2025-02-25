@@ -745,3 +745,22 @@ print(calendar.isleap(2020))
 
 output - True 
 
+## tranc()
+
+from math import trunc
+
+x = 1.4
+y = 2.6
+
+```py
+print(trunc(x), trunc(y))
+print(trunc(-x), trunc(-y))
+```
+output 
+
+```py
+1 2
+-1 -2
+```
+
+
