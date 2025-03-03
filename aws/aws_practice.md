@@ -80,4 +80,27 @@ AWS IAM is a service that helps you securely control access to AWS resources. It
 
 IAM is foundational for AWS security — it ensures the right people and systems have the right access!
 
+# IAM Passport Policy
+
+In AWS Identity and Access Management (IAM), a **passport policy** isn't a standard AWS term, but if you're referring to identity federation or access control through temporary credentials, it may involve setting up policies for secure, time-limited access.
+
+## 🛡️ **Key Concepts**
+
+- **Identity Federation:** Allows users to access AWS using credentials from an external identity provider (IdP), like Google, Facebook, or corporate directories.
+- **Temporary Security Credentials:** Issued via services like AWS STS (Security Token Service) for short-term access.
+- **IAM Policies:** JSON documents defining permissions for users, groups, and roles.
+
+## 🏗️ **Example Policy**
+A sample IAM policy for temporary access:
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::example-bucket"
+        }
+    ]
+}
 
