@@ -104,3 +104,40 @@ A sample IAM policy for temporary access:
     ]
 }
 
+```
+
+# AWS CLI and SDK
+
+## 🖥️ AWS CLI (Command Line Interface)  
+The **AWS CLI** is a tool that lets you interact with AWS services through the command line. It helps manage resources, automate tasks, and control AWS services directly from your terminal.
+
+- **Use Cases:** Manage S3 buckets, launch EC2 instances, configure IAM users, and more.
+- **Example Command:**  
+   ```bash
+   aws s3 ls
+
+# AWS SDK (Software Development Kit)
+
+The **AWS SDK** is a set of libraries and tools that help developers integrate AWS services into their applications. It simplifies making requests to AWS services by handling tasks like authentication, retries, and error handling.
+
+## 📘 Key Features  
+- **Language Support:** Available for Python, JavaScript, Java, C#, Ruby, PHP, Go, and more.  
+- **Service Integration:** Access services like S3, EC2, DynamoDB, and others with minimal setup.  
+- **Simplified API Calls:** Abstracts complex API requests into simple method calls.  
+
+## 🛠️ Example (Python with Boto3)  
+Here’s how you can list S3 buckets using the **Boto3** library in Python:  
+```python
+import boto3
+
+# Create an S3 client
+s3 = boto3.client('s3')
+
+# List buckets
+response = s3.list_buckets()
+
+# Print bucket names
+for bucket in response['Buckets']:
+    print(bucket['Name'])
+
+
