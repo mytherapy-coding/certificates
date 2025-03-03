@@ -53,4 +53,31 @@ Follow these steps to set up your Amazon Web Services (AWS) account.
 3. Log in with your credentials!
 
 
+# AWS IAM (Identity and Access Management)
+
+AWS IAM is a service that helps you securely control access to AWS resources. It allows you to manage users, groups, roles, and permissions.
+
+## Key Concepts
+
+- **Users**: Individuals or applications that need access to AWS services.
+- **Groups**: Collections of users with shared permissions.
+- **Roles**: Assumed by entities (like EC2 instances) to access resources.
+- **Policies**: JSON documents that define permissions.
+- **Access Keys**: Credentials for programmatic access to AWS.
+
+## Features
+
+- **Granular Permissions**: Control access at the resource level.
+- **Federation**: Use external identity providers.
+- **MFA (Multi-Factor Authentication)**: Enhance security with additional authentication layers.
+
+## Best Practices
+
+- Follow the principle of **Least Privilege**.
+- Use **Roles** instead of long-term credentials.
+- Enable **MFA** for sensitive operations.
+- Regularly audit **IAM policies** and access logs.
+
+IAM is foundational for AWS security — it ensures the right people and systems have the right access!
+
 
