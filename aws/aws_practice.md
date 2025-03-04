@@ -216,3 +216,39 @@ You’ll use an **AWS Access Key** whenever you need to access AWS services outs
    Use AWS CLI commands directly:  
    ```bash
    aws s3 ls
+# AWS IAM Roles for Services
+
+**IAM Roles** in AWS are used to grant permissions to services so they can interact with other AWS resources on your behalf. Instead of using long-term credentials, roles provide temporary security credentials, enhancing security and reducing manual key management.
+
+## 🛠️ **Key Features:**  
+- **Temporary Credentials:** Roles issue short-lived credentials through AWS STS (Security Token Service).  
+- **Service-to-Service Access:** Allow AWS services (like EC2, Lambda, or ECS) to access other AWS resources.  
+- **Granular Permissions:** Define precise permissions using IAM policies.
+
+## 🚀 **Common Use Cases:**  
+- **EC2 Accessing S3:** An EC2 instance uploads files to an S3 bucket.  
+- **Lambda Reading DynamoDB:** A Lambda function reads data from a DynamoDB table.  
+- **CodePipeline Deploying to ECS:** A CI/CD pipeline deploys a Docker container to an ECS cluster.
+
+## 🔧 **Creating a Role for a Service:**  
+1. **Go to IAM in AWS Console.**  
+2. **Create a Role:**  
+   - Select the service (e.g., EC2, Lambda).  
+   - Attach a policy (e.g., `AmazonS3ReadOnlyAccess`).  
+3. **Attach the Role:**  
+   - For EC2: Attach the role when launching or modifying the instance.  
+   - For Lambda: Choose the role when creating or editing the function.
+
+## 📘 **Example Policy (S3 Access):**  
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::example-bucket/*"
+        }
+    ]
+}
+
