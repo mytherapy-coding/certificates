@@ -139,7 +139,7 @@ response = s3.list_buckets()
 # Print bucket names
 for bucket in response['Buckets']:
     print(bucket['Name'])
-
+```
 
 # How to Create an AWS Access Key
 
@@ -251,4 +251,68 @@ You’ll use an **AWS Access Key** whenever you need to access AWS services outs
         }
     ]
 }
+```
+
+# How to Launch an Amazon EC2 Instance
+
+Follow these steps to set up and launch an Amazon EC2 instance.
+
+## Step 1: Sign in to the AWS Management Console
+
+1. Open your web browser.
+2. Navigate to the [AWS Management Console](https://aws.amazon.com/console/).
+3. Sign in with your AWS account credentials.
+
+## Step 2: Access the EC2 Dashboard
+
+1. In the AWS Management Console, search for **EC2** in the service search bar.
+2. Click on **EC2** to open the dashboard.
+
+## Step 3: Launch an Instance
+
+1. In the EC2 Dashboard, click **Launch Instance**.
+2. Enter an **Instance Name**.
+3. Choose an **Amazon Machine Image (AMI)** — for example, Amazon Linux 2 or Ubuntu.
+
+## Step 4: Choose an Instance Type
+
+1. Select the **instance type** that fits your needs (e.g., t2.micro for free-tier eligible users).
+2. Click **Next: Configure Instance Details**.
+
+## Step 5: Configure Instance Settings
+
+1. Set the number of instances to launch.
+2. Configure network settings, or use the default VPC and subnet.
+3. Click **Next: Add Storage**.
+
+## Step 6: Add Storage
+
+1. Specify the storage size and type (e.g., 30 GB, General Purpose SSD).
+2. Click **Next: Add Tags**.
+
+## Step 7: Add Tags (Optional)
+
+1. Add tags to organize your resources (e.g., Key: Name, Value: MyEC2Instance).
+2. Click **Next: Configure Security Group**.
+
+## Step 8: Configure Security Group
+
+1. Create a new security group or select an existing one.
+2. Add rules to allow necessary traffic (e.g., SSH for remote access).
+3. Click **Review and Launch**.
+
+## Step 9: Review and Launch
+
+1. Review your instance configuration.
+2. Click **Launch**.
+3. Choose an existing key pair or create a new one for SSH access.
+4. Acknowledge key pair access and click **Launch Instances**.
+
+## Step 10: Connect to Your Instance
+
+1. Return to the EC2 dashboard and select your running instance.
+2. Click **Connect**.
+3. Follow the provided SSH or EC2 Instance Connect instructions to access your instance.
+
+By following these steps, you can quickly deploy and access a virtual server on AWS, ready to host applications or perform computations!
 
