@@ -194,3 +194,25 @@ You’ll use an **AWS Access Key** whenever you need to access AWS services outs
   Run commands or build applications that interact with AWS services.  
   ```bash
   aws s3 ls
+
+# AWS CloudShell
+
+**AWS CloudShell** is a browser-based shell that provides direct, secure access to AWS services through the command line — without needing to install or configure anything on your local machine.
+
+## 🛠️ **Key Features:**  
+- **Pre-installed AWS CLI & Tools:** Comes with the AWS CLI, Python, Node.js, and more.  
+- **Persistent Storage:** 1 GB of persistent storage for your scripts and files.  
+- **Secure Access:** Automatically inherits your AWS Console permissions, so no need to manage access keys.
+
+## 🚀 **When to Use CloudShell:**  
+- **Quick CLI Access:** Manage AWS resources without setting up a local CLI.  
+- **Testing & Debugging:** Try out CLI commands or test small scripts in a live AWS environment.  
+- **Admin Tasks:** Handle IAM, S3, EC2, and other AWS services on the go.
+
+## 🔧 **Getting Started:**  
+1. **Open CloudShell:**  
+   In the AWS Console, click the **CloudShell** icon (top right corner).  
+2. **Run Commands:**  
+   Use AWS CLI commands directly:  
+   ```bash
+   aws s3 ls
