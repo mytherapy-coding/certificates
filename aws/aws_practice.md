@@ -340,5 +340,37 @@ Communication is encrypted, typically using public-key cryptography.
 ## Common SSH Commands
 
 - **Connect to a server:**
+
   ```sh
   ssh username@hostname
+
+# EC2 Instance Connect
+
+**EC2 Instance Connect** is a feature that allows you to securely access your Amazon EC2 instances using a web browser or the AWS CLI, without needing to manage SSH keys manually.
+
+## 🛠️ **Key Features**
+- **Browser-Based Access:** Connect to instances directly from the AWS Management Console.
+- **CLI Integration:** Use AWS CLI to open SSH connections without manual key management.
+- **IAM-Based Access Control:** Manage user access through AWS Identity and Access Management (IAM) roles and policies.
+
+## 🚀 **How It Works**
+1. **Generate a Temporary Key:** When connecting, AWS generates a one-time SSH key.
+2. **Inject the Key into the Instance:** AWS automatically pushes the key into the instance.
+3. **Establish the Connection:** AWS opens an interactive shell session through the console or CLI.
+
+## 🛡️ **Security Benefits**
+- No need to store long-term SSH keys.
+- Granular access control via IAM policies.
+- Logging and auditing through AWS CloudTrail.
+
+## 📘 **Supported Instance Types**
+- Works with Amazon Linux 2, Ubuntu, and more.
+- Ensure the EC2 instance has the **EC2 Instance Connect** package installed and configured.
+
+## 🖥️ **Example: Connect via AWS CLI**
+```sh
+aws ec2-instance-connect send-ssh-public-key \
+    --instance-id i-0123456789abcdef0 \
+    --instance-os-user ec2-user \
+    --ssh-public-key file://my-key.pub \
+    --region us-east-1
