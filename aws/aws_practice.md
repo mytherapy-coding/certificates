@@ -316,3 +316,29 @@ Follow these steps to set up and launch an Amazon EC2 instance.
 
 By following these steps, you can quickly deploy and access a virtual server on AWS, ready to host applications or perform computations!
 
+# Understanding SSH (Secure Shell)
+
+SSH, or Secure Shell, is a cryptographic network protocol used to securely access and manage devices over an unsecured network. It provides a secure way to log into remote systems and execute commands, transfer files, and even tunnel other network protocols.
+
+## Key Features of SSH
+
+- **Encryption:** Protects data from eavesdropping and interception.
+- **Authentication:** Supports various methods, including password-based and key-based authentication.
+- **Port Forwarding:** Allows secure tunneling of other protocols.
+- **File Transfer:** Facilitates secure file transfers via SCP or SFTP.
+- **Remote Command Execution:** Enables running commands on remote systems without direct physical access.
+
+## How SSH Works
+
+SSH operates on a client-server model:
+
+1. **Client:** The machine initiating the connection.
+2. **Server:** The machine receiving the connection request.
+
+Communication is encrypted, typically using public-key cryptography.
+
+## Common SSH Commands
+
+- **Connect to a server:**
+  ```sh
+  ssh username@hostname
