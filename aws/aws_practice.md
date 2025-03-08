@@ -395,5 +395,23 @@ aws ec2 attach-volume --volume-id vol-abc123 --instance-id i-abc123 --device /de
 
 # Mount the volume
 sudo mount /dev/xvdf /mnt/myvolume
+```
 
+
+## Elastic Load Balancer (ELB)
+
+An **Elastic Load Balancer** (ELB) is a service that automatically distributes incoming traffic across multiple targets to improve fault tolerance and availability. It scales with your traffic and supports health checks to route traffic only to healthy instances.
+
+### Types of ELBs:
+1. **Application Load Balancer (ALB)**: Routes HTTP/HTTPS traffic based on request content.
+2. **Network Load Balancer (NLB)**: Handles high-volume TCP/UDP traffic with ultra-low latency.
+3. **Classic Load Balancer (CLB)**: Legacy option, distributing traffic at Layer 4 and Layer 7.
+
+### Key Features:
+- **Automatic Scaling**: Adjusts load balancing capacity to handle varying traffic.
+- **Health Checks**: Monitors the health of registered instances and routes traffic to healthy ones.
+- **Security Integration**: Works with AWS Shield, WAF, and Security Groups for robust protection.
+
+### Example Use Case:
+If you host a web application across multiple EC2 instances, an ALB can route incoming requests to the least busy instance, improving performance and reliability.
 
