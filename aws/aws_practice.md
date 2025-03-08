@@ -374,3 +374,26 @@ aws ec2-instance-connect send-ssh-public-key \
     --instance-os-user ec2-user \
     --ssh-public-key file://my-key.pub \
     --region us-east-1
+```
+# 🛠️ Amazon EC2 Instance Storage
+
+## 📦 Amazon EBS (Elastic Block Store)
+- Persistent, block-level storage for EC2 instances.
+- Retains data after instance stop/terminate (unless deleted).
+- Suitable for databases, boot volumes, and apps needing reliable storage.
+
+**Volume Types:**  
+- 🟢 **gp3/gp2:** General-purpose SSD (balanced cost/performance).  
+- ⚡ **io1/io2:** Provisioned IOPS SSD (for high-performance workloads).  
+- 📊 **st1:** Throughput-optimized HDD (for big data, streaming).  
+- 🧊 **sc1:** Cold HDD (low-cost, infrequent access).
+
+**Useful Commands:**
+```sh
+# Attach an EBS volume
+aws ec2 attach-volume --volume-id vol-abc123 --instance-id i-abc123 --device /dev/xvdf
+
+# Mount the volume
+sudo mount /dev/xvdf /mnt/myvolume
+
+
