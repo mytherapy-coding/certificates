@@ -415,3 +415,33 @@ An **Elastic Load Balancer** (ELB) is a service that automatically distributes i
 ### Example Use Case:
 If you host a web application across multiple EC2 instances, an ALB can route incoming requests to the least busy instance, improving performance and reliability.
 
+## Amazon S3 (Simple Storage Service)
+
+Amazon **S3** is an object storage service that provides industry-leading scalability, data availability, security, and performance. You can use S3 to store and protect any amount of data for a variety of use cases, like websites, mobile apps, backups, and big data analytics.
+
+### Key Features:
+- **Scalability:** Store unlimited data with automatic scaling.
+- **Durability:** 99.999999999% (11 9s) durability, ensuring data is safe.
+- **Accessibility:** Access data from anywhere via HTTP/HTTPS.
+- **Security:** Offers encryption, bucket policies, and access control.
+- **Storage Classes:** Optimize costs with options like S3 Standard, Intelligent-Tiering, and Glacier.
+
+### Common Use Cases:
+- **Backup and Restore:** Store backups securely with versioning.
+- **Data Lakes & Analytics:** Centralize data for big data analytics.
+- **Static Website Hosting:** Host static websites directly from S3.
+- **Content Delivery:** Integrate with Amazon CloudFront for faster content distribution.
+
+### Example S3 Bucket Policy (JSON):
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::example-bucket/*"
+        }
+    ]
+}
