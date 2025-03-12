@@ -482,4 +482,46 @@ Amazon **RDS** is a fully managed database service that supports multiple databa
 mysql -h mydb-instance.123456789012.us-east-1.rds.amazonaws.com -u admin -p
 ```
 
+## Docker
 
+**Docker** is an open-source platform that automates the deployment, scaling, and management of applications. It uses containerization to package applications and their dependencies together, ensuring they run consistently in different environments.
+
+### Why Use Docker?
+- **Portability:** Run containers anywhere — on your laptop, server, or in the cloud.
+- **Isolation:** Containers encapsulate applications, avoiding conflicts between dependencies.
+- **Efficiency:** Lightweight and fast, with less overhead than virtual machines.
+- **Scalability:** Easily scale services up or down with minimal effort.
+
+### Key Concepts:
+- **Image:** A lightweight, standalone package containing everything needed to run a piece of software (code, runtime, libraries, etc.).
+- **Container:** A running instance of an image.
+- **Dockerfile:** A script with instructions to build a Docker image.
+- **Docker Hub:** A public registry for sharing container images.
+- **Volume:** Persistent storage for containers.
+
+### Basic Commands:
+```bash
+# Check Docker version
+docker --version
+
+# Pull an image from Docker Hub
+docker pull nginx
+
+# List all running containers
+docker ps
+
+# Run a container
+docker run -d -p 80:80 nginx
+
+# Stop a running container
+docker stop <container_id>
+
+# Remove a container
+docker rm <container_id>
+
+# Build an image from a Dockerfile
+docker build -t my-image .
+
+# List all images
+docker images
+```
