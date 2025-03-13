@@ -525,3 +525,45 @@ docker build -t my-image .
 # List all images
 docker images
 ```
+# AWS CloudFormation
+
+## What is CloudFormation?
+AWS CloudFormation is a service that helps you model and set up your Amazon Web Services resources. You create templates in JSON or YAML to define the resources you want to provision, and CloudFormation handles the deployment.
+
+## Benefits
+- **Infrastructure as Code**: Manage your infrastructure with code.
+- **Resource Management**: Automatically manage and provision resources.
+- **Rollback and Change Sets**: Test changes safely.
+
+## Key Concepts
+- **Templates**: Define AWS resources in JSON/YAML files.
+- **Stacks**: A collection of AWS resources you manage as a single unit.
+- **Stack Sets**: Manage stacks across multiple AWS accounts and regions.
+
+## Template Structure
+A CloudFormation template consists of:
+
+- **Format Version**: The template version.
+- **Description**: A description of the template.
+- **Metadata**: Additional information about the template.
+- **Parameters**: Input values for the template.
+- **Mappings**: Key-value pairs for conditional logic.
+- **Conditions**: Define conditions to control resource creation.
+- **Resources**: The AWS resources you want to create.
+- **Outputs**: Values you want to return after deployment.
+
+## Example Template (YAML)
+```yaml
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Create an S3 bucket
+
+Resources:
+  MyS3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: my-unique-bucket-name
+
+Outputs:
+  BucketName:
+    Description: Name of the S3 bucket
+    Value: !Ref MyS3Bucket
