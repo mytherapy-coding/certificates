@@ -567,3 +567,28 @@ Outputs:
   BucketName:
     Description: Name of the S3 bucket
     Value: !Ref MyS3Bucket
+```
+
+# AWS Cloud Development Kit (CDK)
+
+## What is AWS CDK?
+AWS CDK is an open-source framework for defining cloud infrastructure using programming languages like TypeScript, Python, Java, C#, and Go. It abstracts AWS CloudFormation, letting you define infrastructure as code with the power of modern programming languages.
+
+## Why Use CDK?
+- **Code-Native Infrastructure**: Use loops, conditionals, and functions.
+- **Reusable Constructs**: Create reusable components.
+- **Simplified CloudFormation**: Less verbose, more readable code.
+- **CI/CD Integration**: Easily integrate into DevOps workflows.
+
+## Key Concepts
+- **App**: The root of your CDK application.
+- **Stack**: A unit of deployment, representing a CloudFormation stack.
+- **Construct**: A reusable, extendable class representing a cloud component.
+- **Assets**: Local files, Docker images, and other resources deployed to AWS.
+
+## Installation
+First, install the AWS CDK CLI:
+```sh
+npm install -g aws-cdk
+```
+
