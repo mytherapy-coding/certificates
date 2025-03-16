@@ -656,3 +656,37 @@ Resources:
       SourceArn: !GetAtt MyBucket.Arn
 ```
 
+# Amazon CloudWatch Metrics
+
+## What is Amazon CloudWatch?
+Amazon CloudWatch is a monitoring and observability service that collects and tracks metrics, logs, and events from AWS resources, applications, and services.
+
+## What are CloudWatch Metrics?
+CloudWatch **metrics** are numerical data points that represent system performance over time. Metrics help monitor **CPU utilization, memory usage, network activity, disk I/O**, and other AWS service metrics.
+
+## Key Features of CloudWatch Metrics
+- **Real-Time Monitoring**: Tracks resource performance in real-time.
+- **Custom Metrics**: Allows publishing of application-specific metrics.
+- **Alarms & Notifications**: Triggers alerts based on metric thresholds.
+- **Dashboards**: Visual representation of key metrics.
+- **Metric Retention**: Stores data for 15 months for trend analysis.
+
+## AWS Services That Provide Metrics
+- **EC2**: CPU utilization, disk read/write, network in/out.
+- **RDS**: Database connections, read/write IOPS, latency.
+- **S3**: Bucket size, request count, error rates.
+- **Lambda**: Invocation count, duration, error rate, throttles.
+- **ECS/EKS**: Container memory, CPU usage, task count.
+
+## Viewing Metrics in CloudWatch
+1. Open the **AWS Management Console**.
+2. Navigate to **CloudWatch** > **Metrics**.
+3. Select a namespace (e.g., AWS/EC2, AWS/Lambda).
+4. Choose a metric and set up visualizations.
+
+## Example: Fetching CloudWatch Metrics with AWS CLI
+List available metrics:
+```sh
+aws cloudwatch list-metrics --namespace AWS/EC2
+```
+
