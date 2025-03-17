@@ -375,6 +375,32 @@ aws ec2-instance-connect send-ssh-public-key \
     --ssh-public-key file://my-key.pub \
     --region us-east-1
 ```
+# AWS Snapshot Recycle Bin
+
+## What is AWS Snapshot Recycle Bin?
+AWS **Recycle Bin** allows you to **retain and recover deleted Amazon EBS snapshots** within a specified **retention period**. This feature helps **protect against accidental deletions** while optimizing cost and storage.
+
+## Key Features
+- **Recover Deleted Snapshots**: Restore snapshots within the retention window.
+- **Retention Rules**: Define policies for automatic snapshot expiration.
+- **Cross-Region Support**: Store snapshots in different AWS regions.
+- **Tag-Based Filtering**: Apply rules to specific snapshots using tags.
+
+## How It Works
+1. **Create Retention Rules**: Define rules for snapshot retention.
+2. **Delete Snapshots**: Instead of immediate deletion, snapshots move to the Recycle Bin.
+3. **Recover or Expire**: Snapshots can be restored before the retention period expires.
+
+## Managing Recycle Bin with AWS CLI
+
+### Create a Retention Rule
+```sh
+aws rbin create-rule --region us-east-1 \
+  --retention-period 7 \
+  --resource-type EBS_SNAPSHOT \
+  --description "Retention rule for EBS snapshots"
+```
+
 # 🛠️ Amazon EC2 Instance Storage
 
 ## 📦 Amazon EBS (Elastic Block Store)
