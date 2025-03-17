@@ -690,3 +690,28 @@ List available metrics:
 aws cloudwatch list-metrics --namespace AWS/EC2
 ```
 
+# AWS CloudTrail
+
+## What is AWS CloudTrail?
+AWS CloudTrail is a **logging service** that records **API calls** and **account activity** across AWS infrastructure. It helps with **security auditing, compliance monitoring, and troubleshooting** by tracking actions performed in AWS.
+
+## Key Features of CloudTrail
+- **Tracks API Calls**: Logs AWS API requests made via the console, SDKs, CLI, or other services.
+- **Stores Event History**: Retains event logs for **90 days** (longer if stored in S3).
+- **Integration with CloudWatch**: Sends logs to CloudWatch for real-time monitoring.
+- **Event Categorization**:
+  - **Management Events**: Logs actions like `CreateBucket`, `RunInstances`, `DeleteDBInstance`.
+  - **Data Events** (Optional): Logs operations on resources (e.g., S3 object access, Lambda execution).
+  - **Insight Events**: Detects unusual activity patterns.
+
+## Viewing CloudTrail Logs
+### Using AWS Console:
+1. Open the **AWS CloudTrail Console**.
+2. Click **Event History** to view recorded events.
+3. Filter by **Time, Event Name, Resource Type, and User**.
+
+### Using AWS CLI:
+List CloudTrail events:
+```sh
+aws cloudtrail lookup-events --max-results 5
+```
