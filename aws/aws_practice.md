@@ -400,6 +400,55 @@ aws rbin create-rule --region us-east-1 \
   --resource-type EBS_SNAPSHOT \
   --description "Retention rule for EBS snapshots"
 ```
+# Amazon Elastic File System (EFS)
+
+## Overview
+Amazon EFS is a scalable, fully managed elastic NFS file system for AWS services and on-premises resources.
+
+## Features
+- **Elastic Scaling**: Grows and shrinks automatically as you add or remove files.
+- **Multiple Access**: Can be accessed by multiple EC2 instances simultaneously.
+- **Performance Modes**: Supports General Purpose and Max I/O performance modes.
+- **Security**: Provides encryption at rest and in transit.
+
+## EFS Performance Modes
+| Performance Mode  | Description |
+|------------------|-------------|
+| General Purpose  | Default mode, ideal for latency-sensitive applications. |
+| Max I/O         | Optimized for scalability, supports thousands of EC2 instances. |
+
+## Commands
+```bash
+# Create an EFS file system
+aws efs create-file-system --performance-mode generalPurpose
+
+# List existing EFS file systems
+aws efs describe-file-systems
+
+# Delete an EFS file system
+aws efs delete-file-system --file-system-id fs-12345678
+```
+
+## Mounting EFS
+```bash
+# Install NFS client (for Amazon Linux 2)
+sudo yum install -y amazon-efs-utils
+
+# Mount EFS file system
+sudo mount -t efs fs-12345678:/ /mnt/efs
+```
+
+## Pricing
+EFS pricing is based on:
+- **Storage Classes**: Standard and Infrequent Access (IA)
+- **Throughput and Requests**
+- **Data Transfer Costs**
+
+For detailed pricing, visit [AWS EFS Pricing](https://aws.amazon.com/efs/pricing/).
+
+## References
+For more details, visit the [AWS EFS Documentation](https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html).
+
 
 # 🛠️ Amazon EC2 Instance Storage
 
