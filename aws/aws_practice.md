@@ -471,6 +471,46 @@ aws ec2 attach-volume --volume-id vol-abc123 --instance-id i-abc123 --device /de
 # Mount the volume
 sudo mount /dev/xvdf /mnt/myvolume
 ```
+# Amazon Elastic Load Balancer (ELB)
+
+## Overview
+Amazon ELB automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, and IP addresses.
+
+## Types of Load Balancers
+- **Application Load Balancer (ALB)**: Operates at the application layer (HTTP/HTTPS) and supports path-based and host-based routing.
+- **Network Load Balancer (NLB)**: Operates at the transport layer (TCP/UDP) and is optimized for high-performance workloads.
+- **Gateway Load Balancer (GWLB)**: Routes traffic to third-party virtual appliances for security and monitoring.
+- **Classic Load Balancer (CLB)**: Legacy load balancer operating at both the application and network layers.
+
+## Features
+- **High Availability**: Automatically distributes traffic across multiple Availability Zones.
+- **Security**: Supports TLS termination and integrates with AWS WAF for additional protection.
+- **Autoscaling Integration**: Works with AWS Auto Scaling to handle varying traffic loads.
+- **Monitoring**: Provides metrics via Amazon CloudWatch.
+
+## Commands
+```bash
+# Create an Application Load Balancer
+aws elbv2 create-load-balancer --name my-alb --subnets subnet-12345678 subnet-87654321 --security-groups sg-12345678 --type application
+
+# Describe existing load balancers
+aws elbv2 describe-load-balancers
+
+# Delete a Load Balancer
+aws elbv2 delete-load-balancer --load-balancer-arn arn:aws:elasticloadbalancing:region:account-id:loadbalancer/app/my-alb/123456789
+```
+
+## Listener Configuration
+```bash
+# Create an HTTP listener
+aws elbv2 create-listener --load-balancer-arn arn:aws:elasticloadbalancing:region:account-id:loadbalancer/app/my-alb/123456789 --protocol HTTP --port 80 --default-actions Type=forward,TargetGroupArn=arn:aws:elasticloadbalancing:region:account-id:targetgroup/my-target-group/12345678
+```
+
+## Pricing
+ELB pricing is based on:
+- **Load Balancer Hours**: Active load balancer running time
+- **Data Processing**: Traffic handled by the load balancer
+- **Additional Features**: Optional add-ons like AWS WAF
 
 
 ## Elastic Load Balancer (ELB)
