@@ -561,6 +561,54 @@ Amazon **S3** is an object storage service that provides industry-leading scalab
     ]
 }
 ```
+
+# Amazon Auto Scaling Group (ASG)
+
+## Overview
+Amazon Auto Scaling Groups (ASG) help maintain application availability by automatically adjusting the number of EC2 instances in response to traffic patterns.
+
+## Features
+- **Automatic Scaling**: Adjusts the number of EC2 instances based on demand.
+- **Load Balancer Integration**: Works with ELB to distribute traffic evenly.
+- **Health Monitoring**: Automatically replaces unhealthy instances.
+- **Cost Optimization**: Scales down during low demand to save costs.
+
+## ASG Components
+| Component | Description |
+|-----------|-------------|
+| Launch Template | Defines instance configurations such as AMI, instance type, and security groups. |
+| Scaling Policies | Adjusts the number of instances based on metrics or schedules. |
+| Health Checks | Ensures instances are running properly and replaces unhealthy ones. |
+| Load Balancing | Distributes incoming traffic across healthy instances. |
+
+## Commands
+```bash
+# Create an Auto Scaling Group
+aws autoscaling create-auto-scaling-group --auto-scaling-group-name my-asg --launch-template LaunchTemplateName=my-template,Version=1 --min-size 1 --max-size 5 --desired-capacity 2 --vpc-zone-identifier subnet-12345678,subnet-87654321
+
+# Describe existing Auto Scaling Groups
+aws autoscaling describe-auto-scaling-groups
+
+# Update an Auto Scaling Group
+aws autoscaling update-auto-scaling-group --auto-scaling-group-name my-asg --min-size 2 --max-size 10 --desired-capacity 3
+
+# Delete an Auto Scaling Group
+aws autoscaling delete-auto-scaling-group --auto-scaling-group-name my-asg --force-delete
+```
+
+## Scaling Policies
+```bash
+# Create a scaling policy based on CPU utilization
+aws autoscaling put-scaling-policy --auto-scaling-group-name my-asg --policy-name scale-out-policy --policy-type TargetTrackingScaling --target-tracking-configuration '{"PredefinedMetricSpecification": {"PredefinedMetricType": "ASGAverageCPUUtilization"}, "TargetValue": 50.0}'
+```
+
+## Pricing
+ASG itself is free, but you pay for:
+- **EC2 Instances**: Billed per usage.
+- **Load Balancing**: If used with ELB, additional costs apply.
+- **Monitoring**: CloudWatch metrics may incur charges.
+
+
 ## Amazon RDS (Relational Database Service)
 
 Amazon **RDS** is a fully managed database service that supports multiple database engines, allowing you to run and scale relational databases in the cloud with ease.
