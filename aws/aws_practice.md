@@ -878,3 +878,49 @@ List CloudTrail events:
 ```sh
 aws cloudtrail lookup-events --max-results 5
 ```
+# AWS Snowball
+
+## Overview
+AWS Snowball is a data transport solution that accelerates moving large amounts of data into and out of AWS using secure, ruggedized devices.
+
+## Features
+- **Petabyte-scale data transfer**: Moves large data sets efficiently.
+- **Secure and Encrypted**: Uses 256-bit encryption and tamper-resistant enclosures.
+- **Offline Data Transfer**: Reduces network dependency by physically shipping devices.
+- **Edge Computing**: Runs AWS Lambda and EC2 instances for local processing.
+
+## Snowball Variants
+| Variant | Description |
+|---------|-------------|
+| Snowball Edge Storage Optimized | Ideal for large-scale data transfer and storage. |
+| Snowball Edge Compute Optimized | Includes additional compute capacity for edge processing. |
+| AWS Snowcone | Smaller, lightweight device for portable data transfer. |
+
+## Commands
+```bash
+# Create a Snowball job
+aws snowball create-job --job-type IMPORT --resources S3Resources=[{BucketArn=arn:aws:s3:::my-bucket}] --address-id address-12345678
+
+# List Snowball jobs
+aws snowball list-jobs
+
+# Describe a specific job
+aws snowball describe-job --job-id job-12345678
+
+# Cancel a Snowball job
+aws snowball cancel-job --job-id job-12345678
+```
+
+## Use Cases
+- **Large-scale Data Migration**: Move petabytes of data to AWS efficiently.
+- **Disaster Recovery**: Backup data securely for remote storage.
+- **Edge Processing**: Perform computing tasks before transferring data.
+- **Media & Entertainment**: Transfer large video files without relying on network bandwidth.
+
+## Pricing
+AWS Snowball pricing includes:
+- **Per-device usage fee**
+- **Shipping and handling costs**
+- **Data transfer charges (if applicable)**
+
+
