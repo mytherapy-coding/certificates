@@ -923,4 +923,58 @@ AWS Snowball pricing includes:
 - **Shipping and handling costs**
 - **Data transfer charges (if applicable)**
 
+# Amazon Relational Database Service (RDS)
+
+## Overview
+Amazon RDS is a managed relational database service that simplifies setup, operation, and scaling of databases in the cloud.
+
+## Features
+- **Automated Backups**: Provides point-in-time recovery and automated snapshots.
+- **Multi-AZ Deployments**: Ensures high availability and failover support.
+- **Read Replicas**: Enhances performance by distributing read traffic.
+- **Security**: Supports encryption at rest and in transit.
+- **Automatic Scaling**: Adjusts resources based on demand.
+
+## Supported Database Engines
+| Database Engine | Description |
+|----------------|-------------|
+| Amazon Aurora  | High-performance, fully managed MySQL and PostgreSQL-compatible database. |
+| MySQL          | Open-source relational database. |
+| PostgreSQL     | Advanced open-source relational database. |
+| MariaDB        | Fork of MySQL with additional features. |
+| Oracle         | Enterprise-grade relational database. |
+| SQL Server     | Microsoft’s relational database for enterprise applications. |
+
+## Commands
+```bash
+# Create an RDS instance
+aws rds create-db-instance --db-instance-identifier mydb --db-instance-class db.t3.micro --engine mysql --allocated-storage 20 --master-username admin --master-user-password password123
+
+# List existing RDS instances
+aws rds describe-db-instances
+
+# Modify an RDS instance
+aws rds modify-db-instance --db-instance-identifier mydb --allocated-storage 50 --apply-immediately
+
+# Delete an RDS instance
+aws rds delete-db-instance --db-instance-identifier mydb --skip-final-snapshot
+```
+
+## Backup and Restore
+```bash
+# Create a manual snapshot
+aws rds create-db-snapshot --db-instance-identifier mydb --db-snapshot-identifier mydb-snapshot
+
+# Restore a database from a snapshot
+aws rds restore-db-instance-from-db-snapshot --db-instance-identifier newdb --db-snapshot-identifier mydb-snapshot
+```
+
+## Pricing
+RDS pricing is based on:
+- **Instance Type**: Compute power and memory.
+- **Storage**: Amount of provisioned storage.
+- **Backup Retention**: Charges for automated snapshots.
+- **Data Transfer**: Costs associated with data movement.
+
+
 
