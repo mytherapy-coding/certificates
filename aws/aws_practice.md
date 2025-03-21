@@ -1053,5 +1053,53 @@ X-RateLimit-Remaining: 950
 X-RateLimit-Reset: 1672531200
 ```
 
+# AWS Batch
+
+## Overview
+AWS Batch enables the execution of batch computing workloads efficiently across AWS infrastructure. It dynamically provisions resources to optimize cost and performance.
+
+## Features
+- **Fully Managed**: Automates batch job scheduling and execution.
+- **Compute Environment Management**: Supports EC2 and Fargate for running batch jobs.
+- **Scalability**: Automatically scales computing resources based on workload demand.
+- **Job Queues**: Prioritizes and routes jobs to the appropriate compute environment.
+- **Integration**: Works with AWS services like S3, CloudWatch, and IAM.
+
+## Key Components
+| Component | Description |
+|-----------|-------------|
+| Job Definition | Specifies how batch jobs should be executed, including vCPUs, memory, and retry strategy. |
+| Job Queue | Holds batch jobs until they can be executed. |
+| Compute Environment | Defines the compute resources for job execution (EC2, Fargate, or Spot instances). |
+| Job | A unit of work executed in AWS Batch. |
+
+## Commands
+```bash
+# Create a Compute Environment
+aws batch create-compute-environment --compute-environment-name my-compute-env --type MANAGED --compute-resources type=EC2,minvCpus=0,maxvCpus=16,instanceTypes=m5.large,subnets=subnet-12345678,securityGroupIds=sg-12345678
+
+# Create a Job Queue
+aws batch create-job-queue --job-queue-name my-job-queue --priority 1 --compute-environment-order computeEnvironment=my-compute-env,order=1
+
+# Register a Job Definition
+aws batch register-job-definition --job-definition-name my-job --type container --container-properties '{"image":"amazonlinux","vcpus":2,"memory":4000,"command":["echo","Hello World"]}'
+
+# Submit a Job
+aws batch submit-job --job-name my-job --job-queue my-job-queue --job-definition my-job
+
+# List Jobs
+aws batch list-jobs --job-queue my-job-queue
+
+# Describe a Job
+aws batch describe-jobs --jobs job-12345678
+```
+
+## Pricing
+AWS Batch pricing is based on:
+- **Compute Resources**: Charges for EC2, Fargate, or Spot instances.
+- **Data Transfer**: Costs for moving data in and out of AWS Batch.
+- **Storage Usage**: Charges for storing job-related data in S3 or EBS.
+
+
 
 
