@@ -976,5 +976,82 @@ RDS pricing is based on:
 - **Backup Retention**: Charges for automated snapshots.
 - **Data Transfer**: Costs associated with data movement.
 
+# API Documentation
+
+## Overview
+An API (Application Programming Interface) allows applications to communicate with each other by sending requests and receiving responses in a structured format, typically JSON or XML.
+
+## Authentication
+Most APIs require authentication, commonly using:
+- **API Key**: A unique key for each user.
+- **OAuth 2.0**: Token-based authentication.
+- **Basic Auth**: Username and password encoded in base64.
+
+### Example Authentication Header
+```http
+Authorization: Bearer YOUR_ACCESS_TOKEN
+```
+
+## API Endpoints
+### 1. Get User Details
+**Endpoint:**
+```http
+GET /api/users/{id}
+```
+**Request Example:**
+```bash
+curl -X GET "https://api.example.com/users/123" -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+```
+**Response Example:**
+```json
+{
+  "id": 123,
+  "name": "John Doe",
+  "email": "johndoe@example.com"
+}
+```
+
+### 2. Create a New User
+**Endpoint:**
+```http
+POST /api/users
+```
+**Request Example:**
+```bash
+curl -X POST "https://api.example.com/users" \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
+     -d '{"name": "Jane Doe", "email": "janedoe@example.com"}'
+```
+**Response Example:**
+```json
+{
+  "id": 124,
+  "name": "Jane Doe",
+  "email": "janedoe@example.com",
+  "created_at": "2025-03-19T12:00:00Z"
+}
+```
+
+## Error Handling
+| Status Code | Meaning |
+|------------|---------|
+| 200 OK | Request was successful. |
+| 201 Created | Resource was successfully created. |
+| 400 Bad Request | The request was invalid or malformed. |
+| 401 Unauthorized | Authentication failed. |
+| 403 Forbidden | You do not have permission. |
+| 404 Not Found | Resource was not found. |
+| 500 Internal Server Error | Something went wrong on the server. |
+
+## Rate Limiting
+Most APIs enforce rate limits to prevent abuse.
+Example header response:
+```http
+X-RateLimit-Limit: 1000
+X-RateLimit-Remaining: 950
+X-RateLimit-Reset: 1672531200
+```
+
 
 
