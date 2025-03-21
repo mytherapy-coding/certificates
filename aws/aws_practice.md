@@ -1305,3 +1305,32 @@ CDK uses three levels of constructs:
 
 ## Conclusion
 AWS CDK revolutionizes Infrastructure as Code by providing a modern, developer-friendly approach to defining cloud resources. By leveraging familiar programming languages, CDK empowers teams to create scalable and maintainable AWS infrastructure with ease.
+
+# AWS Elastic Beanstalk vs AWS CloudFormation
+
+## Overview
+AWS Elastic Beanstalk and AWS CloudFormation are both AWS services designed to simplify infrastructure management, but they serve different purposes. Elastic Beanstalk is a Platform as a Service (PaaS) that automates application deployment and management, whereas CloudFormation is an Infrastructure as Code (IaC) tool that provides a declarative way to define and provision AWS resources.
+
+## Key Differences
+
+| Feature               | AWS Elastic Beanstalk | AWS CloudFormation |
+|----------------------|----------------------|--------------------|
+| **Purpose** | Manages application deployment and scaling | Defines and provisions AWS infrastructure |
+| **Resource Management** | Abstracts and manages infrastructure automatically | Requires explicit resource definition |
+| **Customization** | Limited customization of underlying infrastructure | Full control over infrastructure configuration |
+| **Scalability** | Auto-scales based on application demand | Requires manual or automated scaling policies |
+| **Ease of Use** | Simplifies deployment with minimal configuration | Requires deeper AWS knowledge and configuration |
+| **Use Case** | Best for quickly deploying and managing applications | Best for infrastructure provisioning and automation |
+
+## When to Use AWS Elastic Beanstalk
+- When you need a fully managed environment for deploying applications.
+- If you prefer AWS to handle infrastructure provisioning and scaling automatically.
+- When using supported platforms like Java, Python, Node.js, etc.
+
+## When to Use AWS CloudFormation
+- When you need full control over AWS resources and configurations.
+- If you want to manage complex infrastructure setups using IaC.
+- When automating deployments across multiple AWS accounts and regions.
+
+## Conclusion
+AWS Elastic Beanstalk and AWS CloudFormation serve different but complementary roles. Elastic Beanstalk is ideal for developers looking for a simple deployment solution without infrastructure management, whereas CloudFormation is better suited for DevOps teams needing full control over infrastructure provisioning. Choosing between them depends on your use case and level of required customization.
