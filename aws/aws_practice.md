@@ -1101,5 +1101,83 @@ AWS Batch pricing is based on:
 - **Storage Usage**: Charges for storing job-related data in S3 or EBS.
 
 
+# Serverless Services in AWS
 
+## Overview
+AWS offers various serverless services that allow users to run applications without managing servers. These services automatically scale, charge based on usage, and reduce operational overhead.
+
+## Key Serverless Services
+
+### 1. AWS Lambda
+**Purpose:** Runs code without provisioning or managing servers.
+- **Event-driven execution**: Triggers from AWS services like S3, DynamoDB, API Gateway.
+- **Supported languages**: Python, Node.js, Java, Go, etc.
+- **Billing**: Based on execution time and memory used.
+
+**Example Command:**
+```bash
+aws lambda create-function --function-name myFunction --runtime python3.8 --role arn:aws:iam::account-id:role/execution_role --handler lambda_function.lambda_handler --zip-file fileb://function.zip
+```
+
+### 2. Amazon API Gateway
+**Purpose:** Creates, manages, and secures APIs for applications.
+- **Supports REST and WebSocket APIs**
+- **Integrates with AWS Lambda, EC2, DynamoDB**
+- **Security**: Uses AWS IAM, API keys, and Lambda authorizers.
+
+**Example Command:**
+```bash
+aws apigateway create-rest-api --name "MyAPI"
+```
+
+### 3. AWS Step Functions
+**Purpose:** Orchestrates workflows using AWS services.
+- **Visual workflow creation**
+- **Integration with Lambda, S3, DynamoDB**
+- **Error handling and retries**
+
+**Example Command:**
+```bash
+aws stepfunctions create-state-machine --name myStateMachine --role-arn arn:aws:iam::account-id:role/service-role --definition file://state-machine.json
+```
+
+### 4. Amazon DynamoDB
+**Purpose:** Fully managed NoSQL database with single-digit millisecond latency.
+- **Auto-scaling and on-demand capacity**
+- **Serverless with built-in security and backup**
+
+**Example Command:**
+```bash
+aws dynamodb create-table --table-name Users --attribute-definitions AttributeName=UserId,AttributeType=S --key-schema AttributeName=UserId,KeyType=HASH --billing-mode PAY_PER_REQUEST
+```
+
+### 5. AWS Fargate
+**Purpose:** Runs containers without managing servers.
+- **Works with Amazon ECS and EKS**
+- **Scales automatically**
+- **No need to provision EC2 instances**
+
+**Example Command:**
+```bash
+aws ecs create-cluster --cluster-name myFargateCluster
+```
+
+### 6. Amazon EventBridge
+**Purpose:** Event bus service to connect applications.
+- **Real-time event-driven architecture**
+- **Supports AWS and third-party event sources**
+
+**Example Command:**
+```bash
+aws events put-rule --name MyRule --event-pattern '{"source": ["aws.ec2"]}' --state ENABLED
+```
+
+## Pricing
+Pricing is based on usage:
+- **Lambda**: Pay per request and execution time.
+- **API Gateway**: Charges for API calls and data transfer.
+- **Step Functions**: Charged per state transition.
+- **DynamoDB**: Billed per read/write capacity or on-demand usage.
+- **Fargate**: Charges based on CPU and memory allocation.
+- **EventBridge**: Charges per event published and rule execution.
 
