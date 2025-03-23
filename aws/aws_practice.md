@@ -1387,4 +1387,49 @@ AWS Route 53 supports several DNS routing policies:
 ## Conclusion
 AWS Route 53 is a powerful DNS and domain management service that provides high availability, advanced routing capabilities, and seamless AWS integration. It is an essential service for managing domains, optimizing traffic, and ensuring reliability for applications hosted in AWS.
 
+# AWS CloudFront
+
+## Overview
+AWS CloudFront is a fast, secure, and highly scalable content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to users worldwide with low latency and high transfer speeds. It integrates seamlessly with AWS services and helps optimize content delivery through edge locations.
+
+## Key Features
+- **Global Content Delivery**: Uses a worldwide network of edge locations to cache and deliver content efficiently.
+- **Integration with AWS Services**: Works seamlessly with S3, EC2, Elastic Load Balancing, and Route 53.
+- **Security**: Supports AWS Shield, AWS Web Application Firewall (WAF), and SSL/TLS encryption.
+- **Customizable Caching**: Provides fine-tuned control over cache behaviors and TTL settings.
+- **Lambda@Edge Support**: Enables serverless computing at edge locations for content customization and dynamic processing.
+
+## Benefits
+- **Reduced Latency**: Delivers content from the nearest edge location to users.
+- **Cost Efficiency**: Reduces bandwidth costs by caching content closer to users.
+- **Security & Compliance**: Protects against DDoS attacks and enables secure content delivery.
+- **Scalability**: Handles spikes in traffic automatically without manual intervention.
+
+## How AWS CloudFront Works
+1. **Content is Uploaded**: Store static files (e.g., images, videos, scripts) in an S3 bucket or an origin server (EC2, on-premise server, etc.).
+2. **CloudFront Distributes Content**: When a user requests content, CloudFront serves it from the nearest edge location.
+3. **Caching & Optimization**: Frequently requested content is cached, reducing load times and origin requests.
+4. **Security & Monitoring**: AWS WAF, Shield, and monitoring tools like CloudWatch enhance protection and visibility.
+
+## Getting Started with AWS CloudFront
+### Creating a CloudFront Distribution
+1. Open the AWS CloudFront Console.
+2. Click "Create Distribution."
+3. Choose an origin (e.g., S3 bucket, EC2 instance, or custom server).
+4. Configure settings like cache behavior, SSL certificates, and logging.
+5. Deploy the distribution and use the assigned CloudFront URL for content delivery.
+
+### Configuring Caching Policies
+- **Default TTL**: Set how long objects remain in CloudFront cache.
+- **Cache-Control Headers**: Customize caching behavior using HTTP headers.
+- **Invalidations**: Manually refresh content in edge locations when updates are required.
+
+## CloudFront Pricing
+AWS CloudFront pricing is based on:
+- **Data Transfer Out**: Charges based on the amount of data delivered.
+- **Requests**: Fees depend on the number of HTTP/HTTPS requests processed.
+- **Additional Features**: Costs for custom SSL certificates, field-level encryption, and Lambda@Edge execution.
+
+## Conclusion
+AWS CloudFront is a powerful CDN that enhances website and application performance by reducing latency and improving security. With its global edge network, customizable caching, and seamless AWS integration, CloudFront is an excellent solution for optimizing content delivery at scale.
 
