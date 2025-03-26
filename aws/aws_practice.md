@@ -1487,4 +1487,55 @@ When selecting a VPS provider, consider factors such as:
 
 ## Conclusion
 A VPS is a powerful hosting solution that bridges the gap between shared hosting and dedicated servers. It provides enhanced performance, security, and flexibility, making it suitable for businesses, developers, and tech enthusiasts looking for a reliable and scalable hosting environment.
+# AWS Pricing
+
+## Overview
+AWS (Amazon Web Services) offers a flexible pricing model that allows users to pay only for the resources they use. AWS pricing varies based on the service, usage type, and pricing model.
+
+## AWS Pricing Models
+AWS provides multiple pricing models to suit different business needs:
+
+### 1. **Pay-as-You-Go**
+- Users pay only for what they consume without upfront costs.
+- Suitable for unpredictable workloads.
+- Example: EC2 instances billed per second or hour.
+
+### 2. **Reserved Instances (RI)**
+- Offers significant cost savings (up to 75%) in exchange for a long-term commitment (1 or 3 years).
+- Available for services like EC2, RDS, and Redshift.
+- Ideal for predictable workloads.
+
+### 3. **Spot Instances**
+- Unused AWS capacity available at a discount (up to 90%).
+- Prices fluctuate based on demand and supply.
+- Best for fault-tolerant, flexible applications (e.g., batch jobs, big data processing).
+
+### 4. **Savings Plans**
+- Offers cost savings like Reserved Instances but with more flexibility.
+- Users commit to a consistent amount of usage (measured in $/hour) for 1 or 3 years.
+- Available for EC2, Fargate, and Lambda.
+
+### 5. **Free Tier**
+- AWS provides a Free Tier with limited usage for 12 months.
+- Includes 750 hours/month of EC2 t2.micro, 5GB S3 storage, 1 million Lambda requests, etc.
+- Best for new users exploring AWS services.
+
+## AWS Pricing Examples
+| AWS Service | Pricing Model | Example Cost |
+|-------------|--------------|--------------|
+| **EC2** | Pay-as-you-go, RI, Spot, Savings Plans | Starts at ~$0.0116/hour (t4g.nano) |
+| **S3** | Pay-as-you-go | $0.023 per GB for Standard storage |
+| **RDS** | Pay-as-you-go, RI | Starts at ~$0.017/hour (db.t3.micro) |
+| **Lambda** | Pay-as-you-go | $0.20 per 1M requests |
+| **CloudFront** | Pay-as-you-go | $0.085 per GB (first 10 TB) |
+
+## Cost Management Tools
+AWS provides several tools to help users track and manage costs:
+- **AWS Pricing Calculator**: Estimates costs for various AWS services.
+- **AWS Cost Explorer**: Analyzes past usage and forecasts future expenses.
+- **AWS Budgets**: Sets budget limits and sends alerts for cost control.
+- **AWS Trusted Advisor**: Provides cost optimization recommendations.
+
+## Conclusion
+AWS pricing is flexible and offers various models to fit different workloads. By leveraging Reserved Instances, Spot Instances, and Savings Plans, users can optimize costs effectively. AWS also provides free tools to track and manage expenses efficiently.
 
