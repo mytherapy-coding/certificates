@@ -1539,3 +1539,47 @@ AWS provides several tools to help users track and manage costs:
 ## Conclusion
 AWS pricing is flexible and offers various models to fit different workloads. By leveraging Reserved Instances, Spot Instances, and Savings Plans, users can optimize costs effectively. AWS also provides free tools to track and manage expenses efficiently.
 
+# AWS Trusted Advisor
+
+## Overview
+AWS Trusted Advisor is an AWS service that provides real-time guidance to help users optimize their AWS environment. It evaluates AWS accounts and offers recommendations across multiple categories, including cost optimization, security, fault tolerance, performance, and service limits.
+
+## Key Features
+- **Cost Optimization**: Identifies underutilized resources to reduce costs.
+- **Security**: Detects security risks, such as open ports and unprotected IAM permissions.
+- **Fault Tolerance**: Highlights configurations that enhance system reliability.
+- **Performance**: Recommends optimizations to improve application efficiency.
+- **Service Limits**: Monitors usage against AWS service quotas to prevent disruptions.
+
+## AWS Trusted Advisor Categories
+
+| Category | Description |
+|----------|-------------|
+| **Cost Optimization** | Identifies unused or underutilized resources to reduce AWS spending. |
+| **Security** | Detects security vulnerabilities, such as open security groups and weak IAM policies. |
+| **Fault Tolerance** | Ensures high availability and resilience by checking for backup and redundancy configurations. |
+| **Performance** | Recommends optimizations to enhance speed and reduce latency. |
+| **Service Limits** | Alerts users when they are approaching AWS service quotas to prevent disruptions. |
+
+## Accessing AWS Trusted Advisor
+1. Sign in to the AWS Management Console.
+2. Navigate to **AWS Trusted Advisor** from the AWS dashboard.
+3. Review the recommended checks and implement suggested improvements.
+
+## Trusted Advisor Plans
+AWS Trusted Advisor offers different levels of access based on AWS Support Plans:
+
+| AWS Support Plan | Features Available |
+|------------------|--------------------|
+| **Basic & Developer** | Access to core checks (Service Limits & Security). |
+| **Business & Enterprise** | Full access to all Trusted Advisor checks and recommendations. |
+
+## Benefits
+- **Proactive Monitoring**: Helps identify potential issues before they impact operations.
+- **Cost Savings**: Provides insights into cost-saving opportunities.
+- **Improved Security**: Strengthens AWS security posture with best practices.
+- **Enhanced Performance**: Ensures optimal resource utilization.
+- **Compliance & Best Practices**: Aligns AWS usage with industry standards.
+
+## Conclusion
+AWS Trusted Advisor is a valuable tool for optimizing AWS environments by providing actionable insights. Businesses can use it to enhance security, reduce costs, and improve performance, ensuring they get the most out of their AWS infrastructure.
