@@ -1583,3 +1583,42 @@ AWS Trusted Advisor offers different levels of access based on AWS Support Plans
 
 ## Conclusion
 AWS Trusted Advisor is a valuable tool for optimizing AWS environments by providing actionable insights. Businesses can use it to enhance security, reduce costs, and improve performance, ensuring they get the most out of their AWS infrastructure.
+
+# Amazon AppStream 2.0
+
+## What is AppStream 2.0?
+Amazon AppStream 2.0 is a **fully managed application streaming service** that enables users to securely stream desktop applications from AWS to any device via a web browser.
+
+## Key Features
+- **No local installation** – Applications run in the cloud and stream to users.
+- **Secure & Scalable** – Data stays in AWS, reducing security risks.
+- **Supports Multiple Devices** – Works on Windows, Mac, Chromebooks, and tablets.
+- **Pay-as-you-go Pricing** – Pay only for active usage.
+- **Integration with AWS** – Works with AWS Directory Service, S3, and other services.
+
+## Use Cases
+### Education
+Schools can provide students access to software like MATLAB and AutoCAD without requiring powerful local machines.
+
+### Remote Work
+Employees can securely access business applications from anywhere.
+
+### Software Trials & Demos
+Companies can offer users a way to test software without downloads.
+
+### High-Performance Computing
+Engineers and designers can run resource-intensive applications on cloud-based GPUs.
+
+## Pricing
+Amazon AppStream 2.0 follows a **pay-as-you-go** model, where costs depend on:
+- The instance type used (standard, graphics, or compute-optimized)
+- The number of streaming hours
+- Storage and data transfer
+
+## How to Get Started
+1. Go to the **AWS Management Console**.
+2. Navigate to **AppStream 2.0**.
+3. Configure your **Fleet** and **Stack**.
+4. Upload and test your **applications**.
+5. Grant users access via **Active Directory** or IAM.
+
