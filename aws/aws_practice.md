@@ -1622,3 +1622,35 @@ Amazon AppStream 2.0 follows a **pay-as-you-go** model, where costs depend on:
 4. Upload and test your **applications**.
 5. Grant users access via **Active Directory** or IAM.
 
+# AWS Elastic Disaster Recovery (AWS DRS)
+
+AWS Elastic Disaster Recovery (AWS DRS) is a service that helps businesses recover their IT infrastructure quickly in the event of disruptions like hardware failures, ransomware attacks, or natural disasters. It minimizes downtime and data loss by continuously replicating servers (both on-premises or cloud-based) to AWS.
+
+## Key Features of AWS DRS:
+- **Continuous Data Replication**: Real-time replication of data from on-premises or cloud-based servers to AWS.
+- **Automated Failover & Failback**: Automatically switch workloads to AWS during a disaster and return to normal operations when the primary infrastructure is restored.
+- **Low Recovery Time Objective (RTO)**: Minimizes downtime and ensures quick recovery.
+- **Point-in-Time Recovery**: Allows you to restore your infrastructure to a specific point in time to avoid corruption.
+- **Supports Various Workloads**: Compatible with physical servers, VMware, and cloud-based workloads.
+- **Cost-Effective**: Pay only for the storage and resources used during the disaster recovery process.
+
+## How AWS DRS Works:
+1. **Install the AWS DRS Agent**: Install the agent on your source servers (physical or virtual).
+2. **Configure Continuous Replication**: Set up continuous replication of your data from the source servers to AWS.
+3. **Failover to AWS**: In the event of a disaster, you can quickly initiate failover to AWS and keep business operations running.
+4. **Failback to Original Infrastructure**: Once the primary site is restored, you can return to your original environment with minimal downtime.
+
+## Benefits of AWS DRS:
+- **Scalable**: Easily scale your disaster recovery operations without upfront infrastructure costs.
+- **Global Availability**: AWS provides global infrastructure, so you can choose regions near your operations for disaster recovery.
+- **Compliance and Security**: AWS meets various industry standards and regulatory requirements, ensuring your data is protected.
+
+## Using AWS DRS in Maryland:
+- AWS doesn't have a data center in Maryland, but the **US East (N. Virginia)** region is commonly used by businesses in Maryland for disaster recovery purposes, offering low-latency recovery.
+  
+## Getting Started with AWS DRS:
+1. Visit [AWS Elastic Disaster Recovery](https://aws.amazon.com/disaster-recovery/) for more information.
+2. Follow the documentation to install and configure the AWS DRS agent on your servers.
+3. Test failover scenarios regularly to ensure your disaster recovery process works as expected.
+
+For businesses in Maryland, using AWS DRS ensures a fast, secure, and cost-effective disaster recovery solution.
