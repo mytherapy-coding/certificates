@@ -1748,3 +1748,35 @@ For businesses in Maryland, using AWS DRS ensures a fast, secure, and cost-effec
 - **AWS Config**: Audits configuration compliance.
 
 This cheat sheet provides an overview of key AWS concepts to help you prepare for the AWS Cloud Practitioner exam.
+
+# AWS Partner Network (APN)
+
+The **AWS Partner Network (APN)** is a global program that helps companies build, market, and sell their AWS-based solutions and services. It provides various benefits, including technical training, marketing support, and access to AWS funding programs.
+
+## Key Components of APN  
+
+### 1. APN Tiers  
+- **Registered**: Entry-level  
+- **Select**: Basic benefits, some requirements  
+- **Advanced**: Higher engagement, more resources  
+- **Premier**: Top-tier with extensive AWS collaboration  
+
+### 2. Partner Types  
+- **Technology Partners**: Build software solutions on AWS (e.g., SaaS, security tools).  
+- **Consulting Partners**: Provide professional services, migration, and strategy support.  
+
+### 3. Programs & Specializations  
+- **AWS Competency Program** (Industry expertise recognition)  
+- **AWS Service Delivery Program** (Proven expertise in AWS services)  
+- **AWS Marketplace** (Sell software solutions)  
+- **AWS ISV Accelerate** (Support for Independent Software Vendors)  
+
+### 4. Benefits  
+- Access to AWS credits  
+- Go-to-market support  
+- Training & certifications  
+- Co-selling opportunities with AWS  
+
+Would you like details on any specific APN program or how to join APN?
+
+
