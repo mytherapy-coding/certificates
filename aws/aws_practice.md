@@ -1654,3 +1654,97 @@ AWS Elastic Disaster Recovery (AWS DRS) is a service that helps businesses recov
 3. Test failover scenarios regularly to ensure your disaster recovery process works as expected.
 
 For businesses in Maryland, using AWS DRS ensures a fast, secure, and cost-effective disaster recovery solution.
+
+
+# AWS Cloud Practitioner Cheat Sheet
+
+## Core AWS Services
+
+### Compute
+- **EC2 (Elastic Compute Cloud)**: Virtual servers in the cloud.
+- **Lambda**: Serverless computing, runs code in response to events.
+- **Elastic Beanstalk**: PaaS for deploying applications.
+- **ECS (Elastic Container Service)**: Managed container service.
+- **EKS (Elastic Kubernetes Service)**: Kubernetes as a service.
+- **Fargate**: Serverless compute engine for containers.
+
+### Storage
+- **S3 (Simple Storage Service)**: Object storage with high availability.
+- **EBS (Elastic Block Store)**: Block storage for EC2 instances.
+- **EFS (Elastic File System)**: Scalable file storage for Linux instances.
+- **Glacier**: Low-cost archival storage.
+
+### Networking & Content Delivery
+- **VPC (Virtual Private Cloud)**: Isolated cloud network.
+- **Route 53**: Scalable domain name system (DNS).
+- **CloudFront**: Content delivery network (CDN).
+- **Elastic Load Balancing (ELB)**: Distributes traffic among instances.
+- **Direct Connect**: Private network connection to AWS.
+
+### Database
+- **RDS (Relational Database Service)**: Managed relational database.
+- **DynamoDB**: NoSQL database.
+- **Aurora**: High-performance managed database.
+- **ElastiCache**: In-memory caching service.
+- **Redshift**: Data warehousing service.
+
+## Security & Identity
+- **IAM (Identity and Access Management)**: Manage users and permissions.
+- **Organizations**: Multi-account management.
+- **Cognito**: User authentication and authorization.
+- **KMS (Key Management Service)**: Encryption key management.
+- **Shield**: DDoS protection.
+- **WAF (Web Application Firewall)**: Protects against web exploits.
+
+## Monitoring & Management
+- **CloudWatch**: Monitoring service.
+- **CloudTrail**: Logs API activity.
+- **AWS Config**: Tracks configuration changes.
+- **Trusted Advisor**: Best practice recommendations.
+
+## Deployment & DevOps
+- **CloudFormation**: Infrastructure as Code (IaC).
+- **CodeDeploy**: Automate software deployments.
+- **CodePipeline**: Continuous integration/continuous deployment (CI/CD).
+- **CodeBuild**: Builds and tests code.
+
+## Cost Management
+- **Cost Explorer**: Analyzes AWS spending.
+- **Budgets**: Set spending thresholds.
+- **Savings Plans**: Discounts for consistent usage.
+- **Reserved Instances**: Lower prices for long-term commitments.
+
+## Support Plans
+- **Basic**: Free, limited support.
+- **Developer**: Email support.
+- **Business**: 24/7 support and Trusted Advisor checks.
+- **Enterprise**: Dedicated account manager and architecture reviews.
+
+## Shared Responsibility Model
+- **AWS Responsibility**: Security "of" the cloud (infrastructure, hardware, software, networking).
+- **Customer Responsibility**: Security "in" the cloud (data, applications, identity management).
+
+## Well-Architected Framework
+- **Operational Excellence**
+- **Security**
+- **Reliability**
+- **Performance Efficiency**
+- **Cost Optimization**
+
+## AWS Pricing Models
+- **Pay-as-you-go**: Pay for usage without upfront costs.
+- **Spot Instances**: Spare EC2 capacity at a lower price.
+- **Reserved Instances**: Commit to a term for cost savings.
+- **Savings Plans**: Flexible pricing model with savings.
+
+## AWS Global Infrastructure
+- **Regions**: Geographical areas with multiple Availability Zones.
+- **Availability Zones (AZs)**: Data centers within a region.
+- **Edge Locations**: CDN endpoints for caching content.
+
+## Compliance & Governance
+- **AWS Artifact**: Access compliance reports.
+- **AWS Organizations**: Centralized account management.
+- **AWS Config**: Audits configuration compliance.
+
+This cheat sheet provides an overview of key AWS concepts to help you prepare for the AWS Cloud Practitioner exam.
