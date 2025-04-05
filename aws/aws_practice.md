@@ -1780,3 +1780,6 @@ The **AWS Partner Network (APN)** is a global program that helps companies build
 Would you like details on any specific APN program or how to join APN?
 
 
+### AWS CodeCommit
+
+**AWS CodeCommit** is a fully managed source control service that hosts secure Git repositories. It allows teams to **store**, **manage**, and **version code** in a highly scalable and reliable environment. CodeCommit supports collaboration with features like pull requests, branching, and access control, and it integrates easily with other AWS developer tools.
