@@ -1783,3 +1783,7 @@ Would you like details on any specific APN program or how to join APN?
 ### AWS CodeCommit
 
 **AWS CodeCommit** is a fully managed source control service that hosts secure Git repositories. It allows teams to **store**, **manage**, and **version code** in a highly scalable and reliable environment. CodeCommit supports collaboration with features like pull requests, branching, and access control, and it integrates easily with other AWS developer tools.
+
+### AWS Pinpoint
+
+**AWS Pinpoint** is a scalable marketing communication service that enables you to **engage customers** across multiple channels, including **email, SMS, push notifications, and voice**. It helps you understand user behavior, segment audiences, and create targeted campaigns, making it ideal for **user engagement and analytics** in applications.
