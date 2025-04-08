@@ -1615,13 +1615,6 @@ Amazon AppStream 2.0 follows a **pay-as-you-go** model, where costs depend on:
 - The number of streaming hours
 - Storage and data transfer
 
-## How to Get Started
-1. Go to the **AWS Management Console**.
-2. Navigate to **AppStream 2.0**.
-3. Configure your **Fleet** and **Stack**.
-4. Upload and test your **applications**.
-5. Grant users access via **Active Directory** or IAM.
-
 # AWS Elastic Disaster Recovery (AWS DRS)
 
 AWS Elastic Disaster Recovery (AWS DRS) is a service that helps businesses recover their IT infrastructure quickly in the event of disruptions like hardware failures, ransomware attacks, or natural disasters. It minimizes downtime and data loss by continuously replicating servers (both on-premises or cloud-based) to AWS.
