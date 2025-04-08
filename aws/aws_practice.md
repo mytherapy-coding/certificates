@@ -1707,12 +1707,6 @@ For businesses in Maryland, using AWS DRS ensures a fast, secure, and cost-effec
 - **Savings Plans**: Discounts for consistent usage.
 - **Reserved Instances**: Lower prices for long-term commitments.
 
-## Support Plans
-- **Basic**: Free, limited support.
-- **Developer**: Email support.
-- **Business**: 24/7 support and Trusted Advisor checks.
-- **Enterprise**: Dedicated account manager and architecture reviews.
-
 ## Shared Responsibility Model
 - **AWS Responsibility**: Security "of" the cloud (infrastructure, hardware, software, networking).
 - **Customer Responsibility**: Security "in" the cloud (data, applications, identity management).
