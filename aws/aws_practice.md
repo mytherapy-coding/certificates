@@ -1774,3 +1774,75 @@ Would you like details on any specific APN program or how to join APN?
 ### AWS Pinpoint
 
 **AWS Pinpoint** is a scalable marketing communication service that enables you to **engage customers** across multiple channels, including **email, SMS, push notifications, and voice**. It helps you understand user behavior, segment audiences, and create targeted campaigns, making it ideal for **user engagement and analytics** in applications.
+
+# 🌩️ AWS Services Overview
+
+## 🧮 Compute
+- **Amazon EC2** – Virtual servers in the cloud
+- **AWS Lambda** – Run code without provisioning servers
+- **Amazon ECS / EKS** – Container orchestration
+- **AWS Batch** – Batch computing jobs
+- **AWS Elastic Beanstalk** – Easy-to-use deployment for applications
+
+## 💾 Storage
+- **Amazon S3** – Object storage service
+- **Amazon EBS** – Block storage for EC2
+- **Amazon EFS** – Managed file storage
+- **AWS Glacier** – Archival storage with retrieval options
+
+## 🛠️ Developer Tools
+- **AWS CodeCommit** – Git-based source control
+- **AWS CodeBuild** – Build and test code
+- **AWS CodeDeploy** – Automate code deployments
+- **AWS CodePipeline** – CI/CD pipeline management
+
+## 📡 Networking & Content Delivery
+- **Amazon VPC** – Isolated cloud resources
+- **Amazon CloudFront** – Global CDN
+- **Elastic Load Balancing** – Distribute incoming traffic
+- **AWS Direct Connect** – Dedicated network connection
+
+## 🧠 AI/ML
+- **Amazon SageMaker** – Build, train, and deploy ML models
+- **Amazon Rekognition** – Image and video analysis
+- **Amazon Polly** – Text-to-speech
+- **Amazon Lex** – Conversational chatbots
+- **Amazon Comprehend** – Natural language processing
+
+## 📊 Analytics
+- **Amazon Athena** – Query data in S3 using SQL
+- **Amazon Redshift** – Data warehousing
+- **Amazon Kinesis** – Real-time data streaming
+- **AWS Glue** – ETL service
+
+## 🛡️ Security, Identity & Compliance
+- **AWS IAM** – User and permission management
+- **AWS KMS** – Key management service
+- **AWS Shield** – DDoS protection
+- **AWS WAF** – Web application firewall
+- **Amazon Cognito** – User authentication and access control
+
+## 📚 Database
+- **Amazon RDS** – Managed relational database
+- **Amazon DynamoDB** – NoSQL database
+- **Amazon Aurora** – High-performance RDS
+- **Amazon ElastiCache** – In-memory cache (Redis/Memcached)
+
+## ☁️ Management & Monitoring
+- **Amazon CloudWatch** – Monitoring and logging
+- **AWS CloudTrail** – Track user activity and API usage
+- **AWS Config** – Configuration history and compliance tracking
+- **AWS Systems Manager** – Operational insights and automation
+
+## 🧭 Migration & Transfer
+- **AWS DMS** – Database migration
+- **AWS Snowball** – Large-scale data transfer
+- **AWS Migration Hub** – Track migrations in one place
+
+## 🧾 Application Integration
+- **Amazon SQS** – Message queues
+- **Amazon SNS** – Notification service
+- **AWS Step Functions** – Orchestrate workflows
+
+
+
