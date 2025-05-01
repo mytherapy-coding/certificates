@@ -1844,5 +1844,28 @@ Would you like details on any specific APN program or how to join APN?
 - **Amazon SNS** – Notification service
 - **AWS Step Functions** – Orchestrate workflows
 
+# What is Amazon Aurora?
+
+Amazon Aurora is a **relational database service** offered by AWS (Amazon Web Services).
+
+Here’s a clear breakdown:
+
+✅ **Fully managed** — You don’t have to handle hardware, patching, backups, or scaling yourself; AWS does it for you.
+
+✅ **MySQL- and PostgreSQL-compatible** — Aurora supports both MySQL and PostgreSQL APIs, so existing applications can usually connect with little or no change.
+
+✅ **High performance** — Aurora claims up to 5x the throughput of standard MySQL and 3x that of standard PostgreSQL on the same hardware.
+
+✅ **Fault-tolerant and highly available** — It replicates data across multiple Availability Zones and continuously backs up to S3.
+
+✅ **Auto-scaling storage** — The database storage automatically expands (up to 128 TB) as needed, so you don’t need to pre-provision space.
+
+✅ **Pay-as-you-go** — You pay only for what you use, which is attractive compared to managing your own database servers.
+
+---
+
+Aurora is part of the broader **Amazon RDS (Relational Database Service)** family but is Amazon’s own reengineered engine designed for the cloud, combining the familiarity of open-source engines with the performance and scalability of a commercial database.
+
+
 
 
