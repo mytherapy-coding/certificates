@@ -1,5 +1,6 @@
 import math  # Importing the math module
 
+
 # Defining a custom sin function
 def sin(x):
     if 2 * x == pi:
@@ -7,14 +8,15 @@ def sin(x):
     else:
         return None  # Returns None for other values
 
+
 # Defining a custom pi variable
 pi = 3.14
 
 # Calling the custom sin function with custom pi
-print(sin(pi / 2))  
+print(sin(pi / 2))
 
 # Calling the actual math.sin function with math.pi
-print(math.sin(math.pi / 2))  
+print(math.sin(math.pi / 2))
 print()
 from platform import machine
 
@@ -39,6 +41,7 @@ print(len(platform.python_version_tuple()))
 print()
 
 from random import randint
+
 for i in range(2):
     print(randint(1, 2))
 print()
@@ -81,7 +84,7 @@ print(min("aAbByYzZ"))
 print("_____________________")
 # Demonstrating min() - Examples 2 & 3:
 t = 'The Knights Who Say "Ni!"'
-x = '[' + min(t) + ']'
+x = "[" + min(t) + "]"
 print(x)
 print(len(x))
 
@@ -89,17 +92,18 @@ t = [0, 1, 2]
 print(min(t))
 print()
 print(
-'''
+    """
 string
 string1
-''')
+"""
+)
 y = "\n\n"
 print(y)
 print(len(y))
 print()
-print('[' + 'Beta'.center(2) + ']')
-print('[' + 'Beta'.center(4, "*") + ']')
-print('[' + 'Beta'.center(6, "*") + ']')
+print("[" + "Beta".center(2) + "]")
+print("[" + "Beta".center(4, "*") + "]")
+print("[" + "Beta".center(6, "*") + "]")
 print()
 
 t = "zeta"
@@ -110,37 +114,37 @@ print(t.endswith("eta"))
 
 print()
 # Demonstrating the isalnum() method:
-print('lambda30'.isalnum())
-print('lambda'.isalnum())
-print('30'.isalnum())
-print('@'.isalnum())
-print('lambda_30'.isalnum())
-print(''.isalnum())
+print("lambda30".isalnum())
+print("lambda".isalnum())
+print("30".isalnum())
+print("@".isalnum())
+print("lambda_30".isalnum())
+print("".isalnum())
 print()
 
-t = 'Six lambdas'
+t = "Six lambdas"
 print(t.isalnum())
 
-t = 'ΑβΓδ'
+t = "ΑβΓδ"
 print(t.isalnum())
 
-t = '20E1'
+t = "20E1"
 print(t.isalnum())
 
 print()
 # Example 1: Demonstrating the isapha() method:
 print("Moooo".isalpha())
-print('Mu40'.isalpha())
+print("Mu40".isalpha())
 
 # Example 2: Demonstrating the isdigit() method:
-print('2018'.isdigit())
+print("2018".isdigit())
 print("Year2019".isdigit())
 print()
 
 print()
 
 # Example 2: Demonstrating the isspace() method:
-print(' \n '.isspace())
+print(" \n ".isspace())
 print(" ".isspace())
 print("mooo mooo mooo".isspace())
 
@@ -171,8 +175,10 @@ print()
 print("phi       chi\npsi")
 print(" ".join(["phi", "chi", "psi"]))
 print("".join("phi chi psi"))
-print(" ".join(['phi', 'chi', 'psi']))
+print(" ".join(["phi", "chi", "psi"]))
 print()
+
+
 def mysplit(strng):
     return strng.split()
 
@@ -195,37 +201,43 @@ print(res.replace("e", "r", 1))
 res = "awesome"
 print(res.find("y"))
 
-x ='\''
+x = "'"
 print(len(x))
 
-print(ord('c')-ord('a'))
-      
-print(chr(ord('z')-2))
+print(ord("c") - ord("a"))
 
-print('Mike'>'Mikey')
+print(chr(ord("z") - 2))
+
+print("Mike" > "Mikey")
 
 
 print()
 
+
 class ExampleClass:
     a = 1
+
     def __init__(self):
         self.b = 2
 
 
 example_object = ExampleClass()
 
-print(hasattr(example_object, 'b'))
-print(hasattr(example_object, 'a'))
-print(hasattr(ExampleClass, 'b'))
-print(hasattr(ExampleClass, 'a'))
+print(hasattr(example_object, "b"))
+print(hasattr(example_object, "a"))
+print(hasattr(ExampleClass, "b"))
+print(hasattr(ExampleClass, "a"))
 print()
+
+
 class Python:
     population = 1
     victims = 0
+
     def __init__(self):
         self.length_ft = 3
         self._venomous = False
+
 
 version_2 = Python()
 print(version_2._venomous)
@@ -234,6 +246,7 @@ print(version_2._venomous)
 
 print()
 
+
 class Timer:
     def __init__(self, hours=0, minutes=0, seconds=0):
         self.hours = hours
@@ -241,25 +254,23 @@ class Timer:
         self.seconds = seconds
 
     def __str__(self):
-        return f'{self.hours:02d}:{self.minutes:02d}:{self.seconds:02d}'
+        return f"{self.hours:02d}:{self.minutes:02d}:{self.seconds:02d}"
 
     def next_second(self):
         self.seconds += 1
-        self.minutes += self.seconds//60
+        self.minutes += self.seconds // 60
         self.seconds %= 60
-        self.hours += self.minutes//60
+        self.hours += self.minutes // 60
         self.minutes %= 60
         self.hours %= 24
-        
-        
+
     def prev_second(self):
-        self.seconds = self.seconds - 1 +60 
-        self.minutes = self.minutes - (1 - self.seconds//60) +60
+        self.seconds = self.seconds - 1 + 60
+        self.minutes = self.minutes - (1 - self.seconds // 60) + 60
         self.seconds %= 60
-        self.hours = self.hours - (1 - self.minutes//60) +24
+        self.hours = self.hours - (1 - self.minutes // 60) + 24
         self.minutes %= 60
         self.hours %= 24
-        
 
 
 timer = Timer(23, 59, 59)
@@ -270,6 +281,8 @@ timer.prev_second()
 print(timer)
 
 print()
+
+
 class SampleClass:
     def __init__(self, val):
         self.val = val
@@ -286,6 +299,7 @@ print(object_3 is object_1)
 print(object_1.val, object_2.val, object_3.val)
 
 import sys
+
 string_1 = "Mary had a little "
 string_2 = sys.intern("Mary had a little lamb")
 string_1 = sys.intern(string_1 + "lamb")
@@ -322,8 +336,9 @@ else:
 
 print(3j)
 x = 3j
-y = x*x 
+y = x * x
 print(x, y)
+
 
 class Fib:
     def __init__(self):
@@ -342,6 +357,7 @@ class Fib:
         self.__p1, self.__p2 = self.__p2, ret
         return ret
 
+
 f = Fib()
 it = iter(f)
 print(it is f)
@@ -350,22 +366,21 @@ for _ in range(10):
 
 for _, y in zip(range(10), Fib()):
     print(y)
-    
+
 print([y for _, y in zip(range(10), Fib())])
 
 print()
 
-print("Mike">"Mikey")
+print("Mike" > "Mikey")
 
 print(ord("c") - ord("a"))
 print()
-x = '\''
+x = "'"
 print(len(x))
 
-print(chr(ord("z") -2))
+print(chr(ord("z") - 2))
 
 print("My_filter")
-
 
 
 def myfilter(f, lst):
@@ -373,9 +388,8 @@ def myfilter(f, lst):
         if f(x):
             yield x
 
-print(list(myfilter(lambda x: x%2 == 0, [2, 4, 6, 13])))
 
-
+print(list(myfilter(lambda x: x % 2 == 0, [2, 4, 6, 13])))
 
 
 def filter_numbers(x):
@@ -386,12 +400,12 @@ print(list(filter(filter_numbers, [1, 2, 5, 9, 15])))
 print()
 print(list(myfilter(filter_numbers, [1, 2, 5, 9, 15])))
 print()
-print(list(myfilter(lambda x: x in (1,5,17), [1, 2, 5, 9, 15])))
+print(list(myfilter(lambda x: x in (1, 5, 17), [1, 2, 5, 9, 15])))
 print(list(myfilter(lambda x: x == 1 or x == 5 or x == 17, [1, 2, 5, 9, 15])))
 
 print()
 
-'''
+"""
 def powers_of_2(n):
     power = 1
     for i in range(n):
@@ -401,24 +415,29 @@ def powers_of_2(n):
 
 for v in powers_of_2(8):
     print(v)
-'''
+"""
 print()
+
+
 def powers_of_2():
     power = 1
     while True:
         yield power
         power *= 2
 
+
 for _, v in zip(range(8), powers_of_2()):
     print(v)
 
 print()
+
 
 def powers_of_2(n):
     power = 1
     for j in range(n):
         yield power
         power *= 2
+
 
 print(list(powers_of_2(20)))
 for i in range(1000):
@@ -441,7 +460,7 @@ print(hash("117"))
 
 two = lambda: 2
 sqr = lambda x: x * x
-pwr = lambda x, y: x ** y
+pwr = lambda x, y: x**y
 
 res = [1, 3, 5, 7, 9, 10]
 a = res[-2:-1]
@@ -452,9 +471,10 @@ print(a)
 
 print()
 
+
 def print_function(args, fun):
     for x in args:
-        print('f(', x,')=', fun(x), sep='')
+        print("f(", x, ")=", fun(x), sep="")
         print(f"f({x})={fun(x)}")
 
 
@@ -484,6 +504,7 @@ print("Month:", today.month)
 print("Day:", today.day)
 print()
 import calendar
+
 print(calendar.calendar(2025))
 print()
 
@@ -493,6 +514,7 @@ print(len(x))
 print("________")
 
 import math
+
 print(dir(math))
 
 print()
@@ -511,11 +533,11 @@ print(trunc(-x), trunc(-y))
 
 print()
 
-from random import randrange, randint
+from random import randint, randrange
 
-print(randrange(1), end=' ')
-print(randrange(0, 1), end=' ')
-print(randrange(0, 1, 1), end=' ')
+print(randrange(1), end=" ")
+print(randrange(0, 1), end=" ")
+print(randrange(0, 1, 1), end=" ")
 print(randint(0, 1))
 
 print()

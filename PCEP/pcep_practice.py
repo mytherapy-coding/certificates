@@ -53,7 +53,7 @@ print(0x123)
 
 print(0.0000000000000000000001)
 
-print('I\'m Monty Python.')
+print("I'm Monty Python.")
 print("I'm Monty Python.")
 
 # Binary System
@@ -75,22 +75,22 @@ binary_number = "1010"
 decimal_number = int(binary_number, 2)
 print(decimal_number)  # Outputs: 10
 print(6 // 3)
-print(6 // 3.)
-print(6. // 3)
-print(6. // 3.)
+print(6 // 3.0)
+print(6.0 // 3)
+print(6.0 // 3.0)
 
 
 print(-6 // 4)
-print(6. // -4)
+print(6.0 // -4)
 print("------------------------------")
 print(-4 - 4)
-print(4. - 8)
+print(4.0 - 8)
 print(-1.1)
-print(2 ** 2 ** 3)
+print(2**2**3)
 
-x =  1
+x = 1
 x = float(x)
-y = 3*x**3-2*x**2 + 3*x - 1
+y = 3 * x**3 - 2 * x**2 + 3 * x - 1
 print("y =", y)
 
 a = 6
@@ -99,7 +99,7 @@ a /= 2 * b
 print(a)
 print(15**2.0)
 print("\nThat's all, folks!")
-'''
+"""
 hour = int(input("Starting time (hours): "))
 mins = int(input("Starting time (minutes): "))
 dura = int(input("Event duration (minutes): "))
@@ -115,16 +115,16 @@ end_min = total_minutes % 60
 print(f"The event will end at: {end_hour:02}:{end_min:02}")
 x = input("Enter a number: ") # The user enters 2
 print(type(x))
-'''
+"""
 
 # Module 2
 
-print(2 == 2.)
+print(2 == 2.0)
 
 
 var = 0  # Assigning 0 to var
 print(var == 0)
-'''
+"""
 income = float(input("Enter the annual income: "))
 
 if income < 85528.0:
@@ -135,7 +135,7 @@ if tax < 0:
     tax = 0
 tax = round(tax, 00)
 print("The tax is:", tax, "thalers")
-'''
+"""
 counter = 5
 while counter != 0:
     print("Inside the loop.", counter)
@@ -143,10 +143,12 @@ while counter != 0:
 print("Outside the loop.", counter)
 
 
-print("""This is a multi-line string.
+print(
+    """This is a multi-line string.
 You can write text on
 multiple lines without
-using any special characters.""")
+using any special characters."""
+)
 
 for i in range(2, 8):
     print("The value of i is currently", i)
@@ -159,7 +161,7 @@ for expo in range(16):
 
 import time
 
-'''
+"""
 # Write a for loop that counts to five.
 for i in range(5):
     # Print the iteration number and "Mississippi"
@@ -181,8 +183,8 @@ print("Outside the loop.")
 
 # continue - example
 
-'''
-'''
+"""
+"""
 print("\nThe continue instruction:")
 for i in range(1, 6):
     if i == 3:
@@ -202,7 +204,7 @@ for b in range(blocks):
 print("The height of the pyramid:", height)
 
 
-'''
+"""
 
 for i in range(1, 10):
     if i % 2 == 0:
@@ -218,7 +220,7 @@ text = "pyxpyxpyx"
 for letter in text:
     if letter == "x":
         continue
-    print(letter, end = "")
+    print(letter, end="")
 
 print()
 
@@ -248,11 +250,13 @@ for digit in reversed(digits):
 
 print()
 
+
 def print_digits_direct(n):
     if n == 0:
         return
     print_digits_direct(n // 10)
     print("Цифра:", n % 10)
+
 
 n = 896
 print_digits_direct(n)
@@ -260,29 +264,34 @@ print_digits_direct(n)
 print("____")
 
 print()
+
+
 def digits(n: int, base: int = 16):
     # List of possible digits for bases > 10
     digits = "0123456789ABCDEF"
     result = []
-    
+
     while n > 0:
         digit = n % base
         result.append(digits[digit])  # Append the corresponding character
         n //= base
-        
+
     result.reverse()  # Reverse the list to get the correct order
-    print(''.join(result))  # Print the result as a string
+    print("".join(result))  # Print the result as a string
+
 
 digits(986)  # This will print the digits of 986 in hexadecimal
 
 print()
+
 
 def digits(n: int, base: int = 16):
     while n > 0:
         digit = n % base
         print(digit)
         n //= base
-        
+
+
 digits(986)
 
 
@@ -291,14 +300,15 @@ def digits(n: int, base: int = 10):
         digit = n % base
         print(digit)
         n //= base
-        
+
+
 digits(986)
 
 print()
 
 for i in range(1, 11):
     if i % 2 == 1:
-      print(i)
+        print(i)
 print()
 x = 1
 while x < 11:
@@ -311,7 +321,7 @@ print()
 for ch in "john.smith@pythoninstitute.org":
     if ch == "@":
         break
-    print(ch, end = "")
+    print(ch, end="")
 
 print()
 
@@ -410,15 +420,15 @@ my_list = [8, 10, 6, 2, 4]  # list to sort
 # It's a little fake, we need it to enter the while loop.
 
 while True:
-      swapped = False
-      for i in range(len(my_list) - 1):
-         if my_list[i] > my_list[i + 1]:
+    swapped = False
+    for i in range(len(my_list) - 1):
+        if my_list[i] > my_list[i + 1]:
             my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
             swapped = True  # a swap occurred!
-      if not swapped :
-            break  # no swaps so far
-      
-      
+    if not swapped:
+        break  # no swaps so far
+
+
 print(my_list)
 print()
 # Copying the entire list.
@@ -478,23 +488,23 @@ print("The list with unique elements only:", unique)
 print(my_list)
 
 print()
-vehicles_one = ['car', 'bicycle', 'motor']
-print(vehicles_one) # outputs: ['car', 'bicycle', 'motor']
+vehicles_one = ["car", "bicycle", "motor"]
+print(vehicles_one)  # outputs: ['car', 'bicycle', 'motor']
 vehicles_two = vehicles_one
-del vehicles_one[0] # deletes 'car'
+del vehicles_one[0]  # deletes 'car'
 print(vehicles_one)
-print(vehicles_two) # outputs: ['bicycle', 'motor']
+print(vehicles_two)  # outputs: ['bicycle', 'motor']
 
 del vehicles_two[0]
 print(vehicles_one)
-print(vehicles_two) # outputs: ['bicycle', 'motor']
+print(vehicles_two)  # outputs: ['bicycle', 'motor']
 print(vehicles_one == vehicles_two)
 
 print()
 
 my_list = [1, 2, 3, 4, 5]
-slice_one = my_list[2: ]
-slice_two = my_list[ :2]
+slice_one = my_list[2:]
+slice_two = my_list[:2]
 slice_three = my_list[-2:]
 
 print(slice_one)  # outputs: [3, 4, 5]
@@ -528,8 +538,6 @@ for i in range(-1, 1):
 print()
 
 
-
-    
 res = [1, 2, 3, 4]
 
 print(res[-3:-2])
@@ -545,7 +553,7 @@ while i <= 5:
     if i % 2 == 0:
         break
     print("*")
-    
+
 print()
 t = [[3 - i for i in range(3)] for j in range(3)]
 print(t)
@@ -559,16 +567,16 @@ print()
 
 a = 1
 b = 0
-c = a & b # and 
-d = a | b # or
-e = a ^ b #!=
+c = a & b  # and
+d = a | b  # or
+e = a ^ b  #!=
 print(c + d + e)
 
 print()
 
 a = 1
 b = 1
-c = a & b 
+c = a & b
 d = a | b
 e = a ^ b
 print(c + d + e)
@@ -577,25 +585,25 @@ print()
 
 a = 0
 b = 0
-c = a & b 
+c = a & b
 d = a | b
 e = a ^ b
 print(c + d + e)
 
 print()
 
-a = 3 # 11
-b = 2 # 10
-c = a & b # 11 
-          # 10
-          # 10 -> 2
-d = a | b # 11 
-          # 10
-          # 11 -> 3
+a = 3  # 11
+b = 2  # 10
+c = a & b  # 11
+# 10
+# 10 -> 2
+d = a | b  # 11
+# 10
+# 11 -> 3
 
-e = a ^ b # 11 
-          # 10
-          # 01 -> 1
+e = a ^ b  # 11
+# 10
+# 01 -> 1
 
 
 print(c + d + e)
@@ -603,11 +611,11 @@ print(c + d + e)
 
 print()
 
-a = 3 # 11 - binary, {0, 1} -  et (indexes of bits)
-b = 2 # 10 - binary,  {1} - set 
-c = a & b # {0, 1} & {1} -> intersect {1} ->  10 -> 2
-d = a | b # {0, 1} | {1} -> union {0, 1} -> 11 -> 3
-e = a ^ b # {0, 1} ^ {1} -> symetric difference {0} ->  1 -> 1
+a = 3  # 11 - binary, {0, 1} -  et (indexes of bits)
+b = 2  # 10 - binary,  {1} - set
+c = a & b  # {0, 1} & {1} -> intersect {1} ->  10 -> 2
+d = a | b  # {0, 1} | {1} -> union {0, 1} -> 11 -> 3
+e = a ^ b  # {0, 1} ^ {1} -> symetric difference {0} ->  1 -> 1
 print(c + d + e)
 
 print()
@@ -618,22 +626,25 @@ print(n)
 print()
 
 
-def happy_new_year(wishes = True):
+def happy_new_year(wishes=True):
     print("Three...")
     print("Two...")
     print("One...")
     if not wishes:
         return
-    
+
     print("Happy New Year!")
+
 
 happy_new_year()
 
 print()
 
+
 def boring_function():
     print("'Boredom Mode' ON.")
     return 123
+
 
 print("This lesson is interesting!")
 boring_function()
@@ -644,30 +655,35 @@ print(x)
 
 print()
 
+
 def is_year_leap(year):
     if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
         return True
     else:
         return False
 
+
 test_data = [1900, 2000, 2016, 1987]
 test_results = [False, True, True, False]
 for i in range(len(test_data)):
-	yr = test_data[i]
-	print(yr,"->",end="")
-	result = is_year_leap(yr)
-	if result == test_results[i]:
-		print("OK")
-	else:
-		print("Failed")
+    yr = test_data[i]
+    print(yr, "->", end="")
+    result = is_year_leap(yr)
+    if result == test_results[i]:
+        print("OK")
+    else:
+        print("Failed")
 
 print()
+
+
 def is_year_leap(year):
     # Determines if a year is a leap year
     if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
         return True
     else:
         return False
+
 
 def days_in_month(year, month):
     # Validate inputs
@@ -682,6 +698,7 @@ def days_in_month(year, month):
         return 29
     else:
         return month_lengths[month - 1]
+
 
 # Test the function
 test_years = [1900, 2000, 2016, 1987, 2023, 2024]
@@ -700,12 +717,14 @@ for i in range(len(test_years)):
 
 print()
 
+
 def is_year_leap(year):
     # Determines if a year is a leap year
     if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
         return True
     else:
         return False
+
 
 def days_in_month(year, month):
     # Validate inputs
@@ -720,6 +739,7 @@ def days_in_month(year, month):
         return 29
     else:
         return month_lengths[month - 1]
+
 
 def day_of_year(year, month, day):
     # Validate inputs
@@ -737,16 +757,17 @@ def day_of_year(year, month, day):
     day_of_year += day  # Add the current month's days
     return day_of_year
 
+
 # Test the function
 test_cases = [
-    (2023, 1, 1, 1),     # January 1, 2023 -> Day 1
-    (2023, 12, 31, 365), # December 31, 2023 -> Day 365
-    (2024, 2, 29, 60),   # February 29, 2024 (leap year) -> Day 60
-    (1900, 2, 28, 59),   # February 28, 1900 (not leap year) -> Day 59
-    (2000, 3, 1, 61),    # March 1, 2000 (leap year) -> Day 61
-    (2023, 13, 1, None), # Invalid month
-    (2023, 2, 29, None), # Invalid day
-    (2023, 0, 10, None), # Invalid month
+    (2023, 1, 1, 1),  # January 1, 2023 -> Day 1
+    (2023, 12, 31, 365),  # December 31, 2023 -> Day 365
+    (2024, 2, 29, 60),  # February 29, 2024 (leap year) -> Day 60
+    (1900, 2, 28, 59),  # February 28, 1900 (not leap year) -> Day 59
+    (2000, 3, 1, 61),  # March 1, 2000 (leap year) -> Day 61
+    (2023, 13, 1, None),  # Invalid month
+    (2023, 2, 29, None),  # Invalid day
+    (2023, 0, 10, None),  # Invalid month
 ]
 
 for year, month, day, expected in test_cases:
@@ -759,17 +780,19 @@ for year, month, day, expected in test_cases:
 
 print()
 
+
 def is_prime(num):
     # A prime number is greater than 1
     if num <= 1:
         return False
-    
+
     # Check divisors from 2 to sqrt(num)
     for i in range(2, int(num**0.5) + 1):
         if num % i == 0:
             return False
-    
+
     return True
+
 
 # Test the function for numbers 2 through 20
 for i in range(1, 20):
@@ -779,27 +802,31 @@ print()
 
 print()
 
+
 def liters_100km_to_miles_gallon(liters):
     # 1 mile = 1609.344 meters, 1 gallon = 3.785411784 liters
     miles_per_100km = 100 * 1000 / 1609.344  # Convert 100 km to miles
-    gallons = liters / 3.785411784           # Convert liters to gallons
-    return miles_per_100km / gallons         # Calculate miles per gallon
+    gallons = liters / 3.785411784  # Convert liters to gallons
+    return miles_per_100km / gallons  # Calculate miles per gallon
+
 
 def miles_gallon_to_liters_100km(miles):
     # 1 mile = 1609.344 meters, 1 gallon = 3.785411784 liters
-    km_per_mile = 1609.344 / 1000           # Convert miles to kilometers
+    km_per_mile = 1609.344 / 1000  # Convert miles to kilometers
     liters_per_100km = 100 / (miles * km_per_mile) * 3.785411784
     return liters_per_100km
+
 
 # Testing the functions
 print(liters_100km_to_miles_gallon(3.9))  # Expected: ~60.31143162393162
 print(liters_100km_to_miles_gallon(7.5))  # Expected: ~31.36194444444444
-print(liters_100km_to_miles_gallon(10.0)) # Expected: ~23.52145833333333
-print(miles_gallon_to_liters_100km(60.3)) # Expected: ~3.9007393587617467
-print(miles_gallon_to_liters_100km(31.4)) # Expected: ~7.490910297239916
-print(miles_gallon_to_liters_100km(23.5)) # Expected: ~10.009131205673757
+print(liters_100km_to_miles_gallon(10.0))  # Expected: ~23.52145833333333
+print(miles_gallon_to_liters_100km(60.3))  # Expected: ~3.9007393587617467
+print(miles_gallon_to_liters_100km(31.4))  # Expected: ~7.490910297239916
+print(miles_gallon_to_liters_100km(23.5))  # Expected: ~10.009131205673757
 
 print()
+
 
 def fib(n):
     if n < 1:
@@ -857,7 +884,7 @@ print(-10 not in my_tuple)
 
 print()
 dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
-phone_numbers = {'boss': 5551234567, 'Suzy': 22657854310}
+phone_numbers = {"boss": 5551234567, "Suzy": 22657854310}
 empty_dictionary = {}
 
 print(dictionary)
@@ -867,46 +894,38 @@ print()
 
 print()
 
-pol_eng_dictionary = {
-    "zamek": "castle",
-    "woda": "water",
-    "gleba": "soil"
-    }
+pol_eng_dictionary = {"zamek": "castle", "woda": "water", "gleba": "soil"}
 
 pol_eng_dictionary["zamek"] = "lock"
-item = pol_eng_dictionary["zamek"]    
+item = pol_eng_dictionary["zamek"]
 print(item)  # outputs: lock
 
 print()
 
-pol_eng_dictionary = {
-    "kwiat": "flower",
-    "woda": "water",
-    "gleba": "soil"
-    }
+pol_eng_dictionary = {"kwiat": "flower", "woda": "water", "gleba": "soil"}
 
-item_1 = pol_eng_dictionary["gleba"]    # ex. 1
-print(item_1)    # outputs: soil
+item_1 = pol_eng_dictionary["gleba"]  # ex. 1
+print(item_1)  # outputs: soil
 
 item_2 = pol_eng_dictionary.get("woda")
-print(item_2)    # outputs: water
+print(item_2)  # outputs: water
 
 print()
 pol_eng_dictionary = {"kwiat": "flower"}
 
 pol_eng_dictionary.update({"gleba": "soil"})
-print(pol_eng_dictionary)    # outputs: {'kwiat': 'flower', 'gleba': 'soil'}
+print(pol_eng_dictionary)  # outputs: {'kwiat': 'flower', 'gleba': 'soil'}
 
 pol_eng_dictionary.popitem()
-print(pol_eng_dictionary)    # outputs: {'kwiat': 'flower'}
+print(pol_eng_dictionary)  # outputs: {'kwiat': 'flower'}
 pol_eng_dictionary["gleba"] = "soil"
 print(pol_eng_dictionary)
 
 
 print("-----")
 
-d1 = {'Adam Smith': 'A', 'Judy Paxton': 'B+'}
-d2 = {'Mary Louis': 'A', 'Patrick White': 'C'}
+d1 = {"Adam Smith": "A", "Judy Paxton": "B+"}
+d2 = {"Mary Louis": "A", "Patrick White": "C"}
 d3 = {}
 
 for item in (d1, d2):
@@ -918,22 +937,22 @@ for item in (d1, d2):
 print(d3)
 
 
-
-def fun(ino = 2, out = 3):
+def fun(ino=2, out=3):
     return ino * out
+
 
 print(fun(3))
 
 print()
 
-print((1, ) + (1, ))
-'''
+print((1,) + (1,))
+"""
 value = input("Enter a value: ")
 print(10/value)
-'''
-x = 5 
+"""
+x = 5
 y = 10
-z = x > y or x and y 
+z = x > y or x and y
 print(z)
 
 
@@ -943,10 +962,10 @@ print("------------")
 print("My", "name", "is", sep="_", end="*")
 print("Monty", "Python.", sep="*")
 print("999")
-print(1//2*8)
+print(1 // 2 * 8)
 
 print(3 % 4)
-print(1/1)
+print(1 / 1)
 print("-----")
 
 res = (1, 2, 3, 4)
@@ -958,16 +977,16 @@ print("-----")
 my_list = [1, 2]
 
 for v in range(2):
-      my_list.insert(-1, my_list[v])
-      
+    my_list.insert(-1, my_list[v])
+
 print(my_list)
 
 lst = [i for i in range(-1, 2, -1)]
 print(lst)
 
-print([x for x in  range(5, 2, -1)])
+print([x for x in range(5, 2, -1)])
 
-print(0%2)
+print(0 % 2)
 print()
 for i in range(5, 2, 1):
     print(i)
@@ -976,10 +995,12 @@ g = (g for g in range(3))
 print(list(g), list(g))
 print()
 
+
 def factorial(n):
     if n == 0:
         return 1
     return n * factorial(n - 1)
+
 
 print(factorial(4))
 
@@ -988,11 +1009,11 @@ print()
 lst = [1, 3, 5, 7]
 print(len(lst))
 print()
-for i in range (len(lst)):
+for i in range(len(lst)):
     print(i)
 
 print()
-the_list = ['a', 'b', 'c']
+the_list = ["a", "b", "c"]
 print((0, 1, 2, 3)[4:5])
 print()
 the_list = [0, 1, 2, 3, 4, 5, 6]
@@ -1000,9 +1021,9 @@ print(the_list[-3:-1])
 print("-----")
 the_list = [0, 1, 2, 3, 4, 5, 6]
 print(len(the_list))
-print(the_list[2:len(the_list)])
+print(the_list[2 : len(the_list)])
 print(the_list[1:])
-print(the_list[1:len(the_list)])
+print(the_list[1 : len(the_list)])
 print()
 res = tuple()
 print(len(res))
@@ -1011,45 +1032,45 @@ print(len(res))
 res = dict()
 print(len(res))
 print()
-attendance = {'Bob': True}
-attendance['Bob'] = False
-print(attendance['Bob'])
+attendance = {"Bob": True}
+attendance["Bob"] = False
+print(attendance["Bob"])
 
 print()
 
-domains = {'au': 'Australia'}
-domains['at'] = 'Austria'
+domains = {"au": "Australia"}
+domains["at"] = "Austria"
 print(len(domains))
 
 print()
-currencies = {'USD': 'United States dollar'}
-del currencies['USD']
+currencies = {"USD": "United States dollar"}
+del currencies["USD"]
 print(len(currencies))
 print()
-phonetic = {'A': 'Alpha', 'B': 'Bravo'}
+phonetic = {"A": "Alpha", "B": "Bravo"}
 for key in phonetic:
-    print(key, end=' ')
+    print(key, end=" ")
 print()
- 
-phonetic = {'A': 'Alpha', 'B': 'Bravo'}
+
+phonetic = {"A": "Alpha", "B": "Bravo"}
 for key in phonetic.keys():
-    print(key, end=' ')
+    print(key, end=" ")
 print(phonetic)
 print()
-phonetic = {'A': 'Alpha', 'B': 'Bravo'}
+phonetic = {"A": "Alpha", "B": "Bravo"}
 for value in phonetic.values():
-    print(value, end=' ')
+    print(value, end=" ")
 print()
-phonetic = {'A': 'Alpha', 'B': 'Bravo'}
+phonetic = {"A": "Alpha", "B": "Bravo"}
 for item in phonetic.items():
-    print(item, end=' ')
+    print(item, end=" ")
 print()
-phonetic = {'A': 'Alpha', 'B': 'Bravo'}
+phonetic = {"A": "Alpha", "B": "Bravo"}
 for item, x in phonetic.items():
-    print(item, x,  end=' ')
+    print(item, x, end=" ")
 print()
 print()
-phonetic = {'A': 'Alpha', 'B': 'Bravo'}
+phonetic = {"A": "Alpha", "B": "Bravo"}
 print(" ".join(str(item) for item in phonetic.items()))
 print()
 lst = [4, 3, 2, 1]
@@ -1058,21 +1079,23 @@ print("()")
 lst = [2, 3, 5, 8]
 print(lst[3:3])
 print()
-lst = [0, .0, True]
+lst = [0, 0.0, True]
 print(lst.index(True) == 0)
 print()
-lst = [1, .0, True]
+lst = [1, 0.0, True]
 print(lst.index(True) == 0)
 print("----")
-lst = ['data', -1, 2.76543]
+lst = ["data", -1, 2.76543]
 print(int(lst[2]) == len(lst))
 print()
-lst = ['data', -1, 2.76543]
+lst = ["data", -1, 2.76543]
 print(lst[-2:])
 print()
-lst = ['data', -1, 2.76543]
+lst = ["data", -1, 2.76543]
 print(lst[-2:-1])
 print()
+
+
 def function(parameter):
     if parameter == False:
         return True
@@ -1080,7 +1103,7 @@ def function(parameter):
 
 print(function(False), function(True))
 print()
-print(1-2//3+4)
+print(1 - 2 // 3 + 4)
 lst = [1, 2, 3]
 print(len(lst[0:2]))
 print("--------------")
