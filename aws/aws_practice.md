@@ -1867,5 +1867,20 @@ Here’s a clear breakdown:
 Aurora is part of the broader **Amazon RDS (Relational Database Service)** family but is Amazon’s own reengineered engine designed for the cloud, combining the familiarity of open-source engines with the performance and scalability of a commercial database.
 
 
+# Amazon Bedrock — Description
+
+## Overview
+Amazon Bedrock is a fully managed AWS service that provides access to leading foundation models (FMs) for building generative AI applications. It offers a unified API, enterprise-grade security, and serverless scalability.
+
+## Key Features
+- Foundation models — Claude, Llama, Mistral, Amazon Nova, and others
+- Model customization — fine-tuning, embeddings, continued pre-training
+- Retrieval Augmented Generation (RAG) — knowledge bases + vector search
+- Agents — autonomous workflows that call APIs and perform tasks
+- Guardrails for safety and moderation
+- Serverless — no GPU management required
+
+
+
 
 
