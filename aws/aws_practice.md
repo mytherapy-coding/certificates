@@ -1880,6 +1880,24 @@ Amazon Bedrock is a fully managed AWS service that provides access to leading fo
 - Guardrails for safety and moderation
 - Serverless — no GPU management required
 
+## What Is MCP
+
+Model Context Protocol (MCP) is an open standard created by Anthropic that defines how AI models communicate with external tools, data sources, and services. MCP provides a consistent, model‑agnostic way for AI systems to call functions, retrieve information, and interact with structured resources.
+
+MCP uses a client–server architecture:
+
+- MCP clients are AI applications or agents.
+- MCP servers expose tools, resources, and prompts.
+- Communication happens over transports such as stdio or HTTP/SSE.
+
+The protocol defines three core components:
+
+- Tools — executable functions that an AI model can call.
+- Resources — read‑only data sources that provide context.
+- Prompts — reusable templates for structured interactions.
+
+MCP is designed to reduce integration complexity, eliminate custom connectors, and make AI agents portable across different models and environments.
+
 
 
 
