@@ -1897,6 +1897,13 @@ The protocol defines three core components:
 - Prompts — reusable templates for structured interactions.
 
 MCP is designed to reduce integration complexity, eliminate custom connectors, and make AI agents portable across different models and environments.
+## New Amazon Service: Amazon Now
+
+Amazon Now is Amazon’s new ultra-fast delivery service that provides fresh groceries, household essentials, and locally relevant items delivered in **30 minutes or less**. The service is already available in major U.S. cities including Atlanta, Dallas–Fort Worth, Philadelphia, and Seattle, with rapid expansion underway across dozens more cities. 
+
+Amazon Now uses a network of smaller, strategically located fulfillment sites to enable fast delivery. Prime members pay a discounted delivery fee of $3.99 per order, while non‑Prime customers pay $13.99. The service operates 24 hours a day in most regions. 
+
+Amazon plans to expand Amazon Now to tens of millions of customers across the U.S. and globally by the end of 2026. 
 
 
 
