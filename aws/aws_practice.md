@@ -1907,5 +1907,14 @@ Amazon plans to expand Amazon Now to tens of millions of customers across the U.
 
 
 
+Amazon Quick — Key Features (Markdown Style)
+✅ Cross‑app content generation — Creates documents, presentations, infographics, summaries, and visual assets across your connected work apps.
 
+✅ Natural‑language app builder — Builds functional mini‑apps simply from a text description, without any coding required.
+
+✅ Workflow automation — Automates notifications, data syncing, daily summaries, and multi‑step business processes.
+
+✅ Multi‑platform integrations — Works with Google Workspace, Microsoft Teams, Zoom, Airtable, Dropbox, and Slack (coming soon).
+
+✅ Visual asset generation — Produces charts, diagrams, infographics, and UI mockups directly from natural‑language prompts.
 
